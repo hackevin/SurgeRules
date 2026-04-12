@@ -10,19 +10,19 @@ URL-REGEX,^https?://api\.coolapk\.com/v6/search\?.*type=hotSearch,REJECT
 
 [Script]
 # 开屏广告
-Coolapk-Init = type=http-response,pattern=^https?://api\.coolapk\.com/v6/main/init,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+Coolapk-Init = type=http-response,pattern=^https?://api\.coolapk\.com/v6/main/init,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/coolapk_adskip.js
 
 # 首页广告
-Coolapk-Index = type=http-response,pattern=^https?://api\.coolapk\.com/v6/main/indexV8,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+Coolapk-Index = type=http-response,pattern=^https?://api\.coolapk\.com/v6/main/indexV8,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/coolapk_adskip.js
 
 # 推广广告 / 酷品页推广
-Coolapk-DataList = type=http-response,pattern=^https?://api\.coolapk\.com/v6/(page/)?dataList,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+Coolapk-DataList = type=http-response,pattern=^https?://api\.coolapk\.com/v6/(page/)?dataList,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/coolapk_adskip.js
 
 # 评论广告
-Coolapk-Reply = type=http-response,pattern=^https?://api\.coolapk\.com/v6/feed/replyList,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+Coolapk-Reply = type=http-response,pattern=^https?://api\.coolapk\.com/v6/feed/replyList,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/coolapk_adskip.js
 
 # 帖子详情广告
-Coolapk-Detail = type=http-response,pattern=^https?://api\.coolapk\.com/v6/feed/detail,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+Coolapk-Detail = type=http-response,pattern=^https?://api\.coolapk\.com/v6/feed/detail,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/coolapk_adskip.js
 
 [MITM]
 hostname = %APPEND% api.coolapk.com
