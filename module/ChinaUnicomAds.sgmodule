@@ -11,9 +11,9 @@ URL-REGEX,^https?://m\.client\.10010\.com/clientIndex/api/v1/index/queryIndexExc
 URL-REGEX,^https?://img\.client\.10010\.com/homejingxuan12/js/(pubuliu|1homeView),REJECT
 
 [Script]
-Unicom-SearchWord = type=http-response,pattern=^https?://m\.client\.10010\.com/search_service/search/searchScrollWord,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/unicom_adskip.js
-Unicom-HomeFusion = type=http-response,pattern=^https?://m\.client\.10010\.com/clientIndex/homefusion/fuInter,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/unicom_adskip.js
-Unicom-MyPage = type=http-response,pattern=^https?://m\.client\.10010\.com/clientMyPage/v\d/api/(myWallet|myPoints|myColorfulRingtone|newUserInfo|getDeviceInfo),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/unicom_adskip.js
+Unicom-SearchWord = type=http-response,pattern=^https?://m\.client\.10010\.com/search_service/search/searchScrollWord,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/unicom_adskip.js
+Unicom-HomeFusion = type=http-response,pattern=^https?://m\.client\.10010\.com/clientIndex/homefusion/fuInter,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/unicom_adskip.js
+Unicom-MyPage = type=http-response,pattern=^https?://m\.client\.10010\.com/clientMyPage/v\d/api/(myWallet|myPoints|myColorfulRingtone|newUserInfo|getDeviceInfo),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/unicom_adskip.js
 
 [MITM]
 hostname = %APPEND% m.client.10010.com,img.client.10010.com
