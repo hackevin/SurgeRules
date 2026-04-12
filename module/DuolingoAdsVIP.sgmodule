@@ -1,0 +1,38 @@
+#!name=多邻国解锁去广告
+#!desc=解锁Duolingo无限体力去广告
+#!author=Claude
+#!version=2026.3.31
+#!system=ios
+
+[Rule]
+# 广告域名用 Rule，不需要 MITM，性能好
+DOMAIN-SUFFIX,appsflyer.com,REJECT
+DOMAIN-SUFFIX,adjust.com,REJECT
+DOMAIN-SUFFIX,adjust.io,REJECT
+DOMAIN-SUFFIX,mopub.com,REJECT
+DOMAIN-SUFFIX,amplitude.com,REJECT
+DOMAIN-SUFFIX,braze.com,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googleadservices.com,REJECT
+DOMAIN-SUFFIX,adcolony.com,REJECT
+DOMAIN-SUFFIX,unity3d.com,REJECT
+DOMAIN-SUFFIX,vungle.com,REJECT
+DOMAIN-SUFFIX,applovin.com,REJECT
+DOMAIN-SUFFIX,ironsource.com,REJECT
+DOMAIN-SUFFIX,chartboost.com,REJECT
+DOMAIN-SUFFIX,xtremepush.com,REJECT
+URL-REGEX,^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/plus-promotions/,REJECT
+URL-REGEX,^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+/ads/,REJECT
+
+[Script]
+多邻国解锁 = type=http-response,pattern=^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+[^/]*$,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/duolingo_unlock.js
+多邻国去广告 = type=http-request,pattern=^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+/ads/,requires-body=false,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/duolingo_unlock.js
+
+[URL Rewrite]
+^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/plus-promotions/.* - reject
+# 广告配置接口
+^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+/ads/.* - reject
+
+[MITM]
+hostname = %APPEND% ios-api-2.duolingo.cn
