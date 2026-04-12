@@ -31,7 +31,7 @@ URL-REGEX,^https://ci\.xiaohongshu\.com/system_config/watermark,REJECT
 
 [Script]
 # 过滤信息流广告卡片、去水印字段
-XHS-Feed = type=http-response,pattern=^https?://edith\.xiaohongshu\.com/api/sns/v\d/(feed|homefeed|search/notes|note/feed|discovery/feed),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/xhs_adskip.js
+XHS-Feed = type=http-response,pattern=^https?://edith\.xiaohongshu\.com/api/sns/v\d/(feed|homefeed|search/notes|note/feed|discovery/feed),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/xhs_adskip.js
 
 [MITM]
 hostname = %APPEND% edith.xiaohongshu.com,www.xiaohongshu.com,referee.xiaohongshu.com
