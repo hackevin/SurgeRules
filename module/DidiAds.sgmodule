@@ -39,31 +39,31 @@ URL-REGEX,^https://conf\.diditaxi\.com\.cn/homepage/v\d/other/slow,REJECT
 
 [Script]
 # 用户中心
-Didi-UserCenter = type=http-response,pattern=^https://common\.diditaxi\.com\.cn/common/v\d/usercenter/me,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-UserCenter = type=http-response,pattern=^https://common\.diditaxi\.com\.cn/common/v\d/usercenter/me,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 # 首页核心布局（精简导航）
-Didi-HomeCore = type=http-response,pattern=^https://conf\.diditaxi\.com\.cn/homepage/v\d/core,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-HomeCore = type=http-response,pattern=^https://conf\.diditaxi\.com\.cn/homepage/v\d/core,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 # 场景列表（移除优惠商城）
-Didi-SceneList = type=http-response,pattern=^https://api\.udache\.com/gulfstream/pre-sale/v1/other/pGetSceneList,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-SceneList = type=http-response,pattern=^https://api\.udache\.com/gulfstream/pre-sale/v1/other/pGetSceneList,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 # 顶部横幅
-Didi-TopBanner = type=http-response,pattern=^https://conf\.diditaxi\.com\.cn/ota/na/yuantu/infoList,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-TopBanner = type=http-response,pattern=^https://conf\.diditaxi\.com\.cn/ota/na/yuantu/infoList,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 # 海外首页布局
-Didi-Oversea = type=http-response,pattern=^https://conf\.diditaxi\.com\.cn/homepage/v1/oversea/layout,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-Oversea = type=http-response,pattern=^https://conf\.diditaxi\.com\.cn/homepage/v1/oversea/layout,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 # 钱包首页推广卡片
-Didi-Wallet = type=http-response,pattern=^https://mapi\.xiaojukeji\.com/passenger-wallet/api/v6/wallet/homepage,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-Wallet = type=http-response,pattern=^https://mapi\.xiaojukeji\.com/passenger-wallet/api/v6/wallet/homepage,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 # 打车首页布局推广卡片
-Didi-HomeLayout = type=http-response,pattern=^https://api\.udache\.com/gulfstream/porsche/v1/dache_homepage_layout,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-HomeLayout = type=http-response,pattern=^https://api\.udache\.com/gulfstream/porsche/v1/dache_homepage_layout,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 # 行程中推广组件
-Didi-InTrip = type=http-response,pattern=^https://api\.udache\.com/gulfstream/passenger-center/v2/other/pInTripLayout,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-InTrip = type=http-response,pattern=^https://api\.udache\.com/gulfstream/passenger-center/v2/other/pInTripLayout,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 # 用户中心布局营销卡片
-Didi-Layout = type=http-response,pattern=^https://common\.diditaxi\.com\.cn/common/v5/usercenter/layout,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/didi_adskip.js
+Didi-Layout = type=http-response,pattern=^https://common\.diditaxi\.com\.cn/common/v5/usercenter/layout,requires-body=true,max-size=0,script-path=hhttps://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/didi_adskip.js
 
 [MITM]
 hostname = %APPEND% common.diditaxi.com.cn,conf.diditaxi.com.cn,api.udache.com,res.xiaojukeji.com,ct.xiaojukeji.com,mapi.xiaojukeji.com
