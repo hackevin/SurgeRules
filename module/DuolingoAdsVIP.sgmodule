@@ -26,8 +26,8 @@ URL-REGEX,^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/plus-promotions/,R
 URL-REGEX,^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+/ads/,REJECT
 
 [Script]
-多邻国解锁 = type=http-response,pattern=^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+[^/]*$,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/duolingo_unlock.js
-多邻国去广告 = type=http-request,pattern=^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+/ads/,requires-body=false,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/duolingo_unlock.js
+多邻国解锁 = type=http-response,pattern=^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+[^/]*$,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/duolingo_adskipvip.js
+多邻国去广告 = type=http-request,pattern=^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/users/\d+/ads/,requires-body=false,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/duolingo_adskipvip.js
 
 [URL Rewrite]
 ^https?://ios-api-2\.duolingo\.cn/\d{4}-\d{2}-\d{2}/plus-promotions/.* - reject
