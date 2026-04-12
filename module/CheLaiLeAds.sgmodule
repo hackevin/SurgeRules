@@ -1,0 +1,25 @@
+#!name=车来了净化 (Surge版)
+#!desc=去除车来了小程序/APP广告、底栏、信息流、隐私追踪。由 ddgksf2013 原规则适配 Surge。
+#!author=ddgksf2013 & Grok
+#!version=1.0.3
+#!update-url=https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/CheLaiLeAds.conf
+#!homepage=https://github.com/ddgksf2013/Rewrite
+
+[Rule]
+# 广告接口直接拒绝（Surge 推荐用 REJECT，避免 reject-200 带来的兼容问题）
+DOMAIN-SUFFIX,chelaile.net.cn,DIRECT
+
+# 更精确的规则（防止误杀）
+URL-REGEX,^https?://.*chelaile\.net\.cn/goocity/flowPos/listByPos,REJECT
+URL-REGEX,^https?://cdn\.web\.chelaile\.net\.cn/info-flow/index\.html,REJECT
+URL-REGEX,^https?://.*chelaile\.net\.cn/(api/)?adpub,REJECT
+URL-REGEX,^https?://124\.70\.194\.16/(ip|adpub|goocity/flowPos/listByPos),REJECT
+URL-REGEX,^https?://web\.chelaile\.net\.cn/api/operative_position/infoflow,REJECT
+URL-REGEX,^https?://atrace\.chelaile\.net\.cn/(wx_preloadAd|adAnalysis),REJECT
+
+[Script]
+# 去除底栏（响应体修改，必须开启 requires-body）
+车来了去底栏 = type=http-response, pattern=^https?://.*chelaile\.net\.cn/goocity/city!, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/chelaile_adskip.js, timeout=10, script-update-interval=86400
+
+[MITM]
+hostname = %APPEND% chelaile.net.cn, web.chelaile.net.cn, api.chelaile.net.cn, cdn.api.chelaile.net.cn, cdn.web.chelaile.net.cn, atrace.chelaile.net.cn

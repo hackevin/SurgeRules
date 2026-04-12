@@ -1,0 +1,36 @@
+#!name=YouTube 去广告
+#!desc=去除 YouTube 视频贴片广告、信息流广告、短视频广告，阻断 QUIC 防止绕过
+#!author=ddgksf2013 / Maasea / DivineEngine (Surge 适配)
+#!version=1.1.0
+#!system=ios
+
+[Rule]
+# 阻止 YouTube 走 QUIC/UDP 绕过规则
+AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP)),REJECT
+
+# YouTube 广告域名
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN,googleadservices.com,REJECT
+DOMAIN,googlesyndication.com,REJECT
+DOMAIN,s0.2mdn.net,REJECT
+
+[Map Local]
+# 广告统计接口
+^https?://(www|s)\.youtube\.com/api/stats/ads data-type=text data="" status-code=200
+^https?://(www|s)\.youtube\.com/(pagead|ptracking) data-type=text data="" status-code=200
+^https?://s\.youtube\.com/api/stats/qoe\?adcontext data-type=text data="" status-code=200
+
+# 广告视频流（initplayback）
+^https?://[\w-]+\.googlevideo\.com/initplayback.+&oad data-type=text data="" status-code=200
+
+[URL Rewrite]
+# 去除视频广告分层请求（302 重定向，Surge 支持）
+^(https?://[\w-]+\.googlevideo\.com/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+
+[Script]
+# binary-body-mode=1 必须，YouTube 接口返回 Protobuf 二进制
+YouTube-Ads = type=http-response,pattern=^https://youtubei\.googleapis\.com/youtubei/v1/(browse|next|player|search|reel/reel_watch_sequence|guide|account/get_setting|get_watch)(\?.*)?$,requires-body=true,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com,-redirector*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com

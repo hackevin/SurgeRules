@@ -1,0 +1,7 @@
+# 广告视频流
+URL-REGEX,^https?://[\w-]+\.googlevideo\.com/(?!(dclk_video_ads|videoplayback\?)).+&oad
+
+# 通用广告统计接口
+URL-REGEX,^https?://(www|s)\.youtube\.com/api/stats/ads
+URL-REGEX,^https?://(www|s)\.youtube\.com/(pagead|ptracking)
+URL-REGEX,^https?://s\.youtube\.com/api/stats/qoe\?adcontext

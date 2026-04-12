@@ -1,0 +1,28 @@
+#!name=Spotify 增强
+#!desc=去除播放广告、解锁部分 Premium（去随机播放、歌手/专辑列表正常展示）。登录后再启用，重启 App 等待生效，音质无法设为超高
+#!author=app2smile / ddgksf2013 (Surge 适配)
+#!version=1.1.0
+#!system=ios
+
+[Rule]
+# 广告追踪域名
+DOMAIN,adeventtracker.spotify.com,REJECT
+DOMAIN,ads-fa.spotify.com,REJECT
+DOMAIN,audio2.spotify.com,REJECT
+
+[Script]
+# ---- 去广告 ----
+Spotify-AdSkip = type=http-response,pattern=^https://spclient\.wg\.spotify\.com/melody/v1/playback_context,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/spotify_adskip.js
+
+Spotify-Gabo = type=http-response,pattern=^https://spclient\.wg\.spotify\.com/gabo-receiver-service/,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/spotify_adskip.js
+
+# ---- Premium 解锁 ----
+# 删除缓存请求头，强制获取最新配置
+Spotify-Header = type=http-request,pattern=^https://(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)/user-customization-service/v1/customize$,requires-body=false,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-qx-header.js
+# 修改 bootstrap / customize 响应，解锁 Premium 功能（Protobuf 二进制，必须加 binary-body-mode=1）
+Spotify-Proto = type=http-response,pattern=^https://(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)/(bootstrap/v1/bootstrap|user-customization-service/v1/customize)$,requires-body=true,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/spotify-proto.js
+# 歌手/专辑列表：伪装 iPad 平台以正常展示
+Spotify-Json = type=http-request,pattern=^https://(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)/(artistview/v1/artist|album-entity-view/v2/album)/,requires-body=false,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+
+[MITM]
+hostname = %APPEND% spclient.wg.spotify.com,*-spclient.spotify.com

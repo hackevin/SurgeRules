@@ -1,0 +1,29 @@
+#!name=中国移动去广告进阶版
+#!desc=精细化过滤开屏、弹窗及首页牛皮癣广告，优化加载速度
+#!system=ios
+
+[Rule]
+# 核心广告域名拦截
+DOMAIN,ad.10086.cn,REJECT
+DOMAIN,adcdn.10086.cn,REJECT
+DOMAIN,msg.10086.cn,REJECT
+DOMAIN,promotion.10086.cn,REJECT
+DOMAIN,amdc.m.taobao.com,REJECT
+
+# SDK 拦截 - 防止摇一摇跳转（穿山甲广告域名）
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.co,REJECT
+
+[URL Rewrite]
+# 1. 拦截开屏配置（正确格式：正则 _ reject）
+^https?://[^/]+\.10086\.cn/.*/startup/.* - reject
+^https?://[^/]+\.10086\.cn/.*/config/.*(ad|splash|popup) - reject
+
+# 2. 拦截“我的”页面红点/Banner
+^https?://[^/]+\.10086\.cn/.*/red-dot - reject
+
+# 3. 屏蔽咪咕视频预加载广告
+^https?://ad\.cmvideo\.cn/.* - reject
+
+[MITM]
+hostname = %APPEND% *.10086.cn

@@ -1,0 +1,11 @@
+#!name=Reddit 增强
+#!desc=去除 Reddit 信息流广告、帖子广告、NSFW 遮罩，伪装 Premium 会员
+#!author=ddgksf2013 (逻辑还原重写，移除混淆)
+#!version=1.0.4
+#!system=ios
+
+[Script]
+Reddit-Ads = type=http-response,pattern=^https?://gql-fed\.reddit\.com/$,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/reddit_adskip.js
+
+[MITM]
+hostname = %APPEND% gql-fed.reddit.com

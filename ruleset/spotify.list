@@ -1,0 +1,14 @@
+# =========================
+# Spotify
+# =========================
+DOMAIN-SUFFIX,pscdn.co
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,spoti.fi
+DOMAIN-SUFFIX,spotilocal.com
+DOMAIN-KEYWORD,spotify
+DOMAIN-SUFFIX,samsungmilkradio.com
+DOMAIN-SUFFIX,anchor.fm
+IP-CIDR,104.154.127.126/32
+IP-CIDR,35.186.224.47/32
+PROCESS-NAME,Spotify
+PROCESS-NAME,Spotify Helper

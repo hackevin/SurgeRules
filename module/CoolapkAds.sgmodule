@@ -1,0 +1,28 @@
+#!name=酷安净化
+#!desc=去除酷安开屏广告、首页广告、推广卡片、评论广告、商品推广，屏蔽热搜词
+#!author=ddgksf2013 (逻辑还原重写，移除混淆)
+#!version=1.0.12
+#!system=ios
+
+[Rule]
+# 屏蔽热词搜索
+URL-REGEX,^https?://api\.coolapk\.com/v6/search\?.*type=hotSearch,REJECT
+
+[Script]
+# 开屏广告
+Coolapk-Init = type=http-response,pattern=^https?://api\.coolapk\.com/v6/main/init,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+
+# 首页广告
+Coolapk-Index = type=http-response,pattern=^https?://api\.coolapk\.com/v6/main/indexV8,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+
+# 推广广告 / 酷品页推广
+Coolapk-DataList = type=http-response,pattern=^https?://api\.coolapk\.com/v6/(page/)?dataList,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+
+# 评论广告
+Coolapk-Reply = type=http-response,pattern=^https?://api\.coolapk\.com/v6/feed/replyList,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+
+# 帖子详情广告
+Coolapk-Detail = type=http-response,pattern=^https?://api\.coolapk\.com/v6/feed/detail,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/coolapk_adskip.js
+
+[MITM]
+hostname = %APPEND% api.coolapk.com

@@ -1,0 +1,7 @@
+DOMAIN-SUFFIX,ad.10010.com
+# 广告推送接口
+URL-REGEX,^https?://m\.client\.10010\.com/mobileserviceimportant/customer/querySmartServicekhd\.htm
+# 新人专享接口
+URL-REGEX,^https?://m\.client\.10010\.com/clientIndex/api/v1/index/queryIndexExclusiveOffers
+# 首页瀑布流图片
+URL-REGEX,^https?://img\.client\.10010\.com/homejingxuan12/js/(pubuliu|1homeView)

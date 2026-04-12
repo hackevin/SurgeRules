@@ -1,0 +1,26 @@
+#!name=Quora 去广告
+#!desc=屏蔽 Quora 广告追踪域名、拦截广告 API，过滤信息流广告条目
+#!author=hackevin
+#!version=1.0.0
+#!system=ios
+
+[Rule]
+# 广告追踪域名
+DOMAIN,ads.quora.com,REJECT
+DOMAIN,pixel.quora.com,REJECT
+DOMAIN,qsf.quora.com,REJECT
+DOMAIN-SUFFIX,quora-ads.com,REJECT
+
+# 广告及追踪 API 接口
+URL-REGEX,^https?://www\.quora\.com/ads,REJECT
+URL-REGEX,^https?://www\.quora\.com/api/ads/,REJECT
+URL-REGEX,^https?://www\.quora\.com/analytics/,REJECT
+URL-REGEX,^https?://www\.quora\.com/qevents/,REJECT
+URL-REGEX,^https?://www\.quora\.com/events/,REJECT
+
+[Script]
+# 过滤信息流中的广告条目
+Quora-Ads = type=http-response,pattern=^https?://www\.quora\.com/api/mobile/v\d+/(feed|home|search|answer),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/quora_adskip.js
+
+[MITM]
+hostname = %APPEND% www.quora.com

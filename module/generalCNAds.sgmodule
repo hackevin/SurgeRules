@@ -1,0 +1,62 @@
+#!name=国内App去广告增强
+#!desc=通用广告SDK拦截 + B站/京东/美团/移动开屏去广告
+#!author=claude
+#!version=2.0.0
+#!system=ios
+
+[Rule]
+
+# === 通用广告追踪 SDK ===
+DOMAIN-SUFFIX,adjust.com,REJECT
+DOMAIN-SUFFIX,appsflyer.com,REJECT
+DOMAIN-SUFFIX,branch.io,REJECT
+
+# === 腾讯广告 ===
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,adsmind.gdtimg.com,REJECT
+
+# === 阿里广告 ===
+DOMAIN-SUFFIX,alimama.com,REJECT
+DOMAIN-SUFFIX,mmstat.com,REJECT
+
+# === 京东广告 ===
+DOMAIN,jdad.jd.com,REJECT
+
+# === 字节广告 ===
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX,byteoversea.com,REJECT
+
+# === 百度广告 ===
+DOMAIN,mobads.baidu.com,REJECT
+DOMAIN,hm.baidu.com,REJECT
+
+# === 美团广告（仅广告子域，不拦截主域）===
+DOMAIN,ad.meituan.com,REJECT
+DOMAIN,adfront.meituan.com,REJECT
+DOMAIN,ad.dianping.com,REJECT
+
+# === 网易广告 ===
+DOMAIN,adgeo.163.com,REJECT
+
+# === 小米追踪 ===
+DOMAIN,tracking.miui.com,REJECT
+
+# === 谷歌广告（国内 app 内嵌）===
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+
+# === 移动广告域名 ===
+DOMAIN,ad.10086.cn,REJECT
+
+[Map Local]
+# === 京东开屏广告 ===
+^https?://api\.m\.jd\.com/client\.action\?functionId=startUp data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/blank/blank_dict.json"
+
+# === 美团开屏广告 ===
+^https?://wmapi\.meituan\.com/api/v\d+/loadInfo data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/blank/blank_dict.json"
+
+# === 大众点评开屏广告 ===
+^https?://mapi\.dianping\.com/.*splash data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/blank/blank_dict.json"
+
+[MITM]
+hostname = %APPEND% app.bilibili.com,api.bilibili.com,api.m.jd.com,wmapi.meituan.com,mapi.dianping.com

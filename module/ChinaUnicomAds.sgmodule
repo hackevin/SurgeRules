@@ -1,0 +1,19 @@
+#!name=中国联通净化
+#!desc=去除联通 App 热搜词、首页底部推广、广告推送、借钱积分彩铃等推广入口
+#!author=ddgksf2013 (逻辑还原重写，移除混淆)
+#!version=1.0.4
+#!system=ios
+
+[Rule]
+DOMAIN-SUFFIX,ad.10010.com,REJECT
+URL-REGEX,^https?://m\.client\.10010\.com/mobileserviceimportant/customer/querySmartServicekhd\.htm,REJECT
+URL-REGEX,^https?://m\.client\.10010\.com/clientIndex/api/v1/index/queryIndexExclusiveOffers,REJECT
+URL-REGEX,^https?://img\.client\.10010\.com/homejingxuan12/js/(pubuliu|1homeView),REJECT
+
+[Script]
+Unicom-SearchWord = type=http-response,pattern=^https?://m\.client\.10010\.com/search_service/search/searchScrollWord,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/unicom_adskip.js
+Unicom-HomeFusion = type=http-response,pattern=^https?://m\.client\.10010\.com/clientIndex/homefusion/fuInter,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/unicom_adskip.js
+Unicom-MyPage = type=http-response,pattern=^https?://m\.client\.10010\.com/clientMyPage/v\d/api/(myWallet|myPoints|myColorfulRingtone|newUserInfo|getDeviceInfo),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/unicom_adskip.js
+
+[MITM]
+hostname = %APPEND% m.client.10010.com,img.client.10010.com
