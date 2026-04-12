@@ -5,7 +5,7 @@
 #!system=ios
 
 [Script]
-Reddit-Ads = type=http-response,pattern=^https?://gql-fed\.reddit\.com/$,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/reddit_adskip.js
+Reddit-Ads = type=http-response,pattern=^https?://gql-fed\.reddit\.com/$,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/reddit_adskip.js
 
 [MITM]
 hostname = %APPEND% gql-fed.reddit.com
