@@ -57,52 +57,52 @@ DOMAIN,apm.zhihu.com,REJECT
 
 [Script]
 # 获取用户信息，本地伪装 VIP
-哲也_用户信息 = type=http-response,pattern=^https?://api\.zhihu\.com/people/,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_用户信息 = type=http-response,pattern=^https?://api\.zhihu\.com/people/,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 关键词屏蔽（需本地 VIP）
-哲也_关键词屏蔽 = type=http-request,pattern=^https?://api\.zhihu\.com/feed-root/block,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_关键词屏蔽 = type=http-request,pattern=^https?://api\.zhihu\.com/feed-root/block,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 优化推荐页 Tab
-哲也_推荐Tab = type=http-response,pattern=^https?://api\.zhihu\.com/root/tab/v2,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_推荐Tab = type=http-response,pattern=^https?://api\.zhihu\.com/root/tab/v2,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 推荐页去广告、过滤黑名单
-哲也_推荐页 = type=http-response,pattern=^https://(api|web-render)\.zhihu\.com/topstory/recommend,requires-body=true,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_推荐页 = type=http-response,pattern=^https://(api|web-render)\.zhihu\.com/topstory/recommend,requires-body=true,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 回答列表去广告
-哲也_回答列表 = type=http-response,pattern=^https://api\.zhihu\.com/questions/\d+/feeds,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_回答列表 = type=http-response,pattern=^https://api\.zhihu\.com/questions/\d+/feeds,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 回答信息流去广告
-哲也_回答信息流 = type=http-response,pattern=^https?://api\.zhihu\.com/next-render,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_回答信息流 = type=http-response,pattern=^https?://api\.zhihu\.com/next-render,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 消息页折叠官方消息
-哲也_消息页 = type=http-response,pattern=^https?://api\.zhihu\.com/notifications/v3/(message|timeline/entry/system_message),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_消息页 = type=http-response,pattern=^https?://api\.zhihu\.com/notifications/v3/(message|timeline/entry/system_message),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 评论页过滤黑名单
-哲也_评论页 = type=http-response,pattern=^https?://api\.zhihu\.com/(comment_v5/)?(answers|comments?|articles|pins)/\d+/(root_|child_)?comments?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_评论页 = type=http-response,pattern=^https?://api\.zhihu\.com/(comment_v5/)?(answers|comments?|articles|pins)/\d+/(root_|child_)?comments?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 回答页移除相关推荐
-哲也_回答页 = type=http-response,pattern=^https://(page-info|api)\.zhihu\.com/answers/v2/\d+,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_回答页 = type=http-response,pattern=^https://(page-info|api)\.zhihu\.com/answers/v2/\d+,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 文章页移除相关推荐
-哲也_文章页 = type=http-response,pattern=^https://api\.zhihu\.com/articles/v\d/\d+,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_文章页 = type=http-response,pattern=^https://api\.zhihu\.com/articles/v\d/\d+,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 关注页过滤黑名单
-哲也_关注页 = type=http-response,pattern=^https?://api\.zhihu\.com/moments_v3\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_关注页 = type=http-response,pattern=^https?://api\.zhihu\.com/moments_v3\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 热榜去广告
-哲也_热榜 = type=http-response,pattern=^https?://api\.zhihu\.com/topstory/hot-lists[?/],requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_热榜 = type=http-response,pattern=^https?://api\.zhihu\.com/topstory/hot-lists[?/],requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 搜索页预置广告
-哲也_搜索预置词 = type=http-response,pattern=^https?://api\.zhihu\.com/search/preset_words\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_搜索预置词 = type=http-response,pattern=^https?://api\.zhihu\.com/search/preset_words\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 搜索页猜你想搜
-哲也_猜你想搜 = type=http-response,pattern=^https?://api\.zhihu\.com/search/recommend_query,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_猜你想搜 = type=http-response,pattern=^https?://api\.zhihu\.com/search/recommend_query,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 黑名单同步
-哲也_黑名单 = type=http-response,pattern=^https://api\.zhihu\.com/settings/blocked_users,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_黑名单 = type=http-response,pattern=^https://api\.zhihu\.com/settings/blocked_users,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 # 回答页底部评论摘要
-哲也_评论摘要 = type=http-response,pattern=^https?://www\.zhihu\.com/api/v4/comment_v5/answers/\d+/abstract_comment\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/zhihu_adskip.js
+哲也_评论摘要 = type=http-response,pattern=^https?://www\.zhihu\.com/api/v4/comment_v5/answers/\d+/abstract_comment\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/zhihu_adskip.js
 
 [MITM]
 hostname = %APPEND% www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,m-cloud.zhihu.com,page-info.zhihu.com,web-render.zhihu.com
