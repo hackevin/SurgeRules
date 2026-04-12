@@ -19,7 +19,7 @@ URL-REGEX,^https?://atrace\.chelaile\.net\.cn/(wx_preloadAd|adAnalysis),REJECT
 
 [Script]
 # 去除底栏（响应体修改，必须开启 requires-body）
-车来了去底栏 = type=http-response, pattern=^https?://.*chelaile\.net\.cn/goocity/city!, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/chelaile_adskip.js, timeout=10, script-update-interval=86400
+车来了去底栏 = type=http-response, pattern=^https?://.*chelaile\.net\.cn/goocity/city!, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/chelaile_adskip.js, timeout=10, script-update-interval=86400
 
 [MITM]
 hostname = %APPEND% chelaile.net.cn, web.chelaile.net.cn, api.chelaile.net.cn, cdn.api.chelaile.net.cn, cdn.web.chelaile.net.cn, atrace.chelaile.net.cn
