@@ -23,7 +23,7 @@ URL-REGEX, ^https?://ad\.api\.moji\.com/get_ads_v3, REJECT
 [Script]
 # 脚本处理 (动态内容剥离)
 # 请确保下方 URL 替换为你自己托管的 JS 直链
-墨迹去广告 = type=http-response,pattern=^https?:\/\/api\.moji\.com\/v6\/(ad\/get_ad|config\/get_config),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/moji_adskip.js
+墨迹去广告 = type=http-response,pattern=^https?:\/\/api\.moji\.com\/v6\/(ad\/get_ad|config\/get_config),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/moji_adskip.js
 
 [MITM]
 hostname = %APPEND% api.moji.com, ad.api.moji.com
