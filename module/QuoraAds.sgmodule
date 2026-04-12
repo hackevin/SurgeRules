@@ -20,7 +20,7 @@ URL-REGEX,^https?://www\.quora\.com/events/,REJECT
 
 [Script]
 # 过滤信息流中的广告条目
-Quora-Ads = type=http-response,pattern=^https?://www\.quora\.com/api/mobile/v\d+/(feed|home|search|answer),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/tiktok-ruleset/refs/heads/main/quora_adskip.js
+Quora-Ads = type=http-response,pattern=^https?://www\.quora\.com/api/mobile/v\d+/(feed|home|search|answer),requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/quora_adskip.js
 
 [MITM]
 hostname = %APPEND% www.quora.com
