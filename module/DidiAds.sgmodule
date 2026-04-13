@@ -23,19 +23,19 @@ IP-CIDR,116.85.1.22/32,REJECT,no-resolve
 IP-CIDR,116.85.3.25/32,REJECT,no-resolve
 
 # 广告域名
-DOMAIN,gwp.xiaojukeji.com,REJECT
+DOMAIN,gwp.xiaojukeji.com,REJECT-DROP
 
 # 小程序首页横幅 / 推广接口
-URL-REGEX,^https://res\.xiaojukeji\.com/resapi/activity/getMulti\?,REJECT
-URL-REGEX,^https://res\.xiaojukeji\.com/resapi/activity/xpget,REJECT
-URL-REGEX,^https://res\.xiaojukeji\.com/resapi/activity/mget,REJECT
-URL-REGEX,^https://res\.xiaojukeji\.com/resapi/activity/getInsActivityV2,REJECT
-URL-REGEX,^https://ct\.xiaojukeji\.com/agent/v3/feeds,REJECT
-URL-REGEX,^https://freight\.xiaojukeji\.com/gateway,REJECT
-URL-REGEX,^https://daijia\.kuaidadi\.com:443/gateway,REJECT
-URL-REGEX,^https://conf\.diditaxi\.com\.cn/dynamic/conf,REJECT
-URL-REGEX,^https://api\.udache\.com/gulfstream/watson/v1/bubble/getBubble,REJECT
-URL-REGEX,^https://conf\.diditaxi\.com\.cn/homepage/v\d/other/slow,REJECT
+URL-REGEX,^https://res\.xiaojukeji\.com/resapi/activity/getMulti\?,REJECT-DROP
+URL-REGEX,^https://res\.xiaojukeji\.com/resapi/activity/xpget,REJECT-DROP
+URL-REGEX,^https://res\.xiaojukeji\.com/resapi/activity/mget,REJECT-DROP
+URL-REGEX,^https://res\.xiaojukeji\.com/resapi/activity/getInsActivityV2,REJECT-DROP
+URL-REGEX,^https://ct\.xiaojukeji\.com/agent/v3/feeds,REJECT-DROP
+URL-REGEX,^https://freight\.xiaojukeji\.com/gateway,REJECT-DROP
+URL-REGEX,^https://daijia\.kuaidadi\.com:443/gateway,REJECT-DROP
+URL-REGEX,^https://conf\.diditaxi\.com\.cn/dynamic/conf,REJECT-DROP
+URL-REGEX,^https://api\.udache\.com/gulfstream/watson/v1/bubble/getBubble,REJECT-DROP
+URL-REGEX,^https://conf\.diditaxi\.com\.cn/homepage/v\d/other/slow,REJECT-DROP
 
 [Script]
 # 用户中心
