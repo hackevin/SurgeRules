@@ -4,15 +4,15 @@
 
 [Rule]
 # 核心广告域名拦截
-DOMAIN,ad.10086.cn,REJECT
-DOMAIN,adcdn.10086.cn,REJECT
-DOMAIN,msg.10086.cn,REJECT
-DOMAIN,promotion.10086.cn,REJECT
-DOMAIN,amdc.m.taobao.com,REJECT
+DOMAIN,ad.10086.cn,REJECT-DROP
+DOMAIN,adcdn.10086.cn,REJECT-DROP
+DOMAIN,msg.10086.cn,REJECT-DROP
+DOMAIN,promotion.10086.cn,REJECT-DROP
+DOMAIN,amdc.m.taobao.com,REJECT-DROP
 
 # SDK 拦截 - 防止摇一摇跳转（穿山甲广告域名）
-DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
-DOMAIN-SUFFIX,pglstatp-toutiao.co,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-DROP
+DOMAIN-SUFFIX,pglstatp-toutiao.co,REJECT-DROP
 
 [URL Rewrite]
 # 1. 拦截开屏配置（正确格式：正则 _ reject）
