@@ -6,7 +6,7 @@
 
 [Rule]
 # 广告域名直接拦截（无需 MITM）
-DOMAIN,ad.12306.cn,REJECT
+DOMAIN,ad.12306.cn,REJECT-DROP
 
 [Script]
 # 广告接口返回伪造空数据（需 MITM ad.12306.cn）
