@@ -2,7 +2,7 @@
 #!desc=去除滴滴首页横幅广告、导航推广、用户中心营销卡片、钱包推广，精简底部导航
 #!author=ZenmoFeiShi (Surge 适配)
 #!version=2026.1.9
-#!system=ios
+#!category=去广告
 
 [Rule]
 # 广告 IP 直接拒绝（无需 MitM）
