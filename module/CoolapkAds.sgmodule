@@ -6,7 +6,7 @@
 
 [Rule]
 # 屏蔽热词搜索
-URL-REGEX,^https?://api\.coolapk\.com/v6/search\?.*type=hotSearch,REJECT
+URL-REGEX,^https?://api\.coolapk\.com/v6/search\?.*type=hotSearch,REJECT-DROP
 
 [Script]
 # 开屏广告
