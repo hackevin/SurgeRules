@@ -2,7 +2,7 @@
 #!desc=解锁Duolingo无限体力去广告
 #!author=Claude
 #!version=2026.3.31
-#!system=ios
+#!category=去广告
 
 [Rule]
 # 广告域名用 Rule，不需要 MITM，性能好
