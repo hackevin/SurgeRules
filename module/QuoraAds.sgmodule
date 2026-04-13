@@ -2,7 +2,7 @@
 #!desc=屏蔽 Quora 广告追踪域名、拦截广告 API，过滤信息流广告条目
 #!author=hackevin
 #!version=1.0.0
-#!system=ios
+#!category=去广告
 
 [Rule]
 # 广告追踪域名
