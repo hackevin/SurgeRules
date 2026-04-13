@@ -6,28 +6,28 @@
 
 [Rule]
 # 广告接口拦截（来自 blackmatrix7 实测规则）
-URL-REGEX,^https?://www\.xiaohongshu\.com/api/sns/(v\d/ads/resource|v2/hey/\w+/hey_gallery),REJECT
-URL-REGEX,^https?://www\.xiaohongshu\.com/api/sns/v\d/ads/,REJECT
-URL-REGEX,^https?://www\.xiaohongshu\.com/api/sns/v\d/system_service/splash_config,REJECT
+URL-REGEX,^https?://www\.xiaohongshu\.com/api/sns/(v\d/ads/resource|v2/hey/\w+/hey_gallery),REJECT-DROP
+URL-REGEX,^https?://www\.xiaohongshu\.com/api/sns/v\d/ads/,REJECT-DROP
+URL-REGEX,^https?://www\.xiaohongshu\.com/api/sns/v\d/system_service/splash_config,REJECT-DROP
 
 # 广告接口拦截（原版规则）
-URL-REGEX,^https?://www\.xiaohongshu\.com/api/sns/v\d/(tag/)?ads,REJECT
-URL-REGEX,^https?://edith\.xiaohongshu\.com/api/sns/v\d/(tag/)?ads,REJECT
+URL-REGEX,^https?://www\.xiaohongshu\.com/api/sns/v\d/(tag/)?ads,REJECT-DROP
+URL-REGEX,^https?://edith\.xiaohongshu\.com/api/sns/v\d/(tag/)?ads,REJECT-DROP
 
 # 青少年模式弹窗
-URL-REGEX,^https?://edith\.xiaohongshu\.com/api/sns/v\d/user/teenager/status,REJECT
+URL-REGEX,^https?://edith\.xiaohongshu\.com/api/sns/v\d/user/teenager/status,REJECT-DROP
 
 # 惊喜盒子弹窗
-URL-REGEX,^https?://edith\.xiaohongshu\.com/api/sns/v\d/surprisebox/(get_style|open|submit_action),REJECT
+URL-REGEX,^https?://edith\.xiaohongshu\.com/api/sns/v\d/surprisebox/(get_style|open|submit_action),REJECT-DROP
 
 # 数据上报 / 埋点
-URL-REGEX,^https?://referee\.xiaohongshu\.com/v\d/stateReport,REJECT
+URL-REGEX,^https?://referee\.xiaohongshu\.com/v\d/stateReport,REJECT-DROP
 
 # 开关控制（原版）
-URL-REGEX,^https?://pages\.xiaohongshu\.com/data/native/matrix_switches,REJECT
+URL-REGEX,^https?://pages\.xiaohongshu\.com/data/native/matrix_switches,REJECT-DROP
 
 # 水印图片
-URL-REGEX,^https://ci\.xiaohongshu\.com/system_config/watermark,REJECT
+URL-REGEX,^https://ci\.xiaohongshu\.com/system_config/watermark,REJECT-DROP
 
 [Script]
 # 过滤信息流广告卡片、去水印字段
