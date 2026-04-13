@@ -1,7 +1,7 @@
 #!name=高德地图净化
 #!desc=去除高德地图开屏广告、信息流广告、底部推广、搜索热词推广等
 #!version=1.0.28
-#!system=ios
+#!category=去广告
 
 [Rule]
 DOMAIN-SUFFIX,optimus-ads.amap.com,DIRECT
