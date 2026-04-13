@@ -7,46 +7,46 @@
 [Rule]
 
 # === 通用广告追踪 SDK ===
-DOMAIN-SUFFIX,adjust.com,REJECT
-DOMAIN-SUFFIX,appsflyer.com,REJECT
-DOMAIN-SUFFIX,branch.io,REJECT
+DOMAIN-SUFFIX,adjust.com,REJECT-DROP
+DOMAIN-SUFFIX,appsflyer.com,REJECT-DROP
+DOMAIN-SUFFIX,branch.io,REJECT-DROP
 
 # === 腾讯广告 ===
-DOMAIN-SUFFIX,gdt.qq.com,REJECT
-DOMAIN-SUFFIX,adsmind.gdtimg.com,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT-DROP
+DOMAIN-SUFFIX,adsmind.gdtimg.com,REJECT-DROP
 
 # === 阿里广告 ===
-DOMAIN-SUFFIX,alimama.com,REJECT
-DOMAIN-SUFFIX,mmstat.com,REJECT
+DOMAIN-SUFFIX,alimama.com,REJECT-DROP
+DOMAIN-SUFFIX,mmstat.com,REJECT-DROP
 
 # === 京东广告 ===
-DOMAIN,jdad.jd.com,REJECT
+DOMAIN,jdad.jd.com,REJECT-DROP
 
 # === 字节广告 ===
-DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
-DOMAIN-SUFFIX,byteoversea.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-DROP
+DOMAIN-SUFFIX,byteoversea.com,REJECT-DROP
 
 # === 百度广告 ===
-DOMAIN,mobads.baidu.com,REJECT
-DOMAIN,hm.baidu.com,REJECT
+DOMAIN,mobads.baidu.com,REJECT-DROP
+DOMAIN,hm.baidu.com,REJECT-DROP
 
 # === 美团广告（仅广告子域，不拦截主域）===
-DOMAIN,ad.meituan.com,REJECT
-DOMAIN,adfront.meituan.com,REJECT
-DOMAIN,ad.dianping.com,REJECT
+DOMAIN,ad.meituan.com,REJECT-DROP
+DOMAIN,adfront.meituan.com,REJECT-DROP
+DOMAIN,ad.dianping.com,REJECT-DROP
 
 # === 网易广告 ===
-DOMAIN,adgeo.163.com,REJECT
+DOMAIN,adgeo.163.com,REJECT-DROP
 
 # === 小米追踪 ===
-DOMAIN,tracking.miui.com,REJECT
+DOMAIN,tracking.miui.com,REJECT-DROP
 
 # === 谷歌广告（国内 app 内嵌）===
-DOMAIN-SUFFIX,doubleclick.net,REJECT
-DOMAIN-SUFFIX,googlesyndication.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT-DROP
+DOMAIN-SUFFIX,googlesyndication.com,REJECT-DROP
 
 # === 移动广告域名 ===
-DOMAIN,ad.10086.cn,REJECT
+DOMAIN,ad.10086.cn,REJECT-DROP
 
 [Map Local]
 # === 京东开屏广告 ===
