@@ -2,7 +2,7 @@
 #!desc=去除酷安开屏广告、首页广告、推广卡片、评论广告、商品推广，屏蔽热搜词
 #!author=ddgksf2013 (逻辑还原重写，移除混淆)
 #!version=1.0.12
-#!system=ios
+#!category=去广告
 
 [Rule]
 # 屏蔽热词搜索
