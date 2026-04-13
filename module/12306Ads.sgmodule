@@ -2,6 +2,7 @@
 #!desc=去除开屏及信息流广告
 #!author=ddgksf2013 (hackevin 适配)
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/12306.png
+#!category=去广告
 
 [Rule]
 # 广告域名直接拦截（无需 MITM）
