@@ -2,7 +2,7 @@
 #!desc=去除 YouTube 视频贴片广告、信息流广告、短视频广告，阻断 QUIC 防止绕过
 #!author=ddgksf2013 / Maasea / DivineEngine (Surge 适配)
 #!version=1.1.0
-#!system=ios
+#!category=去广告
 
 [Rule]
 # 阻止 YouTube 走 QUIC/UDP 绕过规则
