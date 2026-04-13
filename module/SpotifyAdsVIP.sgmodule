@@ -11,6 +11,9 @@ DOMAIN,ads-fa.spotify.com,REJECT
 DOMAIN,audio2.spotify.com,REJECT
 
 [Script]
+# 广告预取接口（Mac 桌面版核心）
+Spotify-AdLogic = type=http-response,pattern=^https://spclient\.wg\.spotify\.com/ad-logic/,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/spotify_adskip.js
+
 # ---- 去广告 ----
 Spotify-AdSkip = type=http-response,pattern=^https://spclient\.wg\.spotify\.com/melody/v1/playback_context,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/spotify_adskip.js
 
