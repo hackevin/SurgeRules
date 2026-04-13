@@ -2,7 +2,6 @@
 #!desc=去除播放广告、解锁部分 Premium（去随机播放、歌手/专辑列表正常展示）。登录后再启用，重启 App 等待生效，音质无法设为超高
 #!author=app2smile / ddgksf2013 (Surge 适配)
 #!version=1.1.0
-#!system=ios,mac
 
 [Rule]
 # 广告追踪域名
