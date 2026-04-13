@@ -5,13 +5,13 @@
 
 [Rule]
 # --- 域名后缀拦截 (对应原 host-suffix) ---
-DOMAIN-SUFFIX, ad-track.moji.com, REJECT
-DOMAIN-SUFFIX, ad.api.moji.com, REJECT
-DOMAIN-SUFFIX, adlaunch.moji.com, REJECT
-DOMAIN-SUFFIX, ads.mojicdn.com, REJECT
-DOMAIN-SUFFIX, g.moji.com, REJECT
-DOMAIN-SUFFIX, v1.log.moji.com, REJECT
-DOMAIN-SUFFIX, adashbc.ut.taobao.com, REJECT
+DOMAIN-SUFFIX, ad-track.moji.com, REJECT-DROP
+DOMAIN-SUFFIX, ad.api.moji.com, REJECT-DROP
+DOMAIN-SUFFIX, adlaunch.moji.com, REJECT-DROP
+DOMAIN-SUFFIX, ads.mojicdn.com, REJECT-DROP
+DOMAIN-SUFFIX, g.moji.com, REJECT-DROP
+DOMAIN-SUFFIX, v1.log.moji.com, REJECT-DROP
+DOMAIN-SUFFIX, adashbc.ut.taobao.com, REJECT-DROP
 
 
 # --- 具体的域名拦截 (对应原 host) ---
