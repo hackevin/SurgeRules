@@ -11,13 +11,13 @@ IP-CIDR,103.41.167.237/32,REJECT,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
 
 # 追踪/崩溃上报域名
-DOMAIN,mqtt.zhihu.com,REJECT
-DOMAIN,sugar.zhihu.com,REJECT
-DOMAIN,crash2.zhihu.com,REJECT
-DOMAIN,appcloud.zhihu.com,REJECT
-DOMAIN,appcloud2.in.zhihu.com,REJECT
-DOMAIN,duga.zhihu.com,REJECT
-DOMAIN,apm.zhihu.com,REJECT
+DOMAIN,mqtt.zhihu.com,REJECT-DROP
+DOMAIN,sugar.zhihu.com,REJECT-DROP
+DOMAIN,crash2.zhihu.com,REJECT-DROP
+DOMAIN,appcloud.zhihu.com,REJECT-DROP
+DOMAIN,appcloud2.in.zhihu.com,REJECT-DROP
+DOMAIN,duga.zhihu.com,REJECT-DROP
+DOMAIN,apm.zhihu.com,REJECT-DROP
 
 [Map Local]
 # ---- 原 URL-REGEX REJECT 接口，改为返回空 JSON（避免 app 报网络错误）----
