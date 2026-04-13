@@ -6,14 +6,14 @@
 
 [Rule]
 # 阻止 YouTube 走 QUIC/UDP 绕过规则
-AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP)),REJECT
-AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP)),REJECT
+AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP)),REJECT-DROP
+AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP)),REJECT-DROP
 
 # YouTube 广告域名
-DOMAIN-SUFFIX,doubleclick.net,REJECT
-DOMAIN,googleadservices.com,REJECT
-DOMAIN,googlesyndication.com,REJECT
-DOMAIN,s0.2mdn.net,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT-DROP
+DOMAIN,googleadservices.com,REJECT-DROP
+DOMAIN,googlesyndication.com,REJECT-DROP
+DOMAIN,s0.2mdn.net,REJECT-DROP
 
 [Map Local]
 # 广告统计接口
