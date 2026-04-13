@@ -13,7 +13,7 @@ DOMAIN,audio2.spotify.com,REJECT-DROP
 URL-REGEX,^https://spclient\.wg\.spotify\.com/ad-logic/,REJECT-DROP
 URL-REGEX,^https://spclient\.wg\.spotify\.com/ads/,REJECT-DROP
 URL-REGEX,^https://spclient\.wg\.spotify\.com/sponsoredplaylist/,REJECT-DROP
-URL-REGEX,^https://.*-spclient\.spotify\.com/storage-resolve/.*product=0,REJECT-DROP
+# URL-REGEX,^https://.*-spclient\.spotify\.com/storage-resolve/.*product=0,REJECT-DROP
 
 [Script]
 # 播放队列去广告（iOS / Mac 通用）
