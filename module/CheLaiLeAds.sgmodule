@@ -4,6 +4,7 @@
 #!version=1.0.3
 #!update-url=https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/CheLaiLeAds.conf
 #!homepage=https://github.com/ddgksf2013/Rewrite
+#!category=去广告
 
 [Rule]
 # 广告接口直接拒绝（Surge 推荐用 REJECT，避免 reject-200 带来的兼容问题）
