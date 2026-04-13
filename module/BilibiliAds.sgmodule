@@ -6,8 +6,8 @@
 
 [Rule]
 # B站广告追踪域名
-DOMAIN,adfront.bilibili.com,REJECT
-DOMAIN,data.bilibili.com,REJECT
+DOMAIN,adfront.bilibili.com,REJECT-DROP
+DOMAIN,data.bilibili.com,REJECT-DROP
 
 [Map Local]
 # 开屏广告
