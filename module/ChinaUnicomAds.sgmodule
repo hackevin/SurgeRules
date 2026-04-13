@@ -2,7 +2,7 @@
 #!desc=去除联通 App 热搜词、首页底部推广、广告推送、借钱积分彩铃等推广入口
 #!author=ddgksf2013 (逻辑还原重写，移除混淆)
 #!version=1.0.4
-#!system=ios
+#!category=去广告
 
 [Rule]
 DOMAIN-SUFFIX,ad.10010.com,REJECT
