@@ -15,11 +15,11 @@ DOMAIN-SUFFIX, adashbc.ut.taobao.com, REJECT-DROP
 
 
 # --- 具体的域名拦截 (对应原 host) ---
-DOMAIN, alitui.weibo.com, REJECT
-DOMAIN, amdc.m.taobao.com, REJECT
+DOMAIN, alitui.weibo.com, REJECT-DROP
+DOMAIN, amdc.m.taobao.com, REJECT-DROP
 
 # 拒绝开屏广告请求 (静态路径)
-URL-REGEX, ^https?://ad\.api\.moji\.com/get_ads_v3, REJECT
+URL-REGEX, ^https?://ad\.api\.moji\.com/get_ads_v3, REJECT-DROP
 
 [Script]
 # 脚本处理 (动态内容剥离)
