@@ -2,7 +2,7 @@
 #!desc=去除开屏广告、信息流广告、回答页推广、评论广告、营销消息，本地伪装 VIP 解锁关键词屏蔽
 #!author=blackmatrix7 (hackevin 适配，脚本自托管)
 #!version=3.1.0
-#!system=ios
+#!category=去广告
 
 [Rule]
 # HTTP DNS 广告 IP 拦截
