@@ -15,6 +15,7 @@ DOMAIN,audio2.spotify.com,REJECT
 Spotify-AdLogic = type=http-response,pattern=^https://spclient\.wg\.spotify\.com/ad-logic/,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/spotify_adskip.js
 Spotify-AdsV3 = type=http-response,pattern=^https://spclient\.wg\.spotify\.com/ads/,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/spotify_adskip.js
 Spotify-AudioAd = type=http-response,pattern=^https://.*-spclient\.spotify\.com/storage-resolve/.*product=0,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/spotify_adskip.js
+Spotify-Sponsored = type=http-response,pattern=^https://spclient\.wg\.spotify\.com/sponsoredplaylist/,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/spotify_adskip.js
 
 # ---- 去广告 ----
 Spotify-AdSkip = type=http-response,pattern=^https://spclient\.wg\.spotify\.com/melody/v1/playback_context,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/spotify_adskip.js
