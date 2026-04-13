@@ -2,7 +2,6 @@
 #!desc=屏蔽广告接口、开屏广告、数据上报，过滤信息流广告卡片，去水印字段
 #!author=blackmatrix7 / ddgksf2013 (Surge 适配重写)
 #!version=1.0.0
-#!system=ios,mac
 
 [Rule]
 # 广告接口拦截（来自 blackmatrix7 实测规则）
