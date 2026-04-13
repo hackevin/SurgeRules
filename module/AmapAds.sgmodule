@@ -4,15 +4,15 @@
 #!category=去广告
 
 [Rule]
-DOMAIN-SUFFIX,optimus-ads.amap.com,DIRECT
+DOMAIN-SUFFIX,optimus-ads.amap.com,REJECT-DROP
 URL-REGEX,^https?://.*\.amap\.com/ws/aos/alimama/splash_screen,REJECT-TINYGIF
-URL-REGEX,^https?://.*\.amap\.com/v\d/ai_rec/,REJECT
-URL-REGEX,^https?://.*\.amap\.com/ws/faas/amap-navigation/card-service-route-plan\?,REJECT
-URL-REGEX,^https?://.*\.amap\.com/ws/asa/ads_attribution,REJECT
+URL-REGEX,^https?://.*\.amap\.com/v\d/ai_rec/,REJECT-DROP
+URL-REGEX,^https?://.*\.amap\.com/ws/faas/amap-navigation/card-service-route-plan\?,REJECT-DROP
+URL-REGEX,^https?://.*\.amap\.com/ws/asa/ads_attribution,REJECT-DROP
 URL-REGEX,^https?://.*\.amap\.com/ws/boss/order_web/\w{8}_information,REJECT-TINYGIF
 URL-REGEX,^https?://.*\.amap\.com/uploadimg/\w+\.gif,REJECT-TINYGIF
-URL-REGEX,^https?://.*\.amap\.com/ws/valueadded/weather,REJECT
-URL-REGEX,^http://amdc\.m\.taobao\.com,REJECT
+URL-REGEX,^https?://.*\.amap\.com/ws/valueadded/weather,REJECT-DROP
+URL-REGEX,^http://amdc\.m\.taobao\.com,REJECT-DROP
 
 [Script]
 Amap-Splash = type=http-response,pattern=^https?://.*\.amap\.com/ws/valueadded/alimama/splash_screen,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/js/amap_adskip.js
