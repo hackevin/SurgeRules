@@ -6,17 +6,17 @@
 
 [Rule]
 # 广告追踪域名
-DOMAIN,ads.quora.com,REJECT
-DOMAIN,pixel.quora.com,REJECT
-DOMAIN,qsf.quora.com,REJECT
-DOMAIN-SUFFIX,quora-ads.com,REJECT
+DOMAIN,ads.quora.com,REJECT-DROP
+DOMAIN,pixel.quora.com,REJECT-DROP
+DOMAIN,qsf.quora.com,REJECT-DROP
+DOMAIN-SUFFIX,quora-ads.com,REJECT-DROP
 
 # 广告及追踪 API 接口
-URL-REGEX,^https?://www\.quora\.com/ads,REJECT
-URL-REGEX,^https?://www\.quora\.com/api/ads/,REJECT
-URL-REGEX,^https?://www\.quora\.com/analytics/,REJECT
-URL-REGEX,^https?://www\.quora\.com/qevents/,REJECT
-URL-REGEX,^https?://www\.quora\.com/events/,REJECT
+URL-REGEX,^https?://www\.quora\.com/ads,REJECT-DROP
+URL-REGEX,^https?://www\.quora\.com/api/ads/,REJECT-DROP
+URL-REGEX,^https?://www\.quora\.com/analytics/,REJECT-DROP
+URL-REGEX,^https?://www\.quora\.com/qevents/,REJECT-DROP
+URL-REGEX,^https?://www\.quora\.com/events/,REJECT-DROP
 
 [Script]
 # 过滤信息流中的广告条目
