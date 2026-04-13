@@ -2,6 +2,7 @@
 #!desc=开屏广告、推荐页广告卡片、直播间广告、底部Tab净化
 #!author=Claude
 #!version=1.0.0
+#!category=去广告
 
 [Rule]
 # B站广告追踪域名
