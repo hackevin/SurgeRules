@@ -1,6 +1,7 @@
 #!name=墨迹天气去广告 (私有托管全量版)
 #!desc=移除开屏、首页、视频流广告及第三方插件。补全了 adlaunch 等拦截规则。
 #!author=Genimi
+#!category=去广告
 
 [Rule]
 # --- 域名后缀拦截 (对应原 host-suffix) ---
