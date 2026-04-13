@@ -6,14 +6,14 @@
 
 [Rule]
 # 广告追踪域名
-DOMAIN,adeventtracker.spotify.com,REJECT
-DOMAIN,ads-fa.spotify.com,REJECT
-DOMAIN,audio2.spotify.com,REJECT
+DOMAIN,adeventtracker.spotify.com,REJECT-DROP
+DOMAIN,ads-fa.spotify.com,REJECT-DROP
+DOMAIN,audio2.spotify.com,REJECT-DROP
 # Mac 桌面版广告接口（直接 REJECT，无需脚本）
-URL-REGEX,^https://spclient\.wg\.spotify\.com/ad-logic/,REJECT
-URL-REGEX,^https://spclient\.wg\.spotify\.com/ads/,REJECT
-URL-REGEX,^https://spclient\.wg\.spotify\.com/sponsoredplaylist/,REJECT
-URL-REGEX,^https://.*-spclient\.spotify\.com/storage-resolve/.*product=0,REJECT
+URL-REGEX,^https://spclient\.wg\.spotify\.com/ad-logic/,REJECT-DROP
+URL-REGEX,^https://spclient\.wg\.spotify\.com/ads/,REJECT-DROP
+URL-REGEX,^https://spclient\.wg\.spotify\.com/sponsoredplaylist/,REJECT-DROP
+URL-REGEX,^https://.*-spclient\.spotify\.com/storage-resolve/.*product=0,REJECT-DROP
 
 [Script]
 # 播放队列去广告（iOS / Mac 通用）
