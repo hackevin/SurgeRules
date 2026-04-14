@@ -1,5 +1,7 @@
-#!name=中国移动去广告进阶版
-#!desc=精细化过滤开屏、弹窗及首页牛皮癣广告，优化加载速度
+#!name=中国移动去广告
+#!desc=拦截 10086 APP 开屏广告、悬浮窗及营销内容
+#!author=Claude
+#!version=1.1.0
 #!category=去广告
 
 [Rule]
@@ -14,34 +16,29 @@ DOMAIN,amdc.m.taobao.com,REJECT-DROP
 DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-DROP
 DOMAIN-SUFFIX,pglstatp-toutiao.co,REJECT-DROP
 
-URL-REGEX,^https?://client.app.coc.10086.cn/biz-orange/DN/init/startInit,REJECT-DROP
+[Rule]
+# > 开屏广告初始化接口
+URL-REGEX,^https?://client\.app\.coc\.10086\.cn/biz-orange/DN/init/startInit,REJECT-DROP
+URL-REGEX,^https?://clientaccess\.10086\.cn/biz-orange/DN/init/startInit,REJECT-DROP
 
-[URL Rewrite]
-# 开屏广告初始化接口
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
-^https?+:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
+# > 广告列表接口
+URL-REGEX,^https?://client\.app\.coc\.10086\.cn/biz-orange/DN/explorePage/getAdverList,REJECT-DROP
 
-# 广告列表接口
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject
+# > 悬浮窗广告
+URL-REGEX,^https?://(client\.app\.coc|h\.app\.coc|app)\.10086\.cn/biz-orange/DN/emotionMarket,REJECT-DROP
 
-# 悬浮窗（多个）
-^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket url reject
+# > 首页促销广告接口
+URL-REGEX,^https?://app\.10086\.cn/biz-orange/DN/(findSale|homeSale)/getsaleAdver,REJECT-DROP
 
-# 促销广告图
-^https?:\/\/gd\.10086\.cn\/gmccfile\/file\/image\/preloading703\/.*.jpg url reject-img
+# > 营销内容 feed
+URL-REGEX,^https?://wap\.js\.10086\.cn/jsmccClient/cd/market_content/api/v\d/market_content\.page\.query,REJECT-DROP
 
-# 首页销售广告
-^https?:\/\/app\.10086\.cn\/biz-orange\/DN\/(findSale|homeSale)\/getsaleAdver url reject
-
-# 广告图片资源
-^https?:\/\/res\.app\.coc\.10086\.cn\/group\d\/M00\/[0-9]{2}\/[A-Z0-9]{2}\/.+\.jpg url reject-200
-
-# 营销内容 feed
-^https?+:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject-200
+# > 广告图片资源（返回 1px 透明图，避免图片加载报错）
+URL-REGEX,^https?://gd\.10086\.cn/gmccfile/file/image/preloading703/.*\.jpg,REJECT-IMG
+URL-REGEX,^https?://res\.app\.coc\.10086\.cn/group\d/M00/[0-9]{2}/[A-Z0-9]{2}/.+\.jpg,REJECT-IMG
 
 # 屏蔽咪咕视频预加载广告
-^https?://ad\.cmvideo\.cn/.* - reject
+URL-REGEX,^https?://ad\.cmvideo\.cn/.*,REJECT-DROP
 
 [MITM]
-hostname = %APPEND% client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn, gd.10086.cn, res.app.coc.10086.cn, clientaccess.10086.cn
-
+hostname = %APPEND% client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn, gd.10086.cn, res.app.coc.10086.cn, clientaccess.10086.cn, wap.js.10086.cn
