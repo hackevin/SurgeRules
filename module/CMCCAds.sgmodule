@@ -33,8 +33,8 @@ URL-REGEX,^https?://app\.10086\.cn/biz-orange/DN/(findSale|homeSale)/getsaleAdve
 URL-REGEX,^https?://wap\.js\.10086\.cn/jsmccClient/cd/market_content/api/v\d/market_content\.page\.query,REJECT-DROP
 
 # > 广告图片资源（返回 1px 透明图，避免图片加载报错）
-URL-REGEX,^https?://gd\.10086\.cn/gmccfile/file/image/preloading703/.*\.jpg,REJECT-DROP
-URL-REGEX,^https?://res\.app\.coc\.10086\.cn/group\d/M00/[0-9]{2}/[A-Z0-9]{2}/.+\.jpg,REJECT-DROP
+URL-REGEX,^https?://gd\.10086\.cn/gmccfile/file/image/preloading703/.*\.jpg,REJECT-TINYGIF
+URL-REGEX,^https?://res\.app\.coc\.10086\.cn/group\d/M00/[0-9]{2}/[A-Z0-9]{2}/.+\.jpg,REJECT-TINYGIF
 
 # 屏蔽咪咕视频预加载广告
 URL-REGEX,^https?://ad\.cmvideo\.cn/.*,REJECT-DROP
