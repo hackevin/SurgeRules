@@ -22,6 +22,7 @@ URL-REGEX,^https?://cdn\.web\.chelaile\.net\.cn/info-flow/index\.html,REJECT-DRO
 URL-REGEX,^https?://atrace\.chelaile\.net\.cn/(wx_preloadAd|adAnalysis),REJECT-DROP
 URL-REGEX,^https?://api\.chelaile\.net\.cn/DataAnalysisInfo/UdidFilter,REJECT-DROP
 URL-REGEX,^https?://xigua\.sogaha\.cn/ssp/ad/list,REJECT-DROP
+URL-REGEX,^https?://adx\.sogaha\.cn/sdk/ad/get,REJECT-DROP
 
 # > IP 直连广告接口
 URL-REGEX,^https?://124\.70\.194\.16/(ip|adpub|goocity/flowPos/listByPos),REJECT-DROP
