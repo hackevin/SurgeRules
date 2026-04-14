@@ -2,8 +2,7 @@
 #!desc=去除车来了小程序/APP广告、底栏、信息流、隐私追踪。由 ddgksf2013 原规则适配 Surge。
 #!author=ddgksf2013 & Claude
 #!version=1.0.5
-#!update-url=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/sgmodule/chelaileads.sgmodule
-#!homepage=https://github.com/ddgksf2013/Rewrite
+#!update-url=https://raw.githubusercontent.com/hackevin/SurgeRules/refs/heads/Surge/sgmodule/CheLaiLeAds.sgmodule
 #!category=去广告
 
 [Rule]
