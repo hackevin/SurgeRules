@@ -16,7 +16,6 @@ DOMAIN,amdc.m.taobao.com,REJECT-DROP
 DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-DROP
 DOMAIN-SUFFIX,pglstatp-toutiao.co,REJECT-DROP
 
-[Rule]
 # > 开屏广告初始化接口
 URL-REGEX,^https?://client\.app\.coc\.10086\.cn/biz-orange/DN/init/startInit,REJECT-DROP
 URL-REGEX,^https?://clientaccess\.10086\.cn/biz-orange/DN/init/startInit,REJECT-DROP
