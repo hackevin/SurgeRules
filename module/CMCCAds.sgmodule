@@ -15,15 +15,31 @@ DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-DROP
 DOMAIN-SUFFIX,pglstatp-toutiao.co,REJECT-DROP
 
 [URL Rewrite]
-# 1. 拦截开屏配置（正确格式：正则 _ reject）
-^https?://[^/]+\.10086\.cn/.*/startup/.* - reject
-^https?://[^/]+\.10086\.cn/.*/config/.*(ad|splash|popup) - reject
+# 开屏广告初始化接口
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
+^https?+:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
 
-# 2. 拦截“我的”页面红点/Banner
-^https?://[^/]+\.10086\.cn/.*/red-dot - reject
+# 广告列表接口
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject
 
-# 3. 屏蔽咪咕视频预加载广告
+# 悬浮窗（多个）
+^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket url reject
+
+# 促销广告图
+^https?:\/\/gd\.10086\.cn\/gmccfile\/file\/image\/preloading703\/.*.jpg url reject-img
+
+# 首页销售广告
+^https?:\/\/app\.10086\.cn\/biz-orange\/DN\/(findSale|homeSale)\/getsaleAdver url reject
+
+# 广告图片资源
+^https?:\/\/res\.app\.coc\.10086\.cn\/group\d\/M00\/[0-9]{2}\/[A-Z0-9]{2}\/.+\.jpg url reject-200
+
+# 营销内容 feed
+^https?+:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject-200
+
+# 屏蔽咪咕视频预加载广告
 ^https?://ad\.cmvideo\.cn/.* - reject
 
 [MITM]
-hostname = %APPEND% *.10086.cn
+hostname = %APPEND% client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn, gd.10086.cn, res.app.coc.10086.cn, clientaccess.10086.cn
+
