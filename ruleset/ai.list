@@ -15,6 +15,7 @@ DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,anthropic.ai
 DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,browser-intake-us5-datadoghq.com
 
 # ---- Grok ----
 DOMAIN-SUFFIX,x.ai
