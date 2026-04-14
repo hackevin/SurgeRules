@@ -8,7 +8,10 @@
 
 [Rule]
 # 广告接口直接拒绝（Surge 推荐用 REJECT，避免 reject-200 带来的兼容问题）
-DOMAIN-SUFFIX,chelaile.net.cn,DIRECT
+DOMAIN,adx.sogaha.cn,REJECT-DROP
+DOMAIN,ctrace.sogaha.cn,REJECT-DROP
+DOMAIN,xigua.sogaha.cn,REJECT-DROP
+DOMAIN,logs.chelaile.net.cn,REJECT-DROP
 
 # 更精确的规则（防止误杀）
 URL-REGEX,^https?://.*chelaile\.net\.cn/goocity/flowPos/listByPos,REJECT-DROP
