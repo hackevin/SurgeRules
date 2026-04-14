@@ -12,6 +12,7 @@ DOMAIN,adx.sogaha.cn,REJECT-DROP
 DOMAIN,ctrace.sogaha.cn,REJECT-DROP
 DOMAIN,xigua.sogaha.cn,REJECT-DROP
 DOMAIN,logs.chelaile.net.cn,REJECT-DROP
+DOMAIN,atrace.chelaile.net.cn,REJECT-DROP
 
 # > 广告/信息流接口
 URL-REGEX,^https?://[^/]*\.chelaile\.net\.cn/(api/)?adpub,REJECT-DROP
