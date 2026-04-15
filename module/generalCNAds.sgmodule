@@ -19,6 +19,7 @@ DOMAIN,report.voovmeeting.com,REJECT-DROP
 # === 阿里广告 ===
 DOMAIN-SUFFIX,alimama.com,REJECT-DROP
 DOMAIN-SUFFIX,mmstat.com,REJECT-DROP
+DOMAIN,adtrack.qianwen.com,REJECT-DROP
 
 # === 京东广告 ===
 DOMAIN,jdad.jd.com,REJECT-DROP
