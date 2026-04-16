@@ -3,8 +3,8 @@
 #!category=AI
 
 [Rule]
-DOMAIN-SUFFIX,sentry.io,REJECT
-DOMAIN-SUFFIX,segment.com,REJECT
-DOMAIN-SUFFIX,browser-intake-us5-datadoghq.com,REJECT
-DOMAIN-SUFFIX,intercom.io,REJECT
-DOMAIN-SUFFIX,intercomcdn.com,REJECT
+DOMAIN-SUFFIX,sentry.io,REJECT-DROP
+DOMAIN-SUFFIX,segment.com,REJECT-DROP
+DOMAIN-SUFFIX,browser-intake-us5-datadoghq.com,REJECT-DROP
+DOMAIN-SUFFIX,intercom.io,REJECT-DROP
+DOMAIN-SUFFIX,intercomcdn.com,REJECT-DROP
