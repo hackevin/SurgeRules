@@ -61,4 +61,4 @@ DOMAIN,ad.10086.cn,REJECT-DROP
 ^https?://mapi\.dianping\.com/.*splash data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/blank/blank_dict.json"
 
 [MITM]
-hostname = %APPEND% app.bilibili.com,api.bilibili.com,api.m.jd.com,wmapi.meituan.com,mapi.dianping.com
+hostname = %APPEND% api.m.jd.com,wmapi.meituan.com,mapi.dianping.com
