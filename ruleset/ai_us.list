@@ -35,6 +35,12 @@ DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,googleapis.com
 
+# ---- MiniMax 国际版（代理）----
+DOMAIN-SUFFIX,minimax.io
+DOMAIN-SUFFIX,platform.minimax.io
+DOMAIN-SUFFIX,api.minimax.io
+DOMAIN-SUFFIX,talkie.ai
+
 # ---- Other ----
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
