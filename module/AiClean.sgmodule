@@ -1,0 +1,10 @@
+#!name=AI Tracker Block
+#!desc=拒绝 AI 服务中的追踪/遥测域名
+#!category=AI
+
+[Rule]
+DOMAIN-SUFFIX,sentry.io,REJECT
+DOMAIN-SUFFIX,segment.com,REJECT
+DOMAIN-SUFFIX,browser-intake-us5-datadoghq.com,REJECT
+DOMAIN-SUFFIX,intercom.io,REJECT
+DOMAIN-SUFFIX,intercomcdn.com,REJECT
