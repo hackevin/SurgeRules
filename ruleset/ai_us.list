@@ -19,7 +19,6 @@ DOMAIN-SUFFIX,anthropic.ai
 DOMAIN-SUFFIX,anthropic.com
 PROCESS-NAME,Claude
 PROCESS-NAME,Claude Helper
-DOMAIN,stun.cloudflare.com
 
 # Grok
 DOMAIN-SUFFIX,x.ai
