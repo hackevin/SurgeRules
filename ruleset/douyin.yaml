@@ -1,6 +1,6 @@
 # NAME: DouYin
-# DESC: 抖音（国内版）专属域名，共用的字节基础域名已拆分至 ByteDance-Shared.yaml
-# SOURCE: blackmatrix7/ios_rule_script (2025-06-06)，剔除 snssdk.com / pstatp.com
+# DESC: 抖音全部域名，含字节"国内出口"共用域名
+# 策略：直连
 payload:
   - DOMAIN,v5-dy-o-abtest.zjcdn.com
   - DOMAIN-SUFFIX,amemv.com
@@ -11,3 +11,19 @@ payload:
   - DOMAIN-SUFFIX,idouyinvod.com
   - DOMAIN-SUFFIX,ixigua.com
   - DOMAIN-SUFFIX,ixiguavideo.com
+
+  # --- 字节"国内出口"共用域名 ---
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,pstatp.com
+  - DOMAIN-SUFFIX,bytedapm.com
+  - DOMAIN-SUFFIX,byteimg.com
+  - DOMAIN-SUFFIX,bytescm.com
+  - DOMAIN-SUFFIX,bytetos.com
+  - DOMAIN,lf3-static.bytednsdoc.com
+  - DOMAIN-SUFFIX,bytednsdoc.com
+  - DOMAIN-SUFFIX,bytedance.com
+
+  # 归属不清晰的打点/短链域名，先放这里（直连）；
+  # 若发现 TikTok 侧因此异常，再挪到 TikTok.yaml
+  - DOMAIN-SUFFIX,zijieapi.com
+  - DOMAIN-SUFFIX,zijieimg.com

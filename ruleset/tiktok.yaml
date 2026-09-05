@@ -1,6 +1,6 @@
 # NAME: TikTok
-# DESC: TikTok 国际版专属域名，共用的字节基础域名已拆分至 ByteDance-Shared.yaml
-# SOURCE: blackmatrix7/ios_rule_script (2025-08-10)，剔除 isnssdk.com / snssdk.com / ipstatp.com / sgpstatp.com
+# DESC: TikTok 国际版全部域名，含字节"国际出口"共用域名（i-/sg- 前缀）
+# 策略：代理
 payload:
   - DOMAIN,lf16-effectcdn.byteeffecttos-g.com
   - DOMAIN,lf16-pkgcdn.pitaya-clientai.com
@@ -28,3 +28,9 @@ payload:
   - DOMAIN-SUFFIX,ttwebview.com
   - DOMAIN-KEYWORD,musical.ly
   - DOMAIN-KEYWORD,tiktok
+
+  # --- 字节"国际出口"共用域名（i-/sg- 前缀）---
+  - DOMAIN-SUFFIX,isnssdk.com
+  - DOMAIN-SUFFIX,ipstatp.com
+  - DOMAIN-SUFFIX,sgpstatp.com
+  - DOMAIN-SUFFIX,ibytedapm.com
