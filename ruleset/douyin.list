@@ -1,0 +1,28 @@
+# NAME: DouYin
+# DESC: 抖音全部域名，含字节"国内出口"共用域名
+# 策略：直连
+DOMAIN,v5-dy-o-abtest.zjcdn.com
+DOMAIN-SUFFIX,amemv.com
+DOMAIN-SUFFIX,douyincdn.com
+DOMAIN-SUFFIX,douyinpic.com
+DOMAIN-SUFFIX,douyinstatic.com
+DOMAIN-SUFFIX,douyinvod.com
+DOMAIN-SUFFIX,idouyinvod.com
+DOMAIN-SUFFIX,ixigua.com
+DOMAIN-SUFFIX,ixiguavideo.com
+
+# --- 字节"国内出口"共用域名 ---
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,pstatp.com
+DOMAIN-SUFFIX,bytedapm.com
+DOMAIN-SUFFIX,byteimg.com
+DOMAIN-SUFFIX,bytescm.com
+DOMAIN-SUFFIX,bytetos.com
+DOMAIN,lf3-static.bytednsdoc.com
+DOMAIN-SUFFIX,bytednsdoc.com
+DOMAIN-SUFFIX,bytedance.com
+
+# 归属不清晰的打点/短链域名，先放这里（直连）；
+# 若发现 TikTok 侧因此异常，再挪到 TikTok.list
+DOMAIN-SUFFIX,zijieapi.com
+DOMAIN-SUFFIX,zijieimg.com
