@@ -1,22 +1,20 @@
+# NAME: TikTok
+# DESC: TikTok 国际版专属域名，共用的字节基础域名已拆分至 ByteDance-Shared.yaml
+# SOURCE: blackmatrix7/ios_rule_script (2025-08-10)，剔除 isnssdk.com / snssdk.com / ipstatp.com / sgpstatp.com
 payload:
   - DOMAIN,lf16-effectcdn.byteeffecttos-g.com
   - DOMAIN,lf16-pkgcdn.pitaya-clientai.com
   - DOMAIN,p16-tiktokcdn-com.akamaized.net
   - DOMAIN,trae-api-sg.mchost.guru
-  - DOMAIN-SUFFIX,bytedapm.com
   - DOMAIN-SUFFIX,bytegecko-i18n.com
   - DOMAIN-SUFFIX,byteintlapi.com
   - DOMAIN-SUFFIX,byteoversea.com
   - DOMAIN-SUFFIX,capcut.com
   - DOMAIN-SUFFIX,ibytedtos.com
   - DOMAIN-SUFFIX,ibyteimg.com
-  - DOMAIN-SUFFIX,ipstatp.com
-  - DOMAIN-SUFFIX,isnssdk.com
   - DOMAIN-SUFFIX,marscode.com
   - DOMAIN-SUFFIX,muscdn.com
   - DOMAIN-SUFFIX,musical.ly
-  - DOMAIN-SUFFIX,sgpstatp.com
-  - DOMAIN-SUFFIX,snssdk.com
   - DOMAIN-SUFFIX,tik-tokapi.com
   - DOMAIN-SUFFIX,tiktok.com
   - DOMAIN-SUFFIX,tiktokcdn-us.com
@@ -30,4 +28,3 @@ payload:
   - DOMAIN-SUFFIX,ttwebview.com
   - DOMAIN-KEYWORD,musical.ly
   - DOMAIN-KEYWORD,tiktok
-  - PROCESS-NAME,com.zhiliaoapp.musically

@@ -1,0 +1,26 @@
+# NAME: ByteDance-Shared
+# DESC: TikTok / 抖音及字节系其他App共用的基础设施与打点域名，无法按App拆分，需单独判定策略
+# SOURCE: 整理自 blackmatrix7/ios_rule_script + 社区补充（zijieapi issue）
+payload:
+  # --- API / SDK 网关（TikTok isnssdk 系与国内 snssdk 系共源）---
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,isnssdk.com
+  - DOMAIN-SUFFIX,pstatp.com
+  - DOMAIN-SUFFIX,ipstatp.com
+  - DOMAIN-SUFFIX,sgpstatp.com
+
+  # --- 打点/统计/日志上报（字节系通用，不止抖音/TikTok）---
+  - DOMAIN-SUFFIX,zijieapi.com
+  - DOMAIN-SUFFIX,zijieimg.com
+  - DOMAIN-SUFFIX,bytedapm.com
+  - DOMAIN-SUFFIX,ibytedapm.com
+
+  # --- CDN / 静态资源（部分与抖音评论、图片上传相关）---
+  - DOMAIN-SUFFIX,byteimg.com
+  - DOMAIN-SUFFIX,bytescm.com
+  - DOMAIN-SUFFIX,bytetos.com
+  - DOMAIN,lf3-static.bytednsdoc.com
+  - DOMAIN-SUFFIX,bytednsdoc.com
+
+  # --- 公司主域（企业服务/开放平台，非视频功能本身，但常被两边共同请求）---
+  - DOMAIN-SUFFIX,bytedance.com

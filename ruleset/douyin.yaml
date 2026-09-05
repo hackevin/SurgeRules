@@ -1,5 +1,7 @@
+# NAME: DouYin
+# DESC: 抖音（国内版）专属域名，共用的字节基础域名已拆分至 ByteDance-Shared.yaml
+# SOURCE: blackmatrix7/ios_rule_script (2025-06-06)，剔除 snssdk.com / pstatp.com
 payload:
-  - DOMAIN,lf3-static.bytednsdoc.com
   - DOMAIN,v5-dy-o-abtest.zjcdn.com
   - DOMAIN-SUFFIX,amemv.com
   - DOMAIN-SUFFIX,douyincdn.com
@@ -9,5 +11,3 @@ payload:
   - DOMAIN-SUFFIX,idouyinvod.com
   - DOMAIN-SUFFIX,ixigua.com
   - DOMAIN-SUFFIX,ixiguavideo.com
-  - DOMAIN-SUFFIX,pstatp.com
-  - DOMAIN-SUFFIX,snssdk.com 
