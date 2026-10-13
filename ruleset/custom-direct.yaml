@@ -1,2 +1,8 @@
 payload:
   - DOMAIN-SUFFIX,fast.com
+  - DOMAIN-SUFFIX,samsung.com
+  - DOMAIN-SUFFIX,samsunggosp.com
+  - DOMAIN-SUFFIX,samsungcloud.com
+  - DOMAIN-SUFFIX,samsungapis.com
+  - DOMAIN-SUFFIX,galaxyappstore.com
+  - DOMAIN-KEYWORD,samsung
