@@ -11,8 +11,8 @@ payload:
   - DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,polaris*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,tnc*-*.zijieapi.com
-  - DOMAIN-WILDCARD,*-applog-lq.fqnovel.com
-  - DOMAIN-WILDCARD,log*-misc-lf.amemv.com
+  - DOMAIN-WILDCARD,*-applog-*.fqnovel.com
+  - DOMAIN-WILDCARD,log*-misc-*.amemv.com
   - DOMAIN-WILDCARD,mon*-misc-*.amemv.com
   - DOMAIN,logbk.amemv.com
 
