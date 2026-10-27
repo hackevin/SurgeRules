@@ -38,6 +38,7 @@ payload:
   - DOMAIN,h-adashx.ut.dingtalk.com
   - DOMAIN,hectorstatic.baidu.com
   - DOMAIN,httpdns.zybang.com
+  - DOMAIN,i.snssdk.com
   - DOMAIN,input.shouji.sogou.com
   - DOMAIN,kepler.jd.com
   - DOMAIN,knicks.jd.com
