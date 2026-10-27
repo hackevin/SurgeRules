@@ -61,3 +61,5 @@ payload:
   - DOMAIN,worldwide.sogou.com
   - DOMAIN,wxaintpcos.wxqcloud.qq.com.cn
   - DOMAIN,zxid-m.mobileservice.cn
+  - DOMAIN,abtest-ch.snssdk.com
+  - DOMAIN,api.xsj.wasu.tv
