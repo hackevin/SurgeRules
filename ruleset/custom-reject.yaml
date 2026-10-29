@@ -17,14 +17,18 @@ payload:
   - DOMAIN,logbk.amemv.com
 
   # 其余精确域名
+  - DOMAIN,abtest-ch.snssdk.com
   - DOMAIN,ads-video-al.xhscdn.com
   - DOMAIN,amdc.alipay.com
   - DOMAIN,api.installer.xiaomi.com
+  - DOMAIN,api.xsj.wasu.tv
   - DOMAIN,applog.snssdk.com
   - DOMAIN,badjs.weixinbridge.com
   - DOMAIN,cc.map.qq.com
   - DOMAIN,ccc.sys.miui.com
   - DOMAIN,cfgc.zztfly.com
+  - DOMAIN,cn.s.50union.com
+  - DOMAIN,data.bilibili.com
   - DOMAIN,dig.bdurl.net
   - DOMAIN,dig.zjurl.cn
   - DOMAIN,dlswbr.baidu.com
@@ -37,12 +41,15 @@ payload:
   - DOMAIN,grs.dbankcloud.com
   - DOMAIN,h-adashx.ut.dingtalk.com
   - DOMAIN,hectorstatic.baidu.com
+  - DOMAIN,hmma.baidu.com
+  - DOMAIN,httpdns.meituan.com
   - DOMAIN,httpdns.zybang.com
   - DOMAIN,i.snssdk.com
   - DOMAIN,input.shouji.sogou.com
   - DOMAIN,kepler.jd.com
   - DOMAIN,knicks.jd.com
   - DOMAIN,log-sdk.clickwifi.net
+  - DOMAIN,log.zijieapi.com
   - DOMAIN,log2.cmpassport.com
   - DOMAIN,mapi.m.jd.com
   - DOMAIN,mdap.alipay.com
@@ -52,14 +59,16 @@ payload:
   - DOMAIN,mum.alibabachengdun.net
   - DOMAIN,norma-external-collect.meizu.com
   - DOMAIN,omgup.xiaojukeji.com
+  - DOMAIN,oth.eve.mdt.qq.com
+  - DOMAIN,oth.str.mdt.qq.com
   - DOMAIN,p9-ad-sign.byteimg.com
   - DOMAIN,pro.bugly.qq.com
   - DOMAIN,report.voovmeeting.com
   - DOMAIN,syh-imp.cdnjtzy.com
   - DOMAIN,techain.baidu.com
+  - DOMAIN,tools.3g.qq.com
   - DOMAIN,tz.sec.xiaomi.com
   - DOMAIN,worldwide.sogou.com
   - DOMAIN,wxaintpcos.wxqcloud.qq.com.cn
   - DOMAIN,zxid-m.mobileservice.cn
-  - DOMAIN,abtest-ch.snssdk.com
-  - DOMAIN,api.xsj.wasu.tv
+
