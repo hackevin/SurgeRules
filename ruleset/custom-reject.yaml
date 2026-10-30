@@ -1,87 +1,82 @@
 payload:
-  # 整域名（DOMAIN-SUFFIX 同时匹配根域名和所有子域名）
-  - DOMAIN-SUFFIX,umeng.com
-  - DOMAIN-SUFFIX,gepush.com
+  # ---- DOMAIN-SUFFIX（整域名，6 条）----
   - DOMAIN-SUFFIX,ad-survey.com
+  - DOMAIN-SUFFIX,aiclk.com
+  - DOMAIN-SUFFIX,gepush.com
   - DOMAIN-SUFFIX,wxs.qq.com
+  - DOMAIN-SUFFIX,umeng.com
   - DOMAIN-SUFFIX,wmzfylgdsz.com
 
-  # 字节系通配符压缩
+  # ---- DOMAIN-WILDCARD（通配符，9 条）----
+  - DOMAIN-WILDCARD,log*-misc-*.amemv.com
+  - DOMAIN-WILDCARD,mon*-misc-*.amemv.com
+  - DOMAIN-WILDCARD,*-applog-*.fqnovel.com
+  - DOMAIN-WILDCARD,ulog*.gifshow.com
+  - DOMAIN-WILDCARD,oth.*.mdt.qq.com
   - DOMAIN-WILDCARD,ads*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,polaris*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,tnc*-*.zijieapi.com
-  - DOMAIN-WILDCARD,*-applog-*.fqnovel.com
-  - DOMAIN-WILDCARD,log*-misc-*.amemv.com
-  - DOMAIN-WILDCARD,mon*-misc-*.amemv.com
-  - DOMAIN,logbk.amemv.com
 
-  # 其余精确域名
-  - DOMAIN,abtest-ch.snssdk.com
-  - DOMAIN,acjs.aliyun.com
-  - DOMAIN,ads-video-al.xhscdn.com
-  - DOMAIN,adtrack.quark.cn
-  - DOMAIN,amdc.alipay.com
-  - DOMAIN,api.e.kuaishou.com
-  - DOMAIN,api.installer.xiaomi.com
-  - DOMAIN,api.xsj.wasu.tv
-  - DOMAIN,applog.snssdk.com
-  - DOMAIN,badjs.weixinbridge.com
-  - DOMAIN,cc.map.qq.com
-  - DOMAIN,ccc.sys.miui.com
-  - DOMAIN,cfgc.zztfly.com
+  # ---- DOMAIN（精确域名，61 条）----
   - DOMAIN,cn.s.50union.com
-  - DOMAIN,data.bilibili.com
-  - DOMAIN,dig.bdurl.net
-  - DOMAIN,dig.zjurl.cn
+  - DOMAIN,mum.alibabachengdun.net
+  - DOMAIN,amdc.alipay.com
+  - DOMAIN,mdap.alipay.com
+  - DOMAIN,acjs.aliyun.com
+  - DOMAIN,logbk.amemv.com
+  - DOMAIN,miav-cse.avlyun.com
   - DOMAIN,dlswbr.baidu.com
-  - DOMAIN,dns.jd.com
-  - DOMAIN,dns.weixin.qq.com.cn
-  - DOMAIN,etl-xlmc-ssl.sandai.net
-  - DOMAIN,events-drcn.op.dbankcloud.cn
   - DOMAIN,fclick.baidu.com
-  - DOMAIN,file.daihuo.qq.com
-  - DOMAIN,grs.dbankcloud.com
-  - DOMAIN,h-adashx.ut.dingtalk.com
   - DOMAIN,hectorstatic.baidu.com
   - DOMAIN,hmma.baidu.com
-  - DOMAIN,httpdns.meituan.com
-  - DOMAIN,httpdns.zybang.com
-  - DOMAIN,huichuan.sm.cn
-  - DOMAIN,i.snssdk.com
-  - DOMAIN,input.shouji.sogou.com
+  - DOMAIN,techain.baidu.com
+  - DOMAIN,dig.bdurl.net
+  - DOMAIN,data.bilibili.com
+  - DOMAIN,p9-ad-sign.byteimg.com
+  - DOMAIN,syh-imp.cdnjtzy.com
+  - DOMAIN,log-sdk.clickwifi.net
+  - DOMAIN,log2.cmpassport.com
+  - DOMAIN,events-drcn.op.dbankcloud.cn
+  - DOMAIN,grs.dbankcloud.com
+  - DOMAIN,h-adashx.ut.dingtalk.com
+  - DOMAIN,dns.jd.com
   - DOMAIN,kepler.jd.com
   - DOMAIN,knicks.jd.com
-  - DOMAIN,kste.ksapisrv.com
-  - DOMAIN,log-sdk.clickwifi.net
-  - DOMAIN,log.zijieapi.com
-  - DOMAIN,log2.cmpassport.com
   - DOMAIN,mapi.m.jd.com
-  - DOMAIN,mdap.alipay.com
-  - DOMAIN,miav-cse.avlyun.com
-  - DOMAIN,mmgame.qpic.cn
-  - DOMAIN,mssdk.volces.com
-  - DOMAIN,mum.alibabachengdun.net
-  - DOMAIN,norma-external-collect.meizu.com
-  - DOMAIN,omgup.xiaojukeji.com
-  - DOMAIN,oss.cdn.aiclk.com
-  - DOMAIN,oth.eve.mdt.qq.com
-  - DOMAIN,oth.str.mdt.qq.com
-  - DOMAIN,p9-ad-sign.byteimg.com
-  - DOMAIN,pro.bugly.qq.com
+  - DOMAIN,kste.ksapisrv.com
   - DOMAIN,push.ksapisrv.com
-  - DOMAIN,rcv.aiclk.com
-  - DOMAIN,report.voovmeeting.com
-  - DOMAIN,syh-imp.cdnjtzy.com
-  - DOMAIN,techain.baidu.com
+  - DOMAIN,api.e.kuaishou.com
+  - DOMAIN,httpdns.meituan.com
+  - DOMAIN,norma-external-collect.meizu.com
+  - DOMAIN,ccc.sys.miui.com
+  - DOMAIN,zxid-m.mobileservice.cn
+  - DOMAIN,ulog.wpk.qianwen.com
+  - DOMAIN,mmgame.qpic.cn
+  - DOMAIN,cc.map.qq.com
+  - DOMAIN,file.daihuo.qq.com
+  - DOMAIN,pro.bugly.qq.com
   - DOMAIN,tmfsdk.m.qq.com
   - DOMAIN,tools.3g.qq.com
-  - DOMAIN,tz.sec.xiaomi.com
-  - DOMAIN,ulog.wpk.qianwen.com
-  - DOMAIN,ulogjs.gifshow.com
-  - DOMAIN,ulogs1.gifshow.com
-  - DOMAIN,v2.aiclk.com
-  - DOMAIN,worldwide.sogou.com
+  - DOMAIN,dns.weixin.qq.com.cn
   - DOMAIN,wxaintpcos.wxqcloud.qq.com.cn
-  - DOMAIN,zxid-m.mobileservice.cn
-
+  - DOMAIN,adtrack.quark.cn
+  - DOMAIN,etl-xlmc-ssl.sandai.net
+  - DOMAIN,huichuan.sm.cn
+  - DOMAIN,abtest-ch.snssdk.com
+  - DOMAIN,applog.snssdk.com
+  - DOMAIN,i.snssdk.com
+  - DOMAIN,input.shouji.sogou.com
+  - DOMAIN,worldwide.sogou.com
+  - DOMAIN,report.voovmeeting.com
+  - DOMAIN,mssdk.volces.com
+  - DOMAIN,api.xsj.wasu.tv
+  - DOMAIN,badjs.weixinbridge.com
+  - DOMAIN,ads-video-al.xhscdn.com
+  - DOMAIN,omgup.xiaojukeji.com
+  - DOMAIN,api.installer.xiaomi.com
+  - DOMAIN,tz.sec.xiaomi.com
+  - DOMAIN,log.zijieapi.com
+  - DOMAIN,dig.zjurl.cn
+  - DOMAIN,httpdns.zybang.com
+  - DOMAIN,cfgc.zztfly.com
