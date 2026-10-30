@@ -18,8 +18,11 @@ payload:
 
   # 其余精确域名
   - DOMAIN,abtest-ch.snssdk.com
+  - DOMAIN,acjs.aliyun.com
   - DOMAIN,ads-video-al.xhscdn.com
+  - DOMAIN,adtrack.quark.cn
   - DOMAIN,amdc.alipay.com
+  - DOMAIN,api.e.kuaishou.com
   - DOMAIN,api.installer.xiaomi.com
   - DOMAIN,api.xsj.wasu.tv
   - DOMAIN,applog.snssdk.com
@@ -44,10 +47,12 @@ payload:
   - DOMAIN,hmma.baidu.com
   - DOMAIN,httpdns.meituan.com
   - DOMAIN,httpdns.zybang.com
+  - DOMAIN,huichuan.sm.cn
   - DOMAIN,i.snssdk.com
   - DOMAIN,input.shouji.sogou.com
   - DOMAIN,kepler.jd.com
   - DOMAIN,knicks.jd.com
+  - DOMAIN,kste.ksapisrv.com
   - DOMAIN,log-sdk.clickwifi.net
   - DOMAIN,log.zijieapi.com
   - DOMAIN,log2.cmpassport.com
@@ -59,15 +64,23 @@ payload:
   - DOMAIN,mum.alibabachengdun.net
   - DOMAIN,norma-external-collect.meizu.com
   - DOMAIN,omgup.xiaojukeji.com
+  - DOMAIN,oss.cdn.aiclk.com
   - DOMAIN,oth.eve.mdt.qq.com
   - DOMAIN,oth.str.mdt.qq.com
   - DOMAIN,p9-ad-sign.byteimg.com
   - DOMAIN,pro.bugly.qq.com
+  - DOMAIN,push.ksapisrv.com
+  - DOMAIN,rcv.aiclk.com
   - DOMAIN,report.voovmeeting.com
   - DOMAIN,syh-imp.cdnjtzy.com
   - DOMAIN,techain.baidu.com
+  - DOMAIN,tmfsdk.m.qq.com
   - DOMAIN,tools.3g.qq.com
   - DOMAIN,tz.sec.xiaomi.com
+  - DOMAIN,ulog.wpk.qianwen.com
+  - DOMAIN,ulogjs.gifshow.com
+  - DOMAIN,ulogs1.gifshow.com
+  - DOMAIN,v2.aiclk.com
   - DOMAIN,worldwide.sogou.com
   - DOMAIN,wxaintpcos.wxqcloud.qq.com.cn
   - DOMAIN,zxid-m.mobileservice.cn
