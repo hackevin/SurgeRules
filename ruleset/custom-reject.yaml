@@ -20,6 +20,7 @@ payload:
 
   # ---- DOMAIN（精确域名，61 条）----
   - DOMAIN,cn.s.50union.com
+  - DOMAIN,losvc.alibaba-inc.com
   - DOMAIN,mum.alibabachengdun.net
   - DOMAIN,amdc.alipay.com
   - DOMAIN,mdap.alipay.com
@@ -68,6 +69,7 @@ payload:
   - DOMAIN,i.snssdk.com
   - DOMAIN,input.shouji.sogou.com
   - DOMAIN,worldwide.sogou.com
+  - DOMAIN,g.aplus.taobao.com
   - DOMAIN,report.voovmeeting.com
   - DOMAIN,mssdk.volces.com
   - DOMAIN,api.xsj.wasu.tv
@@ -76,6 +78,7 @@ payload:
   - DOMAIN,omgup.xiaojukeji.com
   - DOMAIN,api.installer.xiaomi.com
   - DOMAIN,tz.sec.xiaomi.com
+  - DOMAIN,sdk.yoyi.com.cn
   - DOMAIN,log.zijieapi.com
   - DOMAIN,dig.zjurl.cn
   - DOMAIN,httpdns.zybang.com
