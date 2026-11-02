@@ -3,3 +3,4 @@ payload:
   - DOMAIN-WILDCARD,log*-misc-*.amemv.com
   - DOMAIN,mon.snssdk.com
   - DOMAIN-WILDCARD,tnc*-aliec*.zijieapi.com
+  - DOMAIN-SUFFIX,appsflyersdk.com
