@@ -46,6 +46,7 @@ payload:
   - DOMAIN,analytics.google.com
   - DOMAIN,firebaselogging-pa.googleapis.com
   - DOMAIN,fundingchoicesmessages.google.com
+  - DOMAIN,firebaselogging.googleapis.com
 
   # ===== 海外归因 / 分析 =====
   - DOMAIN-SUFFIX,appsflyer.com
@@ -252,6 +253,7 @@ payload:
   - DOMAIN,lng.xiaohongshu.com
   - DOMAIN,spider-tracker.xiaohongshu.com
   - DOMAIN,t2.xiaohongshu.com
+  - DOMAIN,crash.xiaohongshu.com
 
   # ===== 快手 =====
   - DOMAIN-WILDCARD,ulog*.gifshow.com
