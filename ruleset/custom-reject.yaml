@@ -130,10 +130,11 @@ payload:
   - DOMAIN-SUFFIX,sharethrough.com
 
   # ===== 字节系 =====
-  - DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
-  - DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
-  - DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
+  - DOMAIN-WILDCARD,pangolin*toutiao*.com
+#  - DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
+#  - DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
   - DOMAIN-SUFFIX,pglstatp-toutiao.com
+  - DOMAIN-SUFFIX,ctobsnssdk.com
   - DOMAIN-WILDCARD,ads*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,polaris*-normal-*.zijieapi.com
@@ -342,6 +343,7 @@ payload:
   - DOMAIN,etl-xlmc-ssl.sandai.net
   - DOMAIN,b.qchannel03.cn
   - DOMAIN,cfgc.zztfly.com
+  - DOMAIN,cfgc.flysleep.cn 
   - DOMAIN,fo.iemiq.com
   - DOMAIN,px.effirst.com
   - DOMAIN,rumt-zh.com
