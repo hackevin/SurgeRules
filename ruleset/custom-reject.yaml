@@ -15,6 +15,7 @@ payload:
   - DOMAIN-SUFFIX,jpush.cn
   - DOMAIN-SUFFIX,jiguang.cn
   - DOMAIN-SUFFIX,ad-survey.com
+  - DOMAIN-SUFFIX,app-measurement.com
 
   # ===== 字节系 =====
   - DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
