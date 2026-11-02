@@ -433,7 +433,11 @@ payload:
   - DOMAIN,px.effirst.com
   - DOMAIN,rumt-zh.com
   - DOMAIN,yumao.puata.info
-  
+  - DOMAIN,ecsv2.roblox.com
+  - DOMAIN,events.mapbox.com
+  - DOMAIN,gator.volces.com
+  - DOMAIN,samsung.telemetry.eyeo.com
+  - DOMAIN,ucus.ucweb.com
   # ===== 观察区（来源或用途未确认，默认不生效）=====
   # DOMAIN,lf-rc1.yhgfb-cn-static.com
   # DOMAIN,opex-service-cn.allawntech.com
