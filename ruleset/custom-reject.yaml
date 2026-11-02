@@ -360,6 +360,8 @@ payload:
   - DOMAIN,mpaas-loggw4zwy.aliyuncs.com
   - DOMAIN,adapi.pandabus.cn
   - DOMAIN-SUFFIX,tobidad.cn
+  - DOMAIN,sdkgen.data.tianwenca.com
+  - DOMAIN,deviceconfig.pandabus.cc
   
   # ===== 微软：App Center / 开发者遥测 =====
   - DOMAIN,in.appcenter.ms
