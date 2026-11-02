@@ -1,85 +1,137 @@
 payload:
-  # ---- DOMAIN-SUFFIX（整域名，6 条）----
-  - DOMAIN-SUFFIX,ad-survey.com
-  - DOMAIN-SUFFIX,aiclk.com
-  - DOMAIN-SUFFIX,gepush.com
-  - DOMAIN-SUFFIX,wxs.qq.com
-  - DOMAIN-SUFFIX,umeng.com
-  - DOMAIN-SUFFIX,wmzfylgdsz.com
+  # ===== IP 直连（绕过 DNS，只能在 mihomo 拦）=====
+  - IP-CIDR,157.255.132.22/32,no-resolve
+  - IP-CIDR,157.148.6.86/32,no-resolve
+  - IP-CIDR,112.253.54.119/32,no-resolve
+  - IP-CIDR,112.253.54.120/32,no-resolve
+  - IP-CIDR,112.253.55.119/32,no-resolve
 
-  # ---- DOMAIN-WILDCARD（通配符，9 条）----
-  - DOMAIN-WILDCARD,log*-misc-*.amemv.com
-  - DOMAIN-WILDCARD,mon*-misc-*.amemv.com
-  - DOMAIN-WILDCARD,*-applog-*.fqnovel.com
-  - DOMAIN-WILDCARD,ulog*.gifshow.com
-  - DOMAIN-WILDCARD,oth.*.mdt.qq.com
+  # ===== 通用 SDK：友盟 / 个推 / 极光 =====
+  - DOMAIN-SUFFIX,umeng.com
+  - DOMAIN-SUFFIX,umengcloud.com
+  - DOMAIN-SUFFIX,gepush.com
+  - DOMAIN-SUFFIX,getui.com
+  - DOMAIN-SUFFIX,getui.net
+  - DOMAIN-SUFFIX,jpush.cn
+  - DOMAIN-SUFFIX,jiguang.cn
+  - DOMAIN-SUFFIX,ad-survey.com
+
+  # ===== 字节系 =====
+  - DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+  - DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
+  - DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
+  - DOMAIN-SUFFIX,pglstatp-toutiao.com
   - DOMAIN-WILDCARD,ads*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,polaris*-normal-*.zijieapi.com
+  - DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,tnc*-*.zijieapi.com
-
-  # ---- DOMAIN（精确域名，61 条）----
-  - DOMAIN,cn.s.50union.com
-  - DOMAIN,losvc.alibaba-inc.com
-  - DOMAIN,mum.alibabachengdun.net
-  - DOMAIN,amdc.alipay.com
-  - DOMAIN,mdap.alipay.com
-  - DOMAIN,acjs.aliyun.com
+  - DOMAIN-WILDCARD,*-applog-*.fqnovel.com
+  - DOMAIN-WILDCARD,mon*-misc-*.fqnovel.com
+  - DOMAIN-WILDCARD,log*-misc-*.amemv.com
   - DOMAIN,logbk.amemv.com
-  - DOMAIN,miav-cse.avlyun.com
-  - DOMAIN,dlswbr.baidu.com
-  - DOMAIN,fclick.baidu.com
-  - DOMAIN,hectorstatic.baidu.com
-  - DOMAIN,hmma.baidu.com
-  - DOMAIN,techain.baidu.com
-  - DOMAIN,dig.bdurl.net
-  - DOMAIN,data.bilibili.com
-  - DOMAIN,p9-ad-sign.byteimg.com
-  - DOMAIN,syh-imp.cdnjtzy.com
-  - DOMAIN,log-sdk.clickwifi.net
-  - DOMAIN,log2.cmpassport.com
-  - DOMAIN,events-drcn.op.dbankcloud.cn
-  - DOMAIN,grs.dbankcloud.com
-  - DOMAIN,h-adashx.ut.dingtalk.com
-  - DOMAIN,dns.jd.com
-  - DOMAIN,kepler.jd.com
-  - DOMAIN,knicks.jd.com
-  - DOMAIN,mapi.m.jd.com
-  - DOMAIN,kste.ksapisrv.com
-  - DOMAIN,push.ksapisrv.com
-  - DOMAIN,api.e.kuaishou.com
-  - DOMAIN,httpdns.meituan.com
-  - DOMAIN,norma-external-collect.meizu.com
-  - DOMAIN,ccc.sys.miui.com
-  - DOMAIN,zxid-m.mobileservice.cn
-  - DOMAIN,ulog.wpk.qianwen.com
-  - DOMAIN,mmgame.qpic.cn
-  - DOMAIN,cc.map.qq.com
-  - DOMAIN,file.daihuo.qq.com
-  - DOMAIN,pro.bugly.qq.com
-  - DOMAIN,tmfsdk.m.qq.com
-  - DOMAIN,tools.3g.qq.com
-  - DOMAIN,dns.weixin.qq.com.cn
-  - DOMAIN,wxaintpcos.wxqcloud.qq.com.cn
-  - DOMAIN,adtrack.quark.cn
-  - DOMAIN,etl-xlmc-ssl.sandai.net
-  - DOMAIN,huichuan.sm.cn
+  - DOMAIN,mon.zijieapi.com
+  - DOMAIN,timon.zijieapi.com
+  - DOMAIN,vcs.zijieapi.com
+  - DOMAIN,feedback-c.zijieapi.com
+  - DOMAIN,tnc3-alisc1.bytedance.com
+  - DOMAIN,dm.bytedance.com
+  - DOMAIN,dm.toutiao.com
+  - DOMAIN,dm-hl.toutiao.com
+  - DOMAIN,monsetting.toutiao.com
   - DOMAIN,abtest-ch.snssdk.com
   - DOMAIN,applog.snssdk.com
-  - DOMAIN,i.snssdk.com
-  - DOMAIN,input.shouji.sogou.com
-  - DOMAIN,worldwide.sogou.com
-  - DOMAIN,g.aplus.taobao.com
-  - DOMAIN,report.voovmeeting.com
+  - DOMAIN,log.snssdk.com
+  - DOMAIN,mon.snssdk.com
   - DOMAIN,mssdk.volces.com
-  - DOMAIN,api.xsj.wasu.tv
-  - DOMAIN,badjs.weixinbridge.com
-  - DOMAIN,ads-video-al.xhscdn.com
-  - DOMAIN,omgup.xiaojukeji.com
-  - DOMAIN,api.installer.xiaomi.com
-  - DOMAIN,tz.sec.xiaomi.com
-  - DOMAIN,sdk.yoyi.com.cn
-  - DOMAIN,log.zijieapi.com
-  - DOMAIN,dig.zjurl.cn
-  - DOMAIN,httpdns.zybang.com
+  - DOMAIN,apmplus.volces.com
+  - DOMAIN,p3-ad-sign.byteimg.com
+
+  # ===== 腾讯系 =====
+  - DOMAIN-SUFFIX,gdt.qq.com
+  - DOMAIN-SUFFIX,e.qq.com
+  - DOMAIN-SUFFIX,bugly.qq.com
+  - DOMAIN-SUFFIX,beacon.qq.com
+  - DOMAIN,pgdt.gtimg.cn
+  - DOMAIN,analytics.map.qq.com
+  - DOMAIN,cc.map.qq.com
+  - DOMAIN,aegis.qq.com
+  - DOMAIN,rmonitor.qq.com
+  - DOMAIN,snowflake.qq.com
+  - DOMAIN,h.trace.qq.com
+  - DOMAIN,log.tbs.qq.com
+  - DOMAIN,cfg.imtt.qq.com
+  - DOMAIN,us.l.qq.com
+  - DOMAIN,oss.weread.qq.com
+  - DOMAIN,galileotelemetry.tencent.com
+
+  # ===== 阿里系 =====
+  - DOMAIN-SUFFIX,alibabachengdun.com
+  - DOMAIN-SUFFIX,alibabachengdun.net
+  - DOMAIN-WILDCARD,*.log.aliyuncs.com
+  - DOMAIN,beacon-api.aliyuncs.com
+  - DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
+  - DOMAIN,abtest.alibaba.com
+  - DOMAIN,atoken.m.taobao.com
+  - DOMAIN,audid-api.taobao.com
+  - DOMAIN,fourier.taobao.com
+  - DOMAIN,sjarvis.taobao.com
+  - DOMAIN,h-adashx.ut.taobao.com
+  - DOMAIN,h-adashx.ut.dingtalk.com
+  - DOMAIN,dorangesource.alicdn.com
+  - DOMAIN,df.tanx.com
+  - DOMAIN,applog.uc.cn
+  - DOMAIN,px.ucweb.com
+  - DOMAIN,loggw-ex.alipay.com
+  - DOMAIN,mdap.alipay.com
+  - DOMAIN,dualstack-logs.amap.com
+
+  # ===== 百度 =====
+  - DOMAIN,ada.baidu.com
+  - DOMAIN,appc.baidu.com
+  - DOMAIN,ext.baidu.com
+  - DOMAIN,feed-image.baidu.com
+  - DOMAIN,httpsdns.baidu.com
+  - DOMAIN,sofire.baidu.com
+  - DOMAIN,techain.baidu.com
+
+  # ===== 小红书 =====
+  - DOMAIN-WILDCARD,ads-*-al.xhscdn.com
+  - DOMAIN-WILDCARD,apm-*.xiaohongshu.com
+  - DOMAIN,lng.xiaohongshu.com
+  - DOMAIN,spider-tracker.xiaohongshu.com
+  - DOMAIN,t2.xiaohongshu.com
+
+  # ===== 快手 =====
+  - DOMAIN,open.kwaizt.com
+  - DOMAIN,open.kuaishouzt.com
+
+  # ===== 手机厂商 =====
+  - DOMAIN-SUFFIX,ad.xiaomi.com
+  - DOMAIN,tk.d.mi.com
+  - DOMAIN,beats.be.mi.com
+  - DOMAIN,stat.youpin.mi.com
+  - DOMAIN,tracking.miui.com
+  - DOMAIN,events-drcn.op.dbankcloud.cn
+  - DOMAIN,metrics1.data.hicloud.com
+  - DOMAIN,norma-external-collect.meizu.com
+  - DOMAIN,ureca.samsungapps.com
+
+  # ===== 运营商 =====
+  - DOMAIN,h.app.coc.10086.cn
+  - DOMAIN,smartad.10010.com
+  - DOMAIN,auni.telecome.cn
+  - DOMAIN,log2.cmpassport.com
+
+  # ===== 其他 =====
+  - DOMAIN,s.c-ctrip.com
+  - DOMAIN,ma-adx.ctrip.com
+  - DOMAIN,catfront.dianping.com
+  - DOMAIN,data-sdk-uuid-log.d.meituan.net
+  - DOMAIN,dataflow.biliapi.com
+  - DOMAIN,b.qchannel03.cn
   - DOMAIN,cfgc.zztfly.com
+  - DOMAIN,fo.iemiq.com
+  - DOMAIN,px.effirst.com
+  - DOMAIN,rumt-zh.com
+  - DOMAIN,yumao.puata.info
