@@ -71,6 +71,7 @@ payload:
   - DOMAIN,firebaselogging-pa.googleapis.com
   - DOMAIN,firebaselogging.googleapis.com
   - DOMAIN,crashlyticsreports-pa.googleapis.com
+  - DOMAIN-WILDCARD,ogads-*.clients*.google.com
 
   # ===== 海外归因 / 分析 =====
   - DOMAIN-SUFFIX,appsflyer.com
