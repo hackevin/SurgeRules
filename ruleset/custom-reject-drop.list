@@ -5,7 +5,7 @@ DOMAIN-WILDCARD,tnc*-aliec*.zijieapi.com
 DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
 DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
 DOMAIN-WILDCARD,abtest*-misc-*.zijieapi.com
-DOMAIN-WILDCARD,v*log.moweather.com
+DOMAIN-WILDCARD,*log.moweather.com
 DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN,mon.snssdk.com
 DOMAIN,ib.snssdk.com
