@@ -7,6 +7,7 @@ payload:
   - IP-CIDR,112.253.55.119/32,no-resolve
 
   # ===== 自定义WILDCARD ====
+  - DOMAIN-WILDCARD,ads.*
   - DOMAIN-WILDCARD,analytics.*
   - DOMAIN-WILDCARD,applog.*
   - DOMAIN-WILDCARD,*.mobi
