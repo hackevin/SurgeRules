@@ -265,6 +265,7 @@ payload:
   - DOMAIN,dualstack-logs.amap.com
   - DOMAIN,atm.youku.com
   - DOMAIN,iyes.youku.com
+  - DOMAIN,club.alimama.com
 
   # ===== 百度 / 搜狗 =====
   - DOMAIN,ada.baidu.com
