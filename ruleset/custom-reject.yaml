@@ -335,6 +335,7 @@ payload:
   - DOMAIN,ctrace.sogaha.cn
   - DOMAIN,logs.chelaile.net.cn
   - DOMAIN,atrace.chelaile.net.cn
+  - DOMAIN,adx.yg84.com
   
   # ===== 其他 =====
   - DOMAIN-SUFFIX,wmzfylgdsz.com
