@@ -43,7 +43,6 @@ payload:
   - DOMAIN-WILDCARD,ads*-normal.zijieapi.com
   - DOMAIN-WILDCARD,*log.moweather.com
   - DOMAIN-SUFFIX,appsflyersdk.com
-  - DOMAIN,mon.snssdk.com
   - DOMAIN,ib.snssdk.com
   - DOMAIN,i.snssdk.com
   - DOMAIN,polaris.zijieapi.com
