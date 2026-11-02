@@ -195,7 +195,7 @@ payload:
   - DOMAIN,ib.snssdk.com           # 疑似业务接口
   - DOMAIN,mssdk.volces.com
   - DOMAIN,dig.zjurl.cn
-  - DOMAIN,lf3-analytics.bytescm.com
+  - DOMAIN-WILDCARD,lf*-analytics.bytescm.com
   
   # ===== 字节系：扩展同类日志/监控节点 =====
   - DOMAIN-WILDCARD,rtlog*-*.zijieapi.com
