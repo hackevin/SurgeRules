@@ -28,6 +28,7 @@ payload:
   - DOMAIN-SUFFIX,mobgi.com
   - DOMAIN-SUFFIX,mmstat.com
   - DOMAIN-SUFFIX,irs01.com
+  - DOMAIN-SUFFIX,inner-active.mobi
 
   # ===== Google 广告 / 统计 / 崩溃上报 =====
   - DOMAIN-SUFFIX,app-measurement.com
@@ -44,6 +45,7 @@ payload:
   - DOMAIN,adservice.google.com
   - DOMAIN,analytics.google.com
   - DOMAIN,firebaselogging-pa.googleapis.com
+  - DOMAIN,fundingchoicesmessages.google.com
 
   # ===== 海外归因 / 分析 =====
   - DOMAIN-SUFFIX,appsflyer.com
@@ -310,6 +312,13 @@ payload:
   # - DOMAIN-SUFFIX,wo.cn              # 联通沃商店
   # - DOMAIN-SUFFIX,cmvideo.cn         # 咪咕视频
 
+  # ===== 墨迹天气 =====
+  - DOMAIN,adl.api.moweather.com
+  - DOMAIN,mcs.api.moweather.com
+  - DOMAIN,mcsop.api.moweather.com
+  # - DOMAIN,bctrl.api.moweather.com   # 先观察
+  # - DOMAIN,wh.api.moweather.com      # 先观察
+  
   # ===== 其他 =====
   - DOMAIN-SUFFIX,wmzfylgdsz.com
   - DOMAIN,s.c-ctrip.com
