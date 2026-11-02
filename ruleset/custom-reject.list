@@ -299,7 +299,7 @@ DOMAIN,data-sdk-uuid-log.d.meituan.net
 DOMAIN,catfront.dianping.com
 
 # ===== 小红书 =====
-DOMAIN-WILDCARD,ads-*-al.xhscdn.com
+#DOMAIN-WILDCARD,ads-*-al.xhscdn.com
 DOMAIN-WILDCARD,ads-*.xhscdn.com
 DOMAIN-WILDCARD,apm-*.xiaohongshu.com
 DOMAIN,crash.xiaohongshu.com
