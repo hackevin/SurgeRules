@@ -32,6 +32,7 @@ payload:
   - DOMAIN-SUFFIX,mobgi.com
   - DOMAIN-SUFFIX,mmstat.com
   - DOMAIN-SUFFIX,irs01.com
+  - DOMAIN-SUFFIX,.mobi
 
   # ===== Google 广告 / 统计 / 崩溃上报 =====
   - DOMAIN-SUFFIX,app-measurement.com
