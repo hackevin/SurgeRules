@@ -218,6 +218,7 @@ payload:
   - DOMAIN-SUFFIX,alibabachengdun.com
   - DOMAIN-SUFFIX,alibabachengdun.net
   - DOMAIN-SUFFIX,log.aliyuncs.com
+  - DOMAIN,sdkgen.data.tianwenca.com
   - DOMAIN,beacon-api.aliyuncs.com
   - DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
   - DOMAIN,acjs.aliyun.com
