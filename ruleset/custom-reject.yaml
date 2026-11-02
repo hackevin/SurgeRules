@@ -222,8 +222,10 @@ payload:
   - DOMAIN,huichuan.sm.cn
   - DOMAIN,ulog.wpk.qianwen.com
   - DOMAIN,amdc.alipay.com
+  - DOMAIN,amdc.alipay.com.cn
   - DOMAIN,loggw-ex.alipay.com
   - DOMAIN,mdap.alipay.com
+  - DOMAIN,mdap.alipay.com.cn
   - DOMAIN,dualstack-logs.amap.com
   - DOMAIN,atm.youku.com
   - DOMAIN,iyes.youku.com
