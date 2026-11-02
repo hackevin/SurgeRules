@@ -1,8 +1,9 @@
 payload:
   # ===== 字节系 =====
   - DOMAIN-WILDCARD,log*-misc-*.amemv.com
-  - DOMAIN,mon.snssdk.com
+  - DOMAIN-WILDCARD,mon*-misc-*.amemv.com
   - DOMAIN-WILDCARD,tnc*-aliec*.zijieapi.com
   - DOMAIN-SUFFIX,appsflyersdk.com
+  - DOMAIN,mon.snssdk.com
   - DOMAIN,ib.snssdk.com
   - DOMAIN,polaris.zijieapi.com
