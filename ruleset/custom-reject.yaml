@@ -6,7 +6,7 @@ payload:
   - IP-CIDR,112.253.54.120/32,no-resolve
   - IP-CIDR,112.253.55.119/32,no-resolve
 
-  # ===== 通用 SDK：友盟 / 个推 / 极光 =====
+  # ===== 通用 SDK：友盟 / 个推 / 极光 / Google =====
   - DOMAIN-SUFFIX,umeng.com
   - DOMAIN-SUFFIX,umengcloud.com
   - DOMAIN-SUFFIX,gepush.com
@@ -16,6 +16,24 @@ payload:
   - DOMAIN-SUFFIX,jiguang.cn
   - DOMAIN-SUFFIX,ad-survey.com
   - DOMAIN-SUFFIX,app-measurement.com
+  - DOMAIN-SUFFIX,doubleclick.net
+  - DOMAIN-SUFFIX,googlesyndication.com
+  - DOMAIN-SUFFIX,googleadservices.com
+  - DOMAIN-SUFFIX,2mdn.net
+  - DOMAIN-SUFFIX,admob.com
+  - DOMAIN-SUFFIX,adsense.com
+  - DOMAIN,adservice.google.com
+
+  # 统计 / 标签
+  - DOMAIN-SUFFIX,google-analytics.com
+  - DOMAIN-SUFFIX,googletagmanager.com
+  - DOMAIN-SUFFIX,googletagservices.com
+  - DOMAIN-SUFFIX,app-measurement.com
+  - DOMAIN,analytics.google.com
+
+  # Firebase 崩溃 / 日志上报
+  - DOMAIN-SUFFIX,crashlytics.com
+  - DOMAIN,firebaselogging-pa.googleapis.com
 
   # ===== 字节系 =====
   - DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
