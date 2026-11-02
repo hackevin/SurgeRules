@@ -1,9 +1,9 @@
-  # httpdns 私有 DNS 入口
-  - DOMAIN,amdc.alipay.com
-  - DOMAIN,dns.jd.com
-  - DOMAIN,httpdns.meituan.com
-  - DOMAIN,httpdns.zybang.com
-  - DOMAIN,dig.bdurl.net
-  - DOMAIN,dig.zjurl.cn
-  - DOMAIN,grs.dbankcloud.com
-  - DOMAIN,dns.weixin.qq.com.cn
+# httpdns 私有 DNS 入口
+DOMAIN,amdc.alipay.com
+DOMAIN,dns.jd.com
+DOMAIN,httpdns.meituan.com
+DOMAIN,httpdns.zybang.com
+DOMAIN,dig.bdurl.net
+DOMAIN,dig.zjurl.cn
+DOMAIN,grs.dbankcloud.com
+DOMAIN,dns.weixin.qq.com.cn
