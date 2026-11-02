@@ -134,6 +134,7 @@ payload:
   - DOMAIN-SUFFIX,bidmachine.io
   - DOMAIN-SUFFIX,startappservice.com
   - DOMAIN-SUFFIX,startapp.com
+  - DOMAIN-SUFFIX,unityads.unitychina.cn
 
   # ===== 广告平台 / DSP / 追踪 =====
   - DOMAIN-SUFFIX,adnxs.com
