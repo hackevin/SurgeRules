@@ -332,6 +332,7 @@ payload:
   
   # ===== 车来了 =====
   - DOMAIN,adx.sogaha.cn
+  - DOMAIN,ctrace.sogaha.cn
   - DOMAIN,logs.chelaile.net.cn
   - DOMAIN,atrace.chelaile.net.cn
   
