@@ -13,7 +13,7 @@ payload:
   - DOMAIN-SUFFIX,gepush.com
   - DOMAIN-SUFFIX,getui.com
   - DOMAIN-SUFFIX,getui.net
-  # - DOMAIN-SUFFIX,onesignal.com
+  - DOMAIN-SUFFIX,onesignal.com
 
   # ===== 通用 SDK：友盟 / 国内统计 =====
   - DOMAIN-SUFFIX,umeng.com
@@ -33,7 +33,34 @@ payload:
   - DOMAIN-SUFFIX,mmstat.com
   - DOMAIN-SUFFIX,irs01.com
   - DOMAIN-SUFFIX,mobi
+  
+  # InMobi
+  - DOMAIN-SUFFIX,inmobi.com
+  - DOMAIN-SUFFIX,inmobi.net
 
+  # MobFox
+  - DOMAIN-SUFFIX,mobfox.com
+
+  # MobClix
+  - DOMAIN-SUFFIX,mobclix.com
+
+  # 移动广告联盟
+  - DOMAIN-SUFFIX,mobadvent.com
+  - DOMAIN-SUFFIX,mobagent.com
+  - DOMAIN-SUFFIX,mobnativeads.com
+  - DOMAIN-SUFFIX,mobstitial.com
+  - DOMAIN-SUFFIX,mobstitialtag.com
+  - DOMAIN-SUFFIX,inner-active.mobi
+  - DOMAIN-SUFFIX,justad.mobi
+  - DOMAIN-SUFFIX,leadboltads.net
+  - DOMAIN-SUFFIX,adcolony.com
+  - DOMAIN-SUFFIX,appnext.com
+  - DOMAIN-SUFFIX,appnxt.net
+  - DOMAIN-SUFFIX,chartboost.com
+  - DOMAIN-SUFFIX,nativex.com
+  - DOMAIN-SUFFIX,rayjump.com
+  - DOMAIN-SUFFIX,mintegral.com
+  
   # ===== Google 广告 / 统计 / 崩溃上报 =====
   - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,doubleclick.net
@@ -261,6 +288,7 @@ payload:
   - DOMAIN,dig.bdurl.net
   - DOMAIN,input.shouji.sogou.com
   - DOMAIN,worldwide.sogou.com
+  - DOMAIN-SUFFIX,mobads.baidu.com
 
   # ===== 京东 / 美团 =====
   - DOMAIN,dns.jd.com
