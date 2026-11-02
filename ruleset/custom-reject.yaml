@@ -422,6 +422,7 @@ payload:
   # ===== Reddit =====
   - DOMAIN-WILDCARD,*-reporting.reddit.com
   - DOMAIN-SUFFIX,logs.netflix.com
+  - DOMAIN,inapps.af-sdk.com
   # ===== 其他 =====
   - DOMAIN-SUFFIX,wmzfylgdsz.com
   - DOMAIN,s.c-ctrip.com
