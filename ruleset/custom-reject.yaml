@@ -13,6 +13,32 @@ payload:
   - DOMAIN-WILDCARD,log.*
   - DOMAIN-WILDCARD,logs.*
   - DOMAIN-WILDCARD,mon.*
+  - DOMAIN-WILDCARD,admarvel.*
+  - DOMAIN-WILDCARD,admaster.*
+  - DOMAIN-WILDCARD,adsage.*
+  - DOMAIN-WILDCARD,adsensor.*
+  - DOMAIN-WILDCARD,adservice.*
+  - DOMAIN-WILDCARD,adsmogo.*
+  - DOMAIN-WILDCARD,adsrvmedia.*
+  - DOMAIN-WILDCARD,adsserving.*
+  - DOMAIN-WILDCARD,adsystem.*
+  - DOMAIN-WILDCARD,adwords.*
+  - DOMAIN-WILDCARD,applovin.*
+  - DOMAIN-WILDCARD,appsflyer.*
+  - DOMAIN-WILDCARD,domob.*
+  - DOMAIN-WILDCARD,duomeng.*
+  - DOMAIN-WILDCARD,dwtrack.*
+  - DOMAIN-WILDCARD,guanggao.*
+  - DOMAIN-WILDCARD,omgmta.*
+  - DOMAIN-WILDCARD,omgmtaw.*
+  - DOMAIN-WILDCARD,omniture.*
+  - DOMAIN-WILDCARD,openx.*
+  - DOMAIN-WILDCARD,partnerad.*
+  - DOMAIN-WILDCARD,pingfore.*
+  - DOMAIN-WILDCARD,socdm.*
+  - DOMAIN-WILDCARD,supersonicads.*
+  - DOMAIN-WILDCARD,wlmonitor.*
+  - DOMAIN-WILDCARD,zjtoolbar.*
   - DOMAIN-WILDCARD,*.mobi
   
   # ===== 通用前缀通配符（httpdns / 配置下发）=====
