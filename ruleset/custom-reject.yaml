@@ -178,6 +178,7 @@ payload:
   - DOMAIN-WILDCARD,p*-ad-sign.byteimg.com
   - DOMAIN,live-player-log-service.bytedance.com
   - DOMAIN,logbk.amemv.com
+  - DOMAIN,mon.toutiaocloud.com
   - DOMAIN,log.zijieapi.com
   - DOMAIN,mon.zijieapi.com
   - DOMAIN,timon.zijieapi.com
