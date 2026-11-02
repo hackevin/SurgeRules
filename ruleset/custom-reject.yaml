@@ -297,6 +297,11 @@ payload:
   - DOMAIN,norma-external-collect.meizu.com
   - DOMAIN,ureca.samsungapps.com
   - DOMAIN,ad.mobile.sec.samsung.com
+  - DOMAIN,adx.heytapmobi.com
+  - DOMAIN,data.heytapmobi.com
+  - DOMAIN,dcs.heytapmobi.com
+  - DOMAIN,stat.heytapmobi.com
+  - DOMAIN,log.heytapmobi.com
   # 以下可能影响应用商店，需要时取消注释
   # - DOMAIN,hispace.hicloud.com       # 华为应用市场接口
   # - DOMAIN,sa.samsungapps.com        # 三星应用商店接口
