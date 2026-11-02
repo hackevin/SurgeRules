@@ -424,8 +424,8 @@ payload:
   - DOMAIN-SUFFIX,logs.netflix.com
   - DOMAIN,inapps.af-sdk.com
   # ===== 航旅纵横 =====
-  DOMAIN,sensors.umetrip.com.cn
-  DOMAIN,analytics.umetrip.com
+  - DOMAIN,sensors.umetrip.com.cn
+  - DOMAIN,analytics.umetrip.com
   
   # ===== 其他 =====
   - DOMAIN-SUFFIX,wmzfylgdsz.com
