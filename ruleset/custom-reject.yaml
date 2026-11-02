@@ -144,6 +144,7 @@ payload:
   - DOMAIN-WILDCARD,log*-misc-*.amemv.com
   - DOMAIN-WILDCARD,mon*-misc-*.amemv.com
   - DOMAIN-WILDCARD,p*-ad-sign.byteimg.com
+  - DOMAIN-WILDCARD,abtest*-misc-*.zijieapi.com
   - DOMAIN,logbk.amemv.com
   - DOMAIN,log.zijieapi.com
   - DOMAIN,mon.zijieapi.com
