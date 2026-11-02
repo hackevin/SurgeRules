@@ -4,6 +4,7 @@ payload:
   - DOMAIN-WILDCARD,mon*-misc-*.amemv.com
   - DOMAIN-WILDCARD,tnc*-aliec*.zijieapi.com
   - DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
+  - DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
   - DOMAIN-SUFFIX,appsflyersdk.com
   - DOMAIN,mon.snssdk.com
   - DOMAIN,ib.snssdk.com
