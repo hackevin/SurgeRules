@@ -32,7 +32,7 @@ payload:
   - DOMAIN-SUFFIX,mobgi.com
   - DOMAIN-SUFFIX,mmstat.com
   - DOMAIN-SUFFIX,irs01.com
-  - DOMAIN-SUFFIX,mobi
+  - DOMAIN-WILDCARD,*.mobi
   
   # MobFox
   - DOMAIN-SUFFIX,mobfox.com
