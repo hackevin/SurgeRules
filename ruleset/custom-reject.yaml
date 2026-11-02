@@ -419,7 +419,9 @@ payload:
   # ===== 观察区（可能影响功能，默认不生效）=====
   # - DOMAIN,settings-win.data.microsoft.com   # Windows 配置下发，封了个别功能的远程配置可能拉不到
   # - DOMAIN,dc.services.visualstudio.com      # 如果你自己开发并用 Application Insights，不要封
-  
+  # ===== Reddit =====
+  - DOMAIN-WILDCARD,*-reporting.reddit.com
+  - DOMAIN-SUFFIX,logs.netflix.com
   # ===== 其他 =====
   - DOMAIN-SUFFIX,wmzfylgdsz.com
   - DOMAIN,s.c-ctrip.com
