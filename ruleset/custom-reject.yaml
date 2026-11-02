@@ -300,7 +300,7 @@ payload:
   - DOMAIN,catfront.dianping.com
 
   # ===== 小红书 =====
-  - DOMAIN-WILDCARD,ads-*-al.xhscdn.com
+  - DOMAIN-WILDCARD,ads-*.xhscdn.com
   - DOMAIN-WILDCARD,apm-*.xiaohongshu.com
   - DOMAIN,crash.xiaohongshu.com
   - DOMAIN,lng.xiaohongshu.com
