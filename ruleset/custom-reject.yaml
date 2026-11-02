@@ -6,6 +6,11 @@ payload:
   - IP-CIDR,112.253.54.120/32,no-resolve
   - IP-CIDR,112.253.55.119/32,no-resolve
 
+  # ===== 自定义WILDCARD ====
+  - DOMAIN-WILDCARD,analytics.*
+  - DOMAIN-WILDCARD,applog.*
+  - DOMAIN-WILDCARD,*.mobi
+  
   # ===== 推送通道（封了可能收不到离线通知，整组注释或改用 REJECT-DROP）=====
   - DOMAIN-SUFFIX,jpush.cn
   - DOMAIN-SUFFIX,jpush.io
@@ -32,7 +37,6 @@ payload:
   - DOMAIN-SUFFIX,mobgi.com
   - DOMAIN-SUFFIX,mmstat.com
   - DOMAIN-SUFFIX,irs01.com
-  - DOMAIN-WILDCARD,*.mobi
   - DOMAIN-SUFFIX,miaozhen.cn
   - DOMAIN-SUFFIX,reachmax.cn
   
@@ -106,7 +110,6 @@ payload:
   - DOMAIN-SUFFIX,business-api.tiktok.com
   - DOMAIN-SUFFIX,app-analytics.snapchat.com
   - DOMAIN-SUFFIX,sentry.io        # 自己用 Sentry 的要注释掉
-  - DOMAIN-WILDCARD,analytics.*
   # 以下有误伤风险，需要时取消注释
   # - DOMAIN-SUFFIX,facebook.net     # 网站上的 Facebook 登录/分享按钮依赖它
   # - DOMAIN,graph.facebook.com      # Facebook/Instagram 登录和主功能也用
