@@ -106,6 +106,7 @@ payload:
   - DOMAIN-SUFFIX,business-api.tiktok.com
   - DOMAIN-SUFFIX,app-analytics.snapchat.com
   - DOMAIN-SUFFIX,sentry.io        # 自己用 Sentry 的要注释掉
+  - DOMAIN-WILDCARD,analytics.*
   # 以下有误伤风险，需要时取消注释
   # - DOMAIN-SUFFIX,facebook.net     # 网站上的 Facebook 登录/分享按钮依赖它
   # - DOMAIN,graph.facebook.com      # Facebook/Instagram 登录和主功能也用
