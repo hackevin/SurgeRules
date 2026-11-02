@@ -1,9 +1,11 @@
+payload:
 # ===== IP 直连（绕过 DNS，只能在 mihomo 拦）=====
 IP-CIDR,157.255.132.22/32,no-resolve
 IP-CIDR,157.148.6.86/32,no-resolve
 IP-CIDR,112.253.54.119/32,no-resolve
 IP-CIDR,112.253.54.120/32,no-resolve
 IP-CIDR,112.253.55.119/32,no-resolve
+
 # ===== 推送通道（封了可能收不到离线通知，整组注释或改用 REJECT-DROP）=====
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jpush.io
@@ -11,7 +13,8 @@ DOMAIN-SUFFIX,jiguang.cn      # 极光认证（一键登录）也用这个域名
 DOMAIN-SUFFIX,gepush.com
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
-# - DOMAIN-SUFFIX,onesignal.com
+DOMAIN-SUFFIX,onesignal.com
+
 # ===== 通用 SDK：友盟 / 国内统计 =====
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
@@ -29,29 +32,27 @@ DOMAIN-SUFFIX,mob.com
 DOMAIN-SUFFIX,mobgi.com
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,irs01.com
-# InMobi
-DOMAIN-SUFFIX,inmobi.com
-DOMAIN-SUFFIX,inmobi.net
+DOMAIN-SUFFIX,mobi
+
 # MobFox
 DOMAIN-SUFFIX,mobfox.com
+
 # MobClix
 DOMAIN-SUFFIX,mobclix.com
+
 # 移动广告联盟
 DOMAIN-SUFFIX,mobadvent.com
 DOMAIN-SUFFIX,mobagent.com
 DOMAIN-SUFFIX,mobnativeads.com
 DOMAIN-SUFFIX,mobstitial.com
 DOMAIN-SUFFIX,mobstitialtag.com
-DOMAIN-SUFFIX,inner-active.mobi
 DOMAIN-SUFFIX,justad.mobi
 DOMAIN-SUFFIX,leadboltads.net
-DOMAIN-SUFFIX,adcolony.com
 DOMAIN-SUFFIX,appnext.com
 DOMAIN-SUFFIX,appnxt.net
-DOMAIN-SUFFIX,chartboost.com
 DOMAIN-SUFFIX,nativex.com
 DOMAIN-SUFFIX,rayjump.com
-DOMAIN-SUFFIX,mintegral.com
+
 # ===== Google 广告 / 统计 / 崩溃上报 =====
 DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,doubleclick.net
@@ -70,6 +71,7 @@ DOMAIN,fundingchoicesmessages.google.com
 DOMAIN,firebaselogging-pa.googleapis.com
 DOMAIN,firebaselogging.googleapis.com
 DOMAIN,crashlyticsreports-pa.googleapis.com
+
 # ===== 海外归因 / 分析 =====
 DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,appsflyersdk.com
@@ -106,6 +108,7 @@ DOMAIN-SUFFIX,sentry.io        # 自己用 Sentry 的要注释掉
 # - DOMAIN,graph.facebook.com      # Facebook/Instagram 登录和主功能也用
 # - DOMAIN-SUFFIX,newrelic.com
 # - DOMAIN-SUFFIX,nr-data.net
+
 # ===== 游戏广告 SDK（封了看广告领奖励会失效）=====
 DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,applvn.com
@@ -119,6 +122,7 @@ DOMAIN-SUFFIX,mtgglobals.com
 DOMAIN-SUFFIX,adcolony.com
 DOMAIN-SUFFIX,chartboost.com
 DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,inmobi.net
 DOMAIN-SUFFIX,inner-active.mobi
 DOMAIN-SUFFIX,vungle.com
 DOMAIN-SUFFIX,liftoff.io
@@ -129,6 +133,7 @@ DOMAIN-SUFFIX,moloco.com
 DOMAIN-SUFFIX,bidmachine.io
 DOMAIN-SUFFIX,startappservice.com
 DOMAIN-SUFFIX,startapp.com
+
 # ===== 广告平台 / DSP / 追踪 =====
 DOMAIN-SUFFIX,adnxs.com
 DOMAIN-SUFFIX,criteo.com
@@ -147,6 +152,7 @@ DOMAIN-SUFFIX,pubmatic.com
 DOMAIN-SUFFIX,yieldmo.com
 DOMAIN-SUFFIX,3lift.com
 DOMAIN-SUFFIX,sharethrough.com
+
 # ===== 字节系 =====
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
@@ -182,6 +188,7 @@ DOMAIN,mon.snssdk.com
 DOMAIN,i.snssdk.com            # 核心接口之一，字节系 App 异常先查这条
 DOMAIN,ib.snssdk.com           # 疑似业务接口
 DOMAIN,mssdk.volces.com
+DOMAIN,dig.zjurl.cn
 # ===== 字节系：扩展同类日志/监控节点 =====
 DOMAIN-WILDCARD,rtlog*-*.zijieapi.com
 DOMAIN-WILDCARD,rtlog*-*.amemv.com
@@ -196,6 +203,7 @@ DOMAIN-WILDCARD,slardar*.zijieapi.com    # 性能监控
 DOMAIN-WILDCARD,apm*.volces.com          # 性能监控，已覆盖 apmplus
 DOMAIN-WILDCARD,abtest*-misc-*.amemv.com
 DOMAIN-WILDCARD,abtest*-misc-*.fqnovel.com
+
 # ===== 腾讯系 =====
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,e.qq.com
@@ -226,10 +234,12 @@ DOMAIN,galileotelemetry.tencent.com
 DOMAIN,mmgame.qpic.cn
 DOMAIN,badjs.weixinbridge.com
 DOMAIN,report.voovmeeting.com
+
 # ===== 阿里系 =====
 DOMAIN-SUFFIX,alibabachengdun.com
 DOMAIN-SUFFIX,alibabachengdun.net
 DOMAIN-SUFFIX,log.aliyuncs.com
+DOMAIN,sdkgen.data.tianwenca.com
 DOMAIN,beacon-api.aliyuncs.com
 DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
 DOMAIN,acjs.aliyun.com
@@ -255,6 +265,7 @@ DOMAIN,mdap.alipay.com.cn
 DOMAIN,dualstack-logs.amap.com
 DOMAIN,atm.youku.com
 DOMAIN,iyes.youku.com
+
 # ===== 百度 / 搜狗 =====
 DOMAIN,ada.baidu.com
 DOMAIN,appc.baidu.com
@@ -271,6 +282,7 @@ DOMAIN,dig.bdurl.net
 DOMAIN,input.shouji.sogou.com
 DOMAIN,worldwide.sogou.com
 DOMAIN-SUFFIX,mobads.baidu.com
+
 # ===== 京东 / 美团 =====
 DOMAIN,dns.jd.com
 DOMAIN,kepler.jd.com
@@ -279,6 +291,7 @@ DOMAIN,mapi.m.jd.com
 DOMAIN,httpdns.meituan.com
 DOMAIN,data-sdk-uuid-log.d.meituan.net
 DOMAIN,catfront.dianping.com
+
 # ===== 小红书 =====
 DOMAIN-WILDCARD,ads-*-al.xhscdn.com
 DOMAIN-WILDCARD,apm-*.xiaohongshu.com
@@ -286,6 +299,7 @@ DOMAIN,crash.xiaohongshu.com
 DOMAIN,lng.xiaohongshu.com
 DOMAIN,spider-tracker.xiaohongshu.com
 DOMAIN,t2.xiaohongshu.com
+
 # ===== 快手 =====
 DOMAIN-WILDCARD,ulog*.gifshow.com
 DOMAIN,api.e.kuaishou.com
@@ -293,6 +307,7 @@ DOMAIN,kste.ksapisrv.com
 DOMAIN,push.ksapisrv.com
 DOMAIN,open.kwaizt.com
 DOMAIN,open.kuaishouzt.com
+
 # ===== 视频 / 其他媒体 =====
 DOMAIN-SUFFIX,mgtv-ad.com
 DOMAIN,stat.mgtv.com
@@ -300,6 +315,7 @@ DOMAIN,pcvcr.cdn.mgtv.com
 DOMAIN,data.bilibili.com
 DOMAIN,dataflow.biliapi.com
 DOMAIN,api.xsj.wasu.tv
+
 # ===== 手机厂商 =====
 DOMAIN-SUFFIX,ad.xiaomi.com
 DOMAIN,api.installer.xiaomi.com
@@ -312,8 +328,8 @@ DOMAIN,beats.be.mi.com
 DOMAIN,stat.youpin.mi.com
 DOMAIN,tracking.miui.com
 DOMAIN,events-drcn.op.dbankcloud.cn
-DOMAIN,grs.dbankcloud.com
 DOMAIN,healthdata.dbankcloud.cn
+DOMAIN,grs.dbankcloud.com
 DOMAIN,metrics1.data.hicloud.com
 DOMAIN,adx.hicloud.com
 DOMAIN,ads.heytapmobi.com
@@ -334,6 +350,7 @@ DOMAIN,ad.mobile.sec.samsung.com
 # 以下可能影响应用商店，需要时取消注释
 # - DOMAIN,hispace.hicloud.com
 # - DOMAIN,sa.samsungapps.com
+
 # ===== 运营商 =====
 DOMAIN,h.app.coc.10086.cn
 DOMAIN,log2.cmpassport.com
@@ -346,6 +363,7 @@ DOMAIN,stat.189.cn
 DOMAIN,zxid-m.mobileservice.cn
 # - DOMAIN-SUFFIX,wo.cn
 # - DOMAIN-SUFFIX,cmvideo.cn
+
 # ===== 墨迹天气 =====
 DOMAIN,adl.api.moweather.com
 DOMAIN,mcs.api.moweather.com
@@ -353,12 +371,21 @@ DOMAIN,mcsop.api.moweather.com
 DOMAIN-WILDCARD,v*log.moweather.com
 # - DOMAIN,bctrl.api.moweather.com
 # - DOMAIN,wh.api.moweather.com
+
 # ===== 车来了 =====
 DOMAIN,adx.sogaha.cn
 DOMAIN,ctrace.sogaha.cn
 DOMAIN,logs.chelaile.net.cn
 DOMAIN,atrace.chelaile.net.cn
 DOMAIN,adx.yg84.com
+
+# ===== PandaBus =====
+DOMAIN,mpaas-loggw4zwy.aliyuncs.com
+DOMAIN,adapi.pandabus.cn
+DOMAIN-SUFFIX,tobidad.cn
+DOMAIN,sdkgen.data.tianwenca.com
+DOMAIN,deviceconfig.pandabus.cc
+
 # ===== 微软：App Center / 开发者遥测 =====
 DOMAIN,in.appcenter.ms
 DOMAIN,dc.services.visualstudio.com        # Application Insights，VS Code 和很多第三方 App 用
@@ -385,6 +412,7 @@ DOMAIN,sqm.telemetry.microsoft.com
 # ===== 观察区（可能影响功能，默认不生效）=====
 # - DOMAIN,settings-win.data.microsoft.com   # Windows 配置下发，封了个别功能的远程配置可能拉不到
 # - DOMAIN,dc.services.visualstudio.com      # 如果你自己开发并用 Application Insights，不要封
+
 # ===== 其他 =====
 DOMAIN-SUFFIX,wmzfylgdsz.com
 DOMAIN,s.c-ctrip.com
@@ -403,5 +431,8 @@ DOMAIN,fo.iemiq.com
 DOMAIN,px.effirst.com
 DOMAIN,rumt-zh.com
 DOMAIN,yumao.puata.info
+DOMAIN,tianmu.mobi
+
 # ===== 观察区（来源或用途未确认，默认不生效）=====
 # - DOMAIN,lf-rc1.yhgfb-cn-static.com       # 字节系静态/配置 CDN，可能影响页面加载
+# - DOMAIN,opex-service-cn.allawntech.com   # OPPO 系统运营配置
