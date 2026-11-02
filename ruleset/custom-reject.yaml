@@ -24,6 +24,18 @@ payload:
   - DOMAIN-SUFFIX,adsense.com
   - DOMAIN,adservice.google.com
 
+  # 游戏
+  - DOMAIN-SUFFIX,applovin.com
+  - DOMAIN-SUFFIX,unityads.unity3d.com
+  - DOMAIN-SUFFIX,ironsrc.com
+  - DOMAIN-SUFFIX,supersonicads.com
+  - DOMAIN-SUFFIX,mintegral.com
+  - DOMAIN-SUFFIX,mtgglobals.com
+  - DOMAIN-SUFFIX,adcolony.com
+  - DOMAIN-SUFFIX,chartboost.com
+  - DOMAIN-SUFFIX,inmobi.com
+  - DOMAIN-SUFFIX,vungle.com
+
   # 统计 / 标签
   - DOMAIN-SUFFIX,google-analytics.com
   - DOMAIN-SUFFIX,googletagmanager.com
