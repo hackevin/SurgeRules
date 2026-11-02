@@ -5,6 +5,12 @@ IP-CIDR,112.253.54.119/32,no-resolve
 IP-CIDR,112.253.54.120/32,no-resolve
 IP-CIDR,112.253.55.119/32,no-resolve
 
+# ===== 自定义WILDCARD ====
+DOMAIN-WILDCARD,ads.*
+DOMAIN-WILDCARD,analytics.*
+DOMAIN-WILDCARD,applog.*
+DOMAIN-WILDCARD,*.mobi
+
 # ===== 推送通道（封了可能收不到离线通知，整组注释或改用 REJECT-DROP）=====
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jpush.io
@@ -31,7 +37,6 @@ DOMAIN-SUFFIX,mob.com
 DOMAIN-SUFFIX,mobgi.com
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,irs01.com
-DOMAIN-WILDCARD,*.mobi
 DOMAIN-SUFFIX,miaozhen.cn
 DOMAIN-SUFFIX,reachmax.cn
 
@@ -176,6 +181,7 @@ DOMAIN-WILDCARD,mon*-misc-*.amemv.com
 DOMAIN-WILDCARD,p*-ad-sign.byteimg.com
 DOMAIN,live-player-log-service.bytedance.com
 DOMAIN,logbk.amemv.com
+DOMAIN,mon.toutiaocloud.com
 DOMAIN,log.zijieapi.com
 DOMAIN,mon.zijieapi.com
 DOMAIN,timon.zijieapi.com
@@ -193,6 +199,7 @@ DOMAIN,i.snssdk.com            # 核心接口之一，字节系 App 异常先查
 DOMAIN,ib.snssdk.com           # 疑似业务接口
 DOMAIN,mssdk.volces.com
 DOMAIN,dig.zjurl.cn
+DOMAIN-WILDCARD,*-analytics.bytescm.com
 
 # ===== 字节系：扩展同类日志/监控节点 =====
 DOMAIN-WILDCARD,rtlog*-*.zijieapi.com
@@ -299,7 +306,6 @@ DOMAIN,data-sdk-uuid-log.d.meituan.net
 DOMAIN,catfront.dianping.com
 
 # ===== 小红书 =====
-#DOMAIN-WILDCARD,ads-*-al.xhscdn.com
 DOMAIN-WILDCARD,ads-*.xhscdn.com
 DOMAIN-WILDCARD,apm-*.xiaohongshu.com
 DOMAIN,crash.xiaohongshu.com
@@ -419,6 +425,13 @@ DOMAIN,sqm.telemetry.microsoft.com
 # ===== 观察区（可能影响功能，默认不生效）=====
 # - DOMAIN,settings-win.data.microsoft.com   # Windows 配置下发，封了个别功能的远程配置可能拉不到
 # - DOMAIN,dc.services.visualstudio.com      # 如果你自己开发并用 Application Insights，不要封
+# ===== Reddit =====
+DOMAIN-WILDCARD,*-reporting.reddit.com
+DOMAIN-SUFFIX,logs.netflix.com
+DOMAIN,inapps.af-sdk.com
+# ===== 航旅纵横 =====
+DOMAIN,sensors.umetrip.com.cn
+DOMAIN,analytics.umetrip.com
 
 # ===== 其他 =====
 DOMAIN-SUFFIX,wmzfylgdsz.com
