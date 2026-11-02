@@ -239,6 +239,7 @@ payload:
   - DOMAIN-SUFFIX,alibabachengdun.com
   - DOMAIN-SUFFIX,alibabachengdun.net
   - DOMAIN-SUFFIX,log.aliyuncs.com
+  - DOMAIN-SUFFIX,tanx.com
   - DOMAIN,sdkgen.data.tianwenca.com
   - DOMAIN,beacon-api.aliyuncs.com
   - DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
@@ -251,7 +252,6 @@ payload:
   - DOMAIN,h-adashx.ut.taobao.com
   - DOMAIN,h-adashx.ut.dingtalk.com
   - DOMAIN,dorangesource.alicdn.com
-  - DOMAIN,df.tanx.com
   - DOMAIN,applog.uc.cn
   - DOMAIN,px.ucweb.com
   - DOMAIN,adtrack.quark.cn
