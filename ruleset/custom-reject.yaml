@@ -356,6 +356,33 @@ payload:
   - DOMAIN,atrace.chelaile.net.cn
   - DOMAIN,adx.yg84.com
 
+  # ===== 微软：App Center / 开发者遥测 =====
+  - DOMAIN,in.appcenter.ms
+  - DOMAIN,dc.services.visualstudio.com        # Application Insights，VS Code 和很多第三方 App 用
+  - DOMAIN,dc.applicationinsights.microsoft.com
+  - DOMAIN,rt.applicationinsights.microsoft.com
+  - DOMAIN-SUFFIX,clarity.ms                    # Microsoft Clarity 网页行为分析
+  - DOMAIN,bat.bing.com                         # Bing 广告转化追踪
+
+  # ===== 微软：Windows / Office / Edge 诊断上报 =====
+  - DOMAIN,vortex.data.microsoft.com
+  - DOMAIN,vortex-win.data.microsoft.com
+  - DOMAIN,mobile.events.data.microsoft.com
+  - DOMAIN,browser.events.data.microsoft.com
+  - DOMAIN,self.events.data.microsoft.com
+  - DOMAIN,v10.events.data.microsoft.com
+  - DOMAIN,v20.events.data.microsoft.com
+  - DOMAIN,watson.telemetry.microsoft.com
+  - DOMAIN,watson.microsoft.com
+  - DOMAIN,telemetry.microsoft.com
+  - DOMAIN,telecommand.telemetry.microsoft.com
+  - DOMAIN,oca.telemetry.microsoft.com
+  - DOMAIN,sqm.telemetry.microsoft.com
+
+  # ===== 观察区（可能影响功能，默认不生效）=====
+  # - DOMAIN,settings-win.data.microsoft.com   # Windows 配置下发，封了个别功能的远程配置可能拉不到
+  # - DOMAIN,dc.services.visualstudio.com      # 如果你自己开发并用 Application Insights，不要封
+  
   # ===== 其他 =====
   - DOMAIN-SUFFIX,wmzfylgdsz.com
   - DOMAIN,s.c-ctrip.com
