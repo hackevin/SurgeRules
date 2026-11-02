@@ -356,6 +356,11 @@ payload:
   - DOMAIN,atrace.chelaile.net.cn
   - DOMAIN,adx.yg84.com
 
+  # ===== PandaBus =====
+  - DOMAIN,mpaas-loggw4zwy.aliyuncs.com
+  - DOMAIN,adapi.pandabus.cn
+  - DOMAIN-SUFFIX,tobidad.cn
+  
   # ===== 微软：App Center / 开发者遥测 =====
   - DOMAIN,in.appcenter.ms
   - DOMAIN,dc.services.visualstudio.com        # Application Insights，VS Code 和很多第三方 App 用
