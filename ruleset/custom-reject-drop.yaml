@@ -34,17 +34,48 @@ payload:
   - DOMAIN-WILDCARD,zjtoolbar.*
   - DOMAIN-WILDCARD,*.mobi
   # ===== 字节系 =====
+  # 穿山甲，覆盖 pangolin-sdk-toutiao / -b / 1 及以后的新编号
+  - DOMAIN-KEYWORD,pangolin-sdk-toutiao
+  - DOMAIN-SUFFIX,pglstatp-toutiao.com
+  - DOMAIN-SUFFIX,ctobsnssdk.com
+  - DOMAIN-WILDCARD,ads*-normal-*.zijieapi.com
+  - DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
+  - DOMAIN-WILDCARD,polaris*-normal-*.zijieapi.com
+  - DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
+  - DOMAIN-WILDCARD,tnc*-*.zijieapi.com
+  - DOMAIN-WILDCARD,tnc*-*.bytedance.com
+  - DOMAIN-WILDCARD,abtest*-misc-*.zijieapi.com
+  - DOMAIN-WILDCARD,*-applog-*.fqnovel.com
+  - DOMAIN-WILDCARD,mon*-misc-*.fqnovel.com
   - DOMAIN-WILDCARD,log*-misc-*.amemv.com
   - DOMAIN-WILDCARD,mon*-misc-*.amemv.com
-  - DOMAIN-WILDCARD,tnc*-aliec*.zijieapi.com
-  - DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
-  - DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
-  - DOMAIN-WILDCARD,abtest*-misc-*.zijieapi.com
-  - DOMAIN-WILDCARD,ads*-normal.zijieapi.com
-  - DOMAIN-WILDCARD,ads*-normal-*.zijieapi.com
-  - DOMAIN-WILDCARD,*log.moweather.com
-  - DOMAIN-SUFFIX,appsflyersdk.com
-  - DOMAIN,ib.snssdk.com
-  - DOMAIN,i.snssdk.com
-  - DOMAIN,polaris.zijieapi.com
+  - DOMAIN-WILDCARD,p*-ad-sign.byteimg.com
+  - DOMAIN-WILDCARD,*-analytics.bytescm.com
+  - DOMAIN,live-player-log-service.bytedance.com
   - DOMAIN,logbk.amemv.com
+  - DOMAIN,timon.zijieapi.com
+  - DOMAIN,vcs.zijieapi.com
+  - DOMAIN,feedback-c.zijieapi.com
+  - DOMAIN,dm.bytedance.com
+  - DOMAIN,dm.toutiao.com
+  - DOMAIN,dm-hl.toutiao.com
+  - DOMAIN,monsetting.toutiao.com
+  - DOMAIN,abtest-ch.snssdk.com
+  - DOMAIN,mssdk.volces.com
+  
+  # ===== 字节系：扩展同类日志/监控节点 =====
+  - DOMAIN-WILDCARD,rtlog*-*.zijieapi.com
+  - DOMAIN-WILDCARD,rtlog*-*.amemv.com
+  - DOMAIN-WILDCARD,*-applog-*.zijieapi.com
+  - DOMAIN-WILDCARD,*-applog-*.amemv.com
+  - DOMAIN-WILDCARD,log*-misc-*.zijieapi.com
+  - DOMAIN-WILDCARD,mon*-misc-*.zijieapi.com
+  - DOMAIN-WILDCARD,log*-misc-*.fqnovel.com
+  - DOMAIN-WILDCARD,abtest*-misc-*.amemv.com
+  - DOMAIN-WILDCARD,abtest*-misc-*.fqnovel.com
+  # 以下三条是推断的节点，没匹配到域名时无副作用
+  - DOMAIN-WILDCARD,mcs*.zijieapi.com
+  - DOMAIN-WILDCARD,crash*.zijieapi.com
+  - DOMAIN-WILDCARD,slardar*.zijieapi.com
+  # 性能监控，已覆盖 apmplus
+  - DOMAIN-WILDCARD,apm*.volces.com
