@@ -46,6 +46,7 @@
   - DOMAIN,fundingchoicesmessages.google.com
   - DOMAIN,firebaselogging-pa.googleapis.com
   - DOMAIN,firebaselogging.googleapis.com
+  - DOMAIN,crashlyticsreports-pa.googleapis.com
   # ===== 海外归因 / 分析 =====
   - DOMAIN-SUFFIX,appsflyer.com
   - DOMAIN-SUFFIX,appsflyersdk.com
@@ -276,6 +277,7 @@
   - DOMAIN,tracking.miui.com
   - DOMAIN,events-drcn.op.dbankcloud.cn
   - DOMAIN,grs.dbankcloud.com
+  - DOMAIN,healthdata.dbankcloud.cn
   - DOMAIN,metrics1.data.hicloud.com
   - DOMAIN,adx.hicloud.com
   - DOMAIN,ads.heytapmobi.com
