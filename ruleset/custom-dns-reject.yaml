@@ -9,3 +9,4 @@ payload:
   - DOMAIN,grs.dbankcloud.com
   - DOMAIN,dns.weixin.qq.com.cn
   - DOMAIN,httpdns.music.163.com
+  - DOMAIN,httpdns.bilivideo.com
