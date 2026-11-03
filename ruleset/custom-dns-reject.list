@@ -1,10 +1,11 @@
-# httpdns 私有 DNS 入口
 DOMAIN,amdc.alipay.com
-DOMAIN,dns.jd.com
-DOMAIN,httpdns.meituan.com
-DOMAIN,httpdns.zybang.com
 DOMAIN,dig.bdurl.net
 DOMAIN,dig.zjurl.cn
-DOMAIN,grs.dbankcloud.com
+DOMAIN,dns.jd.com
 DOMAIN,dns.weixin.qq.com.cn
+DOMAIN,grs.dbankcloud.com
+DOMAIN-WILDCARD,httpdns.*
+DOMAIN,httpdns.bilivideo.com
+DOMAIN,httpdns.meituan.com
 DOMAIN,httpdns.music.163.com
+DOMAIN,httpdns.zybang.com
