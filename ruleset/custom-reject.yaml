@@ -10,41 +10,40 @@ payload:
   - DOMAIN-WILDCARD,ads.*
   - DOMAIN-WILDCARD,analytics.*
   - DOMAIN-WILDCARD,applog.*
+  - DOMAIN-WILDCARD,beacon.*
+  - DOMAIN-WILDCARD,*.beacon.*
+  - DOMAIN-WILDCARD,beacon-*
   - DOMAIN-WILDCARD,log.*
   - DOMAIN-WILDCARD,logs.*
   - DOMAIN-WILDCARD,mon.*
   - DOMAIN-WILDCARD,*.mobi
   - DOMAIN-WILDCARD,telemetry.*
   - DOMAIN-WILDCARD,*.telemetry.*
-  - DOMAIN-KEYWORD,admarve
-  - DOMAIN-KEYWORD,admaste
-  - DOMAIN-KEYWORD,adsag
-  - DOMAIN-KEYWORD,adsenso
-  - DOMAIN-KEYWORD,adservic
-  - DOMAIN-KEYWORD,adsmog
-  - DOMAIN-KEYWORD,adsrvmedi
-  - DOMAIN-KEYWORD,adsservin
-  - DOMAIN-KEYWORD,adsyste
-  - DOMAIN-KEYWORD,adword
-  - DOMAIN-KEYWORD,applovi
-  - DOMAIN-KEYWORD,appsflye
-  - DOMAIN-KEYWORD,domo
-  - DOMAIN-KEYWORD,duomen
-  - DOMAIN-KEYWORD,dwtrac
-  - DOMAIN-KEYWORD,guangga
-  - DOMAIN-KEYWORD,omgmt
+  - DOMAIN-KEYWORD,admarvel
+  - DOMAIN-KEYWORD,admaster
+  - DOMAIN-KEYWORD,adsage
+  - DOMAIN-KEYWORD,adsensor
+  - DOMAIN-KEYWORD,adservice
+  - DOMAIN-KEYWORD,adsmogo
+  - DOMAIN-KEYWORD,adsrvmedia
+  - DOMAIN-KEYWORD,adsserving
+  - DOMAIN-KEYWORD,adsystem
+  - DOMAIN-KEYWORD,adwords
+  - DOMAIN-KEYWORD,applovin
+  - DOMAIN-KEYWORD,appsflyer
+  - DOMAIN-KEYWORD,domob
+  - DOMAIN-KEYWORD,duomeng
+  - DOMAIN-KEYWORD,dwtrack
+  - DOMAIN-KEYWORD,guanggao
   - DOMAIN-KEYWORD,omgmta
-  - DOMAIN-KEYWORD,omnitur
-  - DOMAIN-KEYWORD,open
-  - DOMAIN-KEYWORD,partnera
-  - DOMAIN-KEYWORD,pingfor
-  - DOMAIN-KEYWORD,socd
-  - DOMAIN-KEYWORD,supersonicad
-  - DOMAIN-KEYWORD,wlmonito
-  - DOMAIN-KEYWORD,zjtoolba
-  # Sigmob 广告联盟
+  - DOMAIN-KEYWORD,omniture
+  - DOMAIN-KEYWORD,openx
+  - DOMAIN-KEYWORD,partnerad
+  - DOMAIN-KEYWORD,pingfore
   - DOMAIN-KEYWORD,sigmob
-  
+  - DOMAIN-KEYWORD,socdm
+  - DOMAIN-KEYWORD,supersonicads
+  - DOMAIN-KEYWORD,wlmonitor
   # ===== 通用前缀通配符（httpdns / 配置下发）=====
   # 支付宝/阿里域名调度，含 amdc.alipay.com 和 .com.cn
   - DOMAIN-WILDCARD,amdc.*
