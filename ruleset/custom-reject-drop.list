@@ -1,13 +1,100 @@
-# ===== 字节系 =====
+# ===== 字节系：日志 / 监控（命中最高）=====
 DOMAIN-WILDCARD,log*-misc-*.amemv.com
+DOMAIN-WILDCARD,log*-misc-*.zijieapi.com
+DOMAIN-WILDCARD,log*-misc-*.fqnovel.com
 DOMAIN-WILDCARD,mon*-misc-*.amemv.com
-DOMAIN-WILDCARD,tnc*-aliec*.zijieapi.com
-DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
-DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
+DOMAIN-WILDCARD,mon*-misc-*.zijieapi.com
+DOMAIN-WILDCARD,mon*-misc-*.fqnovel.com
+DOMAIN-WILDCARD,rtlog*-*.zijieapi.com
+DOMAIN-WILDCARD,rtlog*-*.amemv.com
+DOMAIN-WILDCARD,*-applog-*.zijieapi.com
+DOMAIN-WILDCARD,*-applog-*.amemv.com
+DOMAIN-WILDCARD,*-applog-*.fqnovel.com
 DOMAIN-WILDCARD,abtest*-misc-*.zijieapi.com
-DOMAIN-WILDCARD,*log.moweather.com
-DOMAIN-SUFFIX,appsflyersdk.com
-DOMAIN,mon.snssdk.com
-DOMAIN,ib.snssdk.com
-DOMAIN,i.snssdk.com
-DOMAIN,polaris.zijieapi.com
+DOMAIN-WILDCARD,abtest*-misc-*.amemv.com
+DOMAIN-WILDCARD,abtest*-misc-*.fqnovel.com
+DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
+DOMAIN-WILDCARD,polaris*-normal-*.zijieapi.com
+DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
+DOMAIN-WILDCARD,tnc*-*.zijieapi.com
+DOMAIN-WILDCARD,tnc*-*.bytedance.com
+DOMAIN-WILDCARD,*-analytics.bytescm.com
+DOMAIN-SUFFIX,ctobsnssdk.com
+DOMAIN,logbk.amemv.com
+DOMAIN,timon.zijieapi.com
+DOMAIN,vcs.zijieapi.com
+DOMAIN,feedback-c.zijieapi.com
+DOMAIN,live-player-log-service.bytedance.com
+DOMAIN,dm.bytedance.com
+DOMAIN,dm.toutiao.com
+DOMAIN,dm-hl.toutiao.com
+DOMAIN,monsetting.toutiao.com
+DOMAIN,abtest-ch.snssdk.com
+DOMAIN,mssdk.volces.com
+# 以下是推断的节点，没匹配到域名时无副作用
+DOMAIN-WILDCARD,mcs*.zijieapi.com
+DOMAIN-WILDCARD,crash*.zijieapi.com
+DOMAIN-WILDCARD,slardar*.zijieapi.com
+DOMAIN-WILDCARD,apm*.volces.com
+
+# ===== 通用日志 / 监控前缀 =====
+DOMAIN-WILDCARD,applog.*
+DOMAIN-WILDCARD,analytics.*
+DOMAIN-WILDCARD,log.*
+DOMAIN-WILDCARD,logs.*
+DOMAIN-WILDCARD,mon.*
+
+# ===== 小红书（新增，你的命中第 3、6、11 名）=====
+DOMAIN-WILDCARD,apm-*.xiaohongshu.com
+DOMAIN,t2.xiaohongshu.com
+DOMAIN,lng.xiaohongshu.com
+DOMAIN,spider-tracker.xiaohongshu.com
+DOMAIN,crash.xiaohongshu.com
+
+# ===== 微软遥测 =====
+DOMAIN-SUFFIX,events.data.microsoft.com
+DOMAIN-WILDCARD,vortex*.data.microsoft.com
+DOMAIN-SUFFIX,pipe.aria.microsoft.com
+DOMAIN-SUFFIX,telemetry.microsoft.com
+DOMAIN-SUFFIX,applicationinsights.microsoft.com
+DOMAIN,watson.microsoft.com
+DOMAIN,in.appcenter.ms
+
+# ===== 其他应用遥测（新增）=====
+DOMAIN,ecsv2.roblox.com
+# 补回，logs.* 覆盖不到带前缀的子域名
+DOMAIN-SUFFIX,logs.netflix.com
+DOMAIN,dataflow.biliapi.com
+DOMAIN,report.voovmeeting.com
+
+# ===== 推送长连接（断线后客户端会反复重连，封了收不到离线通知）=====
+DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,jpush.io
+# 极光认证（一键登录）也用这个域名
+DOMAIN-SUFFIX,jiguang.cn
+DOMAIN-SUFFIX,gepush.com
+DOMAIN-SUFFIX,getui.com
+DOMAIN-SUFFIX,getui.net
+DOMAIN-SUFFIX,igexin.com
+DOMAIN,push.ksapisrv.com
+# - DOMAIN-SUFFIX,onesignal.com
+
+# ===== 友盟 / 阿里日志 =====
+DOMAIN-SUFFIX,umeng.com
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,log.aliyuncs.com
+DOMAIN,mpaas-loggw4zwy.aliyuncs.com
+DOMAIN,loggw-ex.alipay.com
+DOMAIN-WILDCARD,mdap.alipay.*
+
+# ===== 候选（默认不生效，看命中次数再启用）=====
+# - DOMAIN-SUFFIX,bugly.qq.com
+# - DOMAIN-SUFFIX,beacon.qq.com
+# - DOMAIN,rmonitor.qq.com
+# - DOMAIN,aegis.qq.com
+# - DOMAIN,sofire.baidu.com
+# - DOMAIN,techain.baidu.com
+# - DOMAIN-WILDCARD,data.mistat.*
+# - DOMAIN,tracking.miui.com
+# - DOMAIN-SUFFIX,app-measurement.com
+# - DOMAIN-SUFFIX,crashlytics.com
