@@ -96,6 +96,9 @@ payload:
   - DOMAIN-SUFFIX,tdsdk.cn
   - DOMAIN-SUFFIX,umsns.com
   - DOMAIN-SUFFIX,umtrack.com
+  - DOMAIN-SUFFIX,shuzilm.cn
+  - DOMAIN-SUFFIX,ishumei.com
+  - DOMAIN-SUFFIX,fingerprintjs.com
 
   # ===== 移动广告联盟 =====
   - DOMAIN-SUFFIX,appnext.com
