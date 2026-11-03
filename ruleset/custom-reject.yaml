@@ -1,10 +1,10 @@
 payload:
   # ===== IP 直连（绕过 DNS，只能在 mihomo 拦）=====
-  - IP-CIDR,157.255.132.22/32,no-resolve
-  - IP-CIDR,157.148.6.86/32,no-resolve
-  - IP-CIDR,112.253.54.119/32,no-resolve
-  - IP-CIDR,112.253.54.120/32,no-resolve
-  - IP-CIDR,112.253.55.119/32,no-resolve
+  #- IP-CIDR,157.255.132.22/32,no-resolve
+  #- IP-CIDR,157.148.6.86/32,no-resolve
+  #- IP-CIDR,112.253.54.119/32,no-resolve
+  #- IP-CIDR,112.253.54.120/32,no-resolve
+  #- IP-CIDR,112.253.55.119/32,no-resolve
 
   # ===== 通用通配符 =====
   - DOMAIN-WILDCARD,ads.*
