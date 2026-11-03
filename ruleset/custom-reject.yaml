@@ -235,17 +235,25 @@ payload:
   - DOMAIN-WILDCARD,p*-ad-sign.byteimg.com
   - DOMAIN-WILDCARD,*-analytics.bytescm.com
   - DOMAIN,live-player-log-service.bytedance.com
-  - DOMAIN,logbk.amemv.com
-  - DOMAIN,timon.zijieapi.com
-  - DOMAIN,vcs.zijieapi.com
-  - DOMAIN,feedback-c.zijieapi.com
+  - DOMAIN,abtest-ch.snssdk.com
+  - DOMAIN,applog.snssdk.com
+  - DOMAIN,dm-hl.toutiao.com
   - DOMAIN,dm.bytedance.com
   - DOMAIN,dm.toutiao.com
-  - DOMAIN,dm-hl.toutiao.com
-  - DOMAIN,monsetting.toutiao.com
-  - DOMAIN,abtest-ch.snssdk.com
-  - DOMAIN,mssdk.volces.com
+  - DOMAIN,feedback-c.zijieapi.com
   - DOMAIN,gator.volces.com
+  - DOMAIN,i.snssdk.com
+  - DOMAIN,ib.snssdk.com
+  - DOMAIN,log-hl.snssdk.com
+  - DOMAIN,log.snssdk.com
+  - DOMAIN,logbk.amemv.com
+  - DOMAIN,mon.snssdk.com
+  - DOMAIN,monsetting.toutiao.com
+  - DOMAIN,mssdk.volces.com
+  - DOMAIN,timon.zijieapi.com
+  - DOMAIN,tobapplog.ctobsnssdk.com
+  - DOMAIN,toblog.ctobsnssdk.com
+  - DOMAIN,vcs.zijieapi.com
 
   # ===== 字节系：扩展同类日志/监控节点 =====
   - DOMAIN-WILDCARD,rtlog*-*.zijieapi.com
