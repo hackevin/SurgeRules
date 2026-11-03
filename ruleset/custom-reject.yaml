@@ -29,7 +29,7 @@ payload:
   - DOMAIN-WILDCARD,mon.*
   - DOMAIN-WILDCARD,telemetry.*
   - DOMAIN-WILDCARD,*.telemetry.*
-  - DOMAIN-WILDCARD,*.mobi
+  # - DOMAIN-WILDCARD,*.mobi
 
   # ===== 通用关键字（广告词）=====
   - DOMAIN-KEYWORD,admarvel
