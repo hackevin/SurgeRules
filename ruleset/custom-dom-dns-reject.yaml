@@ -1,0 +1,12 @@
+payload:
+  # httpdns 私有 DNS 入口
+  - 'amdc.alipay.com'
+  - 'dig.bdurl.net'
+  - 'dig.zjurl.cn'
+  - 'dns.jd.com'
+  - 'dns.weixin.qq.com.cn'
+  - 'grs.dbankcloud.com'
+  - 'httpdns.bilivideo.com'
+  - 'httpdns.meituan.com'
+  - 'httpdns.music.163.com'
+  - 'httpdns.zybang.com'
