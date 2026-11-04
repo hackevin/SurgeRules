@@ -36,3 +36,6 @@ payload:
 
 # 支付
 - DOMAIN-SUFFIX,stripe.com
+
+# Deepseek
+- DOMAIN-SUFFIX,deepseek.com
