@@ -18,8 +18,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build rules
-        run: python build_reject.py
+      - name: Build Adblock Rules
+        run: python daily_rules.py
 
       - name: Commit and push if changed
         run: |
