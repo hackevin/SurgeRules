@@ -213,6 +213,7 @@ payload:
   - DOMAIN-SUFFIX,advertising.com
   - DOMAIN-SUFFIX,bidswitch.net
   - DOMAIN-SUFFIX,casalemedia.com
+  - DOMAIN-SUFFIX,guance.com
   - DOMAIN-SUFFIX,indexww.com
   - DOMAIN-SUFFIX,jspcdn.cn
   - DOMAIN-SUFFIX,pubmatic.com
@@ -332,26 +333,32 @@ payload:
   - DOMAIN,club.alimama.com
 
   # ===== 百度 / 搜狗 =====
-  - DOMAIN-SUFFIX,mobads.baidu.com
   - DOMAIN,ada.baidu.com
+  - DOMAIN,afd.baidu.com
+  - DOMAIN,als.baidu.com
   - DOMAIN,appc.baidu.com
   - DOMAIN,dlswbr.baidu.com
   - DOMAIN,ext.baidu.com
   - DOMAIN,fclick.baidu.com
   - DOMAIN,feed-image.baidu.com
+  - DOMAIN,h2tcbox.baidu.com
   - DOMAIN,hectorstatic.baidu.com
   - DOMAIN,hmma.baidu.com
-  - DOMAIN,sofire.baidu.com
-  - DOMAIN,techain.baidu.com
   - DOMAIN,input.shouji.sogou.com
+  - DOMAIN,sofire.baidu.com
+  - DOMAIN,sp1.baidu.com
+  - DOMAIN,techain.baidu.com
   - DOMAIN,worldwide.sogou.com
+  - DOMAIN-SUFFIX,mobads.baidu.com
 
-  # ===== 京东 / 美团 =====
+  # ===== 京东 / 美团 / 拼多多=====
+  - DOMAIN,catfront.dianping.com
+  - DOMAIN,data-sdk-uuid-log.d.meituan.net
   - DOMAIN,kepler.jd.com
   - DOMAIN,knicks.jd.com
   - DOMAIN,mapi.m.jd.com
-  - DOMAIN,data-sdk-uuid-log.d.meituan.net
-  - DOMAIN,catfront.dianping.com
+  - DOMAIN,ta.pinduoduo.com
+  - DOMAIN,th.pinduoduo.com
 
   # ===== 小红书 =====
   - DOMAIN-WILDCARD,ads-*.xhscdn.com
@@ -465,6 +472,8 @@ payload:
   - DOMAIN,sensors.umetrip.com.cn
 
   # ===== 其他应用遥测 =====
+  - DOMAIN,metrics.roblox.com
+  - DOMAIN,tracing.roblox.com
   - DOMAIN,ecsv2.roblox.com
   - DOMAIN,events.mapbox.com
 
