@@ -38,4 +38,4 @@ payload:
 - DOMAIN-SUFFIX,stripe.com
 
 # Deepseek
-- DOMAIN-SUFFIX,deepseek.com
+# - DOMAIN-SUFFIX,deepseek.com
