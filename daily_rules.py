@@ -443,11 +443,11 @@ def main():
 
     h = header("AdGuard + Loyalsoldier reject 合并去重后的 Surge 域名集(.x.com 含子域 / x.com 精确)", len(sd_lines),
                "Surge: DOMAIN-SET,<本文件URL>,REJECT")
-    write_if_changed( OUT_DIR / "surge-reject.txt", h, sd_lines, False)
+    write_if_changed( OUT_DIR / "surge-reject.list", h, sd_lines, False)
 
     h = header("domain-set 表达不了的部分(通配符/关键字)，与 surge-reject.txt 搭配使用", len(nore_extra),
                "Surge: RULE-SET,<本文件URL>,REJECT")
-    write_if_changed( OUT_DIR / "surge-reject-extra.txt", h, nore_extra, False)
+    write_if_changed( OUT_DIR / "surge-reject-extra.list", h, nore_extra, False)
 
     h = header("AdGuard + Loyalsoldier reject 合并去重后的 Shadowrocket 完整规则集"
                "(DOMAIN-SUFFIX/DOMAIN/KEYWORD/WILDCARD)", len(sr_lines),
