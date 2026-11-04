@@ -34,10 +34,10 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ADGUARD_URLS = [
-    "https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt",
+ #   "https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt",
     "https://adguardteam.github.io/HostlistsRegistry/assets/filter_29.txt",
-    "https://adguardteam.github.io/HostlistsRegistry/assets/filter_18.txt",
-    "https://adguardteam.github.io/HostlistsRegistry/assets/filter_50.txt",
+ #   "https://adguardteam.github.io/HostlistsRegistry/assets/filter_18.txt",
+ #   "https://adguardteam.github.io/HostlistsRegistry/assets/filter_50.txt",
     "https://adguardteam.github.io/HostlistsRegistry/assets/filter_21.txt",
 ]
 MIHOMO_URLS = [
