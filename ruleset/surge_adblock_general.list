@@ -1,21 +1,18 @@
-# ==========================================================================
-# adblock_general.list  Surge / Shadowrocket 规则集 · 916 条
 #
-# 是什么  916 条模式规则（97 条 DOMAIN-KEYWORD + 819 条 DOMAIN-WILDCARD）。
-#         拦的是品牌和模式，已知广告网络新开的任意子域当天就能拦，
-#         不用等域名列表更新。基本不变，每周刷一次足够。
-#
-# 怎么用  Surge
 #           [Rule]
 #           RULE-SET, https://<你的域名>/adblock_general.list, REJECT
-#         Shadowrocket
 #           配置 > 规则 > + > 类型选 RULE-SET，填 URL 或本地路径。
-#         两个客户端都直接吃这个文件，每行都是完整规则，不用另加策略。
-#
-# 配套   同时加载 adblock_daily.list，它已经排除了这里覆盖的部分。
-# 来源   2026-11-04T05:25:23Z
 #          anti-AD + AdRules + Loyalsoldier + 本地抓包 756 条
+#         Shadowrocket
+#         不用等域名列表更新。基本不变，每周刷一次足够。
+#         两个客户端都直接吃这个文件，每行都是完整规则，不用另加策略。
+#         拦的是品牌和模式，已知广告网络新开的任意子域当天就能拦，
 # ==========================================================================
+# adblock_general.list  Surge / Shadowrocket 规则集 · 916 条
+# 怎么用  Surge
+# 是什么  916 条模式规则（97 条 DOMAIN-KEYWORD + 819 条 DOMAIN-WILDCARD）。
+# 来源   2026-11-04T05:25:23Z
+# 配套   同时加载 adblock_daily.list，它已经排除了这里覆盖的部分。
 DOMAIN-KEYWORD,.24log.
 DOMAIN-KEYWORD,.aan.amazon.
 DOMAIN-KEYWORD,.ad.kisstvshow.
@@ -147,15 +144,13 @@ DOMAIN-WILDCARD,*.admarvel*.*
 DOMAIN-WILDCARD,*.admicro*.vcmedia.vn
 DOMAIN-WILDCARD,*.admob-app-id-*.firebaseio.com
 DOMAIN-WILDCARD,*.ads*-adnow.com
-DOMAIN-WILDCARD,*.ads*-normal*.zijieapi.com
-DOMAIN-WILDCARD,*.ads*-normal-*.zijieapi.com
-DOMAIN-WILDCARD,*.ads*-normal-hl.zijieapi.com
-DOMAIN-WILDCARD,*.ads*-normal-lq.zijieapi.com
+DOMAIN-WILDCARD,*.ads*.amemv.com
 DOMAIN-WILDCARD,*.ads*.bojijulebu.com
 DOMAIN-WILDCARD,*.ads*.depositfiles.com
 DOMAIN-WILDCARD,*.ads*.depositfiles.org
 DOMAIN-WILDCARD,*.ads*.dfiles.eu
 DOMAIN-WILDCARD,*.ads*.dfiles.ru
+DOMAIN-WILDCARD,*.ads*.fqnovel.com
 DOMAIN-WILDCARD,*.ads*.production-public.tubi.io
 DOMAIN-WILDCARD,*.ads*.textra.me
 DOMAIN-WILDCARD,*.ads*.zijieapi.com
@@ -201,7 +196,10 @@ DOMAIN-WILDCARD,*.apiproxy-log-nlb-1f304af4d3ac01a4.elb.us-east-*.amazonaws.com
 DOMAIN-WILDCARD,*.app-analytics-*.snapchat.com
 DOMAIN-WILDCARD,*.appanalysis*.banggood.com
 DOMAIN-WILDCARD,*.apple-*.le.com
+DOMAIN-WILDCARD,*.applog*.amemv.com
+DOMAIN-WILDCARD,*.applog*.fqnovel.com
 DOMAIN-WILDCARD,*.applog*.matrix.easebar.com
+DOMAIN-WILDCARD,*.applog*.zijieapi.com
 DOMAIN-WILDCARD,*.at*.doubanio.com
 DOMAIN-WILDCARD,*.attr-logs.*.amazonaws.com
 DOMAIN-WILDCARD,*.auth-*.hismarttv.com
@@ -328,14 +326,14 @@ DOMAIN-WILDCARD,*.lively-collect-elb-*.amazonaws.com
 DOMAIN-WILDCARD,*.liveme-sensors-collect2-*.amazonaws.com
 DOMAIN-WILDCARD,*.livetracker.*.pangea-cms.com
 DOMAIN-WILDCARD,*.log*-*.tiktokv.com
-DOMAIN-WILDCARD,*.log*-misc-lf.amemv.com
-DOMAIN-WILDCARD,*.log*-misc-lq.amemv.com
 DOMAIN-WILDCARD,*.log*-normal-*.tiktokv.us
 DOMAIN-WILDCARD,*.log*-normal-lq.toutiaoapi.com
 DOMAIN-WILDCARD,*.log*-normal-useast1a.lemon8-app.com
 DOMAIN-WILDCARD,*.log*.aliyuncs.com
+DOMAIN-WILDCARD,*.log*.amemv.com
 DOMAIN-WILDCARD,*.log*.boomplaymusic.com
 DOMAIN-WILDCARD,*.log*.byteoversea.com
+DOMAIN-WILDCARD,*.log*.fqnovel.com
 DOMAIN-WILDCARD,*.log*.vietnamplus.vn
 DOMAIN-WILDCARD,*.log*.zijieapi.com
 DOMAIN-WILDCARD,*.log-*.epicdn.me
@@ -376,15 +374,18 @@ DOMAIN-WILDCARD,*.mobiadvert*.livesportmedia.eu
 DOMAIN-WILDCARD,*.mobileanalytics.*.amazonaws.com
 DOMAIN-WILDCARD,*.mon*-*.tiktokv.com
 DOMAIN-WILDCARD,*.mon*-*.tiktokv.us
-DOMAIN-WILDCARD,*.mon*-misc-lf.fqnovel.com
-DOMAIN-WILDCARD,*.mon*-misc.fqnovel.com
+DOMAIN-WILDCARD,*.mon*.amemv.com
+DOMAIN-WILDCARD,*.mon*.fqnovel.com
 DOMAIN-WILDCARD,*.mon*.tiktokv.us
+DOMAIN-WILDCARD,*.mon*.zijieapi.com
 DOMAIN-WILDCARD,*.mon-*.lemon8-app.com
 DOMAIN-WILDCARD,*.mon-*.lemon8-app.us
 DOMAIN-WILDCARD,*.mon-*.tiktokv.com
 DOMAIN-WILDCARD,*.mon-v*-boot.capcutapi.com
 DOMAIN-WILDCARD,*.mon-va*.capcutapi.com
+DOMAIN-WILDCARD,*.mssdk*.amemv.com
 DOMAIN-WILDCARD,*.mssdk*.capcutapi.com
+DOMAIN-WILDCARD,*.mssdk*.fqnovel.com
 DOMAIN-WILDCARD,*.mssdk*.zijieapi.com
 DOMAIN-WILDCARD,*.mtag-*.wedevs.com
 DOMAIN-WILDCARD,*.n*adserv.com
@@ -550,10 +551,6 @@ DOMAIN-WILDCARD,admicro*.vcmedia.vn
 DOMAIN-WILDCARD,admob-app-id-*.firebaseio.com
 DOMAIN-WILDCARD,admob.*
 DOMAIN-WILDCARD,ads*-adnow.com
-DOMAIN-WILDCARD,ads*-normal*.zijieapi.com
-DOMAIN-WILDCARD,ads*-normal-*.zijieapi.com
-DOMAIN-WILDCARD,ads*-normal-hl.zijieapi.com
-DOMAIN-WILDCARD,ads*-normal-lq.zijieapi.com
 DOMAIN-WILDCARD,ads*.bojijulebu.com
 DOMAIN-WILDCARD,ads*.depositfiles.com
 DOMAIN-WILDCARD,ads*.depositfiles.org
@@ -735,8 +732,6 @@ DOMAIN-WILDCARD,lively-collect-elb-*.amazonaws.com
 DOMAIN-WILDCARD,liveme-sensors-collect2-*.amazonaws.com
 DOMAIN-WILDCARD,livetracker.*.pangea-cms.com
 DOMAIN-WILDCARD,log*-*.tiktokv.com
-DOMAIN-WILDCARD,log*-misc-lf.amemv.com
-DOMAIN-WILDCARD,log*-misc-lq.amemv.com
 DOMAIN-WILDCARD,log*-normal-*.tiktokv.us
 DOMAIN-WILDCARD,log*-normal-lq.toutiaoapi.com
 DOMAIN-WILDCARD,log*-normal-useast1a.lemon8-app.com
@@ -783,8 +778,6 @@ DOMAIN-WILDCARD,mobiadvert*.livesportmedia.eu
 DOMAIN-WILDCARD,mobileanalytics.*.amazonaws.com
 DOMAIN-WILDCARD,mon*-*.tiktokv.com
 DOMAIN-WILDCARD,mon*-*.tiktokv.us
-DOMAIN-WILDCARD,mon*-misc-lf.fqnovel.com
-DOMAIN-WILDCARD,mon*-misc.fqnovel.com
 DOMAIN-WILDCARD,mon*.tiktokv.us
 DOMAIN-WILDCARD,mon-*.lemon8-app.com
 DOMAIN-WILDCARD,mon-*.lemon8-app.us
