@@ -422,18 +422,18 @@ def main():
     d_lines = [f"{'+.' if w else ''}{d}" for d, w in items]
     h = header("AdGuard 广告/追踪规则 + Loyalsoldier reject 合并去重后的 mihomo domain 规则集", total,
                "mihomo rule-providers: behavior: domain (yaml 文件 format: yaml, txt 文件 format: text)")
-    write_if_changed( mihomo/ruleset/ "mihomo-reject.yaml", h, d_lines, True)
-    write_if_changed( mihomo/ruleset/ "mihomo-reject.txt", h, d_lines, False)
+    write_if_changed( OUT_DIR / "mihomo-reject.yaml", h, d_lines, True)
+    write_if_changed( OUT_DIR / "mihomo-reject.txt", h, d_lines, False)
 
     h = header("AdGuard + Loyalsoldier reject 合并去重后的 mihomo classical 完整规则集"
                "(DOMAIN-SUFFIX/DOMAIN/WILDCARD/KEYWORD/REGEX)", len(classical_lines),
                "mihomo rule-providers: behavior: classical")
-    write_if_changed( mihomo/ruleset/ "mihomo-reject-classical.yaml", h, classical_lines, True)
-    write_if_changed( mihomo/ruleset/ "mihomo-reject-classical.txt", h, classical_lines, False)
+    write_if_changed( OUT_DIR / "mihomo-reject-classical.yaml", h, classical_lines, True)
+    write_if_changed( OUT_DIR / "mihomo-reject-classical.txt", h, classical_lines, False)
 
     h = header("domain 规则集表达不了的部分(通配符/关键字/正则)，与 mihomo-reject.yaml 搭配使用",
                len(extra_lines), "mihomo rule-providers: behavior: classical")
-    write_if_changed( mihomo/ruleset/ "mihomo-reject-extra.yaml", h, extra_lines, True)
+    write_if_changed( OUT_DIR / "mihomo-reject-extra.yaml", h, extra_lines, True)
 
     # ---------------- surge / shadowrocket (无 DOMAIN-REGEX) ----------------
     nore_extra = ([f"DOMAIN-KEYWORD,{k}" for k in sorted(R.kw)]
@@ -443,19 +443,19 @@ def main():
 
     h = header("AdGuard + Loyalsoldier reject 合并去重后的 Surge 域名集(.x.com 含子域 / x.com 精确)", len(sd_lines),
                "Surge: DOMAIN-SET,<本文件URL>,REJECT")
-    write_if_changed( Surge/ruleset/ "surge-reject.txt", h, sd_lines, False)
+    write_if_changed( OUT_DIR / "surge-reject.txt", h, sd_lines, False)
 
     h = header("domain-set 表达不了的部分(通配符/关键字)，与 surge-reject.txt 搭配使用", len(nore_extra),
                "Surge: RULE-SET,<本文件URL>,REJECT")
-    write_if_changed( Surge/ruleset/ "surge-reject-extra.txt", h, nore_extra, False)
+    write_if_changed( OUT_DIR / "surge-reject-extra.txt", h, nore_extra, False)
 
     h = header("AdGuard + Loyalsoldier reject 合并去重后的 Shadowrocket 完整规则集"
                "(DOMAIN-SUFFIX/DOMAIN/KEYWORD/WILDCARD)", len(sr_lines),
                "Shadowrocket: RULE-SET,<本文件URL>,REJECT")
-    write_if_changed( shadowrocket/ruleset/ "shadowrocket-reject.list", h, sr_lines, False)
+    write_if_changed( OUT_DIR / "shadowrocket-reject.list", h, sr_lines, False)
 
     h = header("只含通配符/关键字的部分", len(nore_extra), "Shadowrocket: RULE-SET,<本文件URL>,REJECT")
-    write_if_changed( shadowrocket/ruleset/ "shadowrocket-reject-extra.list", h, nore_extra, False)
+    write_if_changed( OUT_DIR / "shadowrocket-reject-extra.list", h, nore_extra, False)
 
     # 清理旧命名的文件(改名前生成的)，Actions 提交时会一并删除
     for old in ("reject.yaml", "reject.txt", "reject-classical.yaml",
