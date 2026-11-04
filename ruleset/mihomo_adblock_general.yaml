@@ -940,3 +940,6 @@ payload:
   - 'DOMAIN-WILDCARD,zcchyr*.xyz'
   - 'DOMAIN-WILDCARD,zcchyw*.xyz'
   - 'DOMAIN-WILDCARD,zhizhizhizhi.oss-*.aliyuncs.com'
+  - 'DOMAIN-WILDCARD,*.rtlog*.amemv.com'
+  - 'DOMAIN-WILDCARD,*.rtlog*.fqnovel.com'
+  - 'DOMAIN-WILDCARD,*.rtlog*.zijieapi.com'
