@@ -593,6 +593,7 @@ payload:
   - 'DOMAIN-WILDCARD,ajx*.online'
   - 'DOMAIN-WILDCARD,ali-bj-pcdn-*.biliapi.net'
   - 'DOMAIN-WILDCARD,ana*.inews24.com'
+  - 'DOMAIN-WILDCARD,analytics.*'
   - 'DOMAIN-WILDCARD,analytics*.carambo.la'
   - 'DOMAIN-WILDCARD,analytics*.clickdimensions.com'
   - 'DOMAIN-WILDCARD,analytics*.prezly.com'
