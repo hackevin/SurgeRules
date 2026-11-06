@@ -406,6 +406,7 @@ payload:
   - DOMAIN,dcs.heytapmobi.com
   - DOMAIN,stat.heytapmobi.com
   - DOMAIN,adsfs.oppomobile.com
+  - DOMAIN,adsfs.heytapimage.com
   - DOMAIN,dc.vivo.com.cn
   - DOMAIN,adx.vivo.com.cn
   - DOMAIN,norma-external-collect.meizu.com
@@ -478,20 +479,42 @@ payload:
   - DOMAIN,events.mapbox.com
 
   # ===== 其他 =====
-  - DOMAIN-SUFFIX,wmzfylgdsz.com
-  - DOMAIN,s.c-ctrip.com
-  - DOMAIN,ma-adx.ctrip.com
-  - DOMAIN,omgup.xiaojukeji.com
-  - DOMAIN,cn.s.50union.com
-  - DOMAIN,miav-cse.avlyun.com
-  - DOMAIN,syh-imp.cdnjtzy.com
-  - DOMAIN,log-sdk.clickwifi.net
-  - DOMAIN,etl-xlmc-ssl.sandai.net
+  - DOMAIN,als.baidu.com
+  - DOMAIN,api.sec.miui.com
+  - DOMAIN,api16-access-ttp-b.tiktokpangle.us
+  - DOMAIN,api16-access-ttp.tiktokpangle.us
   - DOMAIN,b.qchannel03.cn
+  - DOMAIN,browser.events.data.msn.com
+  - DOMAIN,c.msn.com
+  - DOMAIN,cn.s.50union.com
+  - DOMAIN,collector.github.com
+  - DOMAIN,data.sec.miui.com
+  - DOMAIN,dc.dqa.samsung.com
+  - DOMAIN,ecmb.bdimg.com
+  - DOMAIN,etl-xlmc-ssl.sandai.net
   - DOMAIN,fo.iemiq.com
+  - DOMAIN,gdloc.qchannel03.cn
+  - DOMAIN,gdloc2.qchannel03.cn
+  - DOMAIN,h2tcbox.baidu.com
+  - DOMAIN,hm.baidu.com
+  - DOMAIN,line1-log.biligame.net
+  - DOMAIN,log-sdk.clickwifi.net
+  - DOMAIN,ma-adx.ctrip.com
+  - DOMAIN,metrics.icloud.com
+  - DOMAIN,miav-cse.avlyun.com
+  - DOMAIN,mssdk.bytedance.com
+  - DOMAIN,ogads-pa.googleapis.com
+  - DOMAIN,omgup.xiaojukeji.com
   - DOMAIN,px.effirst.com
   - DOMAIN,rumt-zh.com
+  - DOMAIN,s.c-ctrip.com
+  - DOMAIN,sf16-static.i18n-pglstatp.com
+  - DOMAIN,sp1.baidu.com
+  - DOMAIN,sspapi-prd.samsungrs.com
+  - DOMAIN,syh-imp.cdnjtzy.com
   - DOMAIN,yumao.puata.info
+  - DOMAIN-SUFFIX,iadsdk.apple.com
+  - DOMAIN-SUFFIX,wmzfylgdsz.com
 
   # ===== 观察区（来源或用途未确认，或有误伤风险，默认不生效）=====
   # 核心接口之一，字节系 App 异常先查这条
