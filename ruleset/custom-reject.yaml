@@ -493,7 +493,7 @@ payload:
   # 中国移动基础业务
   # - DOMAIN,base.hjq.komect.com
   # 中国移动云盘
-   - DOMAIN,caiyun.feixin.10086.cn
+   - DOMAIN-SUFFIX,caiyun.feixin.10086.cn
   # 中国移动 MM 广告相关服务（用途待验证）
   - DOMAIN,da.mmarket.com
   # DOMAIN-SUFFIX,wo.cn
