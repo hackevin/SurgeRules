@@ -409,7 +409,7 @@ payload:
   - DOMAIN,grs.dbankcloud.com
   - DOMAIN,metrics1.data.hicloud.com
   - DOMAIN,adx.hicloud.com
-  - DOMAIN,api.ads.heytapmobi.com
+  - DOMAIN-SUFFIX,ads.heytapmobi.com
   - DOMAIN,adx.heytapmobi.com
   - DOMAIN,data.heytapmobi.com
   - DOMAIN,dcs.heytapmobi.com
