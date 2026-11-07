@@ -135,6 +135,7 @@ payload:
   - DOMAIN-SUFFIX,doubleclick.net
   - DOMAIN-SUFFIX,googlesyndication.com
   - DOMAIN-SUFFIX,googleadsserving.cn
+  - DOMAIN-SUFFIX,googleadservices.com
   - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,admob.com
   - DOMAIN-SUFFIX,adsense.com
@@ -306,6 +307,9 @@ payload:
   - DOMAIN,mmgame.qpic.cn
   - DOMAIN,badjs.weixinbridge.com
   - DOMAIN,report.voovmeeting.com
+  - DOMAIN-SUFFIX,ugdtimg.com
+  - DOMAIN-SUFFIX,gdtimg.com
+  - DOMAIN,adsmind.apdcdn.tc.qq.com
 
   # ===== 阿里系 =====
   - DOMAIN-SUFFIX,alibabachengdun.com
@@ -349,7 +353,10 @@ payload:
   - DOMAIN,sp1.baidu.com
   - DOMAIN,techain.baidu.com
   - DOMAIN,worldwide.sogou.com
-  - DOMAIN-SUFFIX,mobads.baidu.com
+  # - DOMAIN-SUFFIX,mobads.baidu.com
+  - DOMAIN,mobads.baidu.com
+  - DOMAIN,mobads-logs.baidu.com
+  - DOMAIN,cpro.baidu.com
 
   # ===== 京东 / 美团 / 拼多多=====
   - DOMAIN,catfront.dianping.com
@@ -375,6 +382,8 @@ payload:
   - DOMAIN,push.ksapisrv.com
   - DOMAIN,open.kwaizt.com
   - DOMAIN,open.kuaishouzt.com
+  - DOMAIN,ad.partner.gifshow.com
+  - DOMAIN-SUFFIX,adukwai.com
 
   # ===== 视频 / 其他媒体 =====
   - DOMAIN-SUFFIX,mgtv-ad.com
@@ -477,6 +486,7 @@ payload:
   - DOMAIN,tracing.roblox.com
   - DOMAIN,ecsv2.roblox.com
   - DOMAIN,events.mapbox.com
+
 
   # ===== 其他 =====
   - DOMAIN,als.baidu.com
