@@ -1,22 +1,26 @@
 # ============================================================
 # 名称: reject
-# 更新: 2026-11-03
+# 更新: 2026-11-07
 # 类型: classical / REJECT
 # 说明: 广告联盟、广告平台、海外归因/分析 SDK、各厂商广告域名，
 #       请求秒失败，避免开屏和信息流卡在超时上。
 #       日志/监控/推送类放 REJECT-DROP 规则集，两边不要重复。
 # 依赖: DOMAIN-KEYWORD / DOMAIN-WILDCARD 无法同步到 AdGuard，
-#       纯域名部分单独给 AdGuard 用
+#       纯域名部分（DOMAIN / DOMAIN-SUFFIX）单独给 AdGuard 用
 # 注意: 游戏广告 SDK 封了看广告领奖励会失效；观察区默认不生效
+# 结构: 一 IP / 二 通用规则 / 三 通用 SDK 与统计 / 四 推送 /
+#       五 广告联盟与平台 / 六 游戏广告 / 七 海外归因分析 /
+#       八 Google / 九 厂商与应用 / 十 观察区
 # ============================================================
 payload:
-  # ===== IP 直连（绕过 DNS，只能在 mihomo 拦）=====
+  # ################ 一、IP 直连（绕过 DNS，只能在 mihomo 拦）################
   #- IP-CIDR,157.255.132.22/32,no-resolve
   #- IP-CIDR,157.148.6.86/32,no-resolve
   #- IP-CIDR,112.253.54.119/32,no-resolve
   #- IP-CIDR,112.253.54.120/32,no-resolve
   #- IP-CIDR,112.253.55.119/32,no-resolve
 
+  # ################ 二、通用规则（通配符 / 关键字）################
   # ===== 通用通配符 =====
   - DOMAIN-WILDCARD,ads.*
   - DOMAIN-WILDCARD,analytics.*
@@ -30,6 +34,15 @@ payload:
   - DOMAIN-WILDCARD,telemetry.*
   - DOMAIN-WILDCARD,*.telemetry.*
   # - DOMAIN-WILDCARD,*.mobi
+
+  # ===== 通用前缀通配符（httpdns / 配置下发）=====
+  # 支付宝/阿里域名调度，含 amdc.alipay.com 和 .com.cn
+  - DOMAIN-WILDCARD,amdc.*
+  - DOMAIN-WILDCARD,mdap.alipay.*
+  # zztfly / flysleep 配置下发
+  - DOMAIN-WILDCARD,cfgc.*
+  # 淘宝 / 钉钉 adashx
+  - DOMAIN-WILDCARD,h-adashx.ut.*
 
   # ===== 通用关键字（广告词）=====
   - DOMAIN-KEYWORD,admarvel
@@ -60,8 +73,8 @@ payload:
   - DOMAIN-KEYWORD,criteo
   - DOMAIN-KEYWORD,hotjar
   - DOMAIN-KEYWORD,inmobi
-  - DOMAIN-KEYWORD,mintegral
   - DOMAIN-KEYWORD,miaozhen
+  - DOMAIN-KEYWORD,mintegral
   - DOMAIN-KEYWORD,openx
   - DOMAIN-KEYWORD,outbrain
   - DOMAIN-KEYWORD,sigmob
@@ -71,122 +84,78 @@ payload:
   - DOMAIN-KEYWORD,tapjoy
   - DOMAIN-KEYWORD,umeng
 
-  # ===== 通用前缀通配符（httpdns / 配置下发）=====
-  # 支付宝/阿里域名调度，含 amdc.alipay.com 和 .com.cn
-  - DOMAIN-WILDCARD,amdc.*
-  - DOMAIN-WILDCARD,mdap.alipay.*
-  # zztfly / flysleep 配置下发
-  - DOMAIN-WILDCARD,cfgc.*
-  # 淘宝 / 钉钉 adashx
-  - DOMAIN-WILDCARD,h-adashx.ut.*
+  # ################ 三、通用 SDK / 统计（国内）################
+  - DOMAIN-SUFFIX,51.la
+  - DOMAIN-SUFFIX,cnzz.com
+  - DOMAIN-SUFFIX,growingio.com
+  - DOMAIN-SUFFIX,guance.com
+  - DOMAIN-SUFFIX,irs01.com
+  - DOMAIN-SUFFIX,mmstat.com
+  - DOMAIN-SUFFIX,sensorsdata.cn
+  - DOMAIN-SUFFIX,tdsdk.cn
+  - DOMAIN-SUFFIX,umsns.com
+  - DOMAIN-SUFFIX,umtrack.com
+  # 设备指纹 / 风控
+  - DOMAIN-SUFFIX,fingerprintjs.com
+  - DOMAIN-SUFFIX,ishumei.com
+  - DOMAIN-SUFFIX,shuzilm.cn
 
-  # ===== 推送通道（封了可能收不到离线通知，整组注释或改用 REJECT-DROP）=====
-  - DOMAIN-SUFFIX,jpush.cn
-  - DOMAIN-SUFFIX,jpush.io
-  # 极光认证（一键登录）也用这个域名
-  - DOMAIN-SUFFIX,jiguang.cn
+  # ################ 四、推送通道 ################
+  # 封了可能收不到离线通知，整组注释或改用 REJECT-DROP
   - DOMAIN-SUFFIX,gepush.com
   - DOMAIN-SUFFIX,getui.com
   - DOMAIN-SUFFIX,getui.net
   # 个推旧品牌
   - DOMAIN-SUFFIX,igexin.com
+  - DOMAIN-SUFFIX,jpush.cn
+  - DOMAIN-SUFFIX,jpush.io
+  # 极光认证（一键登录）也用这个域名
+  - DOMAIN-SUFFIX,jiguang.cn
   - DOMAIN-SUFFIX,onesignal.com
 
-  # ===== 通用 SDK：友盟 / 国内统计 =====
-  - DOMAIN-SUFFIX,51.la
+  # ################ 五、广告联盟 / 广告平台 ################
+  # ===== 移动广告联盟 =====
   - DOMAIN-SUFFIX,ad-survey.com
   - DOMAIN-SUFFIX,aiclk.com
-  - DOMAIN-SUFFIX,cnzz.com
-  - DOMAIN-SUFFIX,growingio.com
-  - DOMAIN-SUFFIX,irs01.com
-  - DOMAIN-SUFFIX,mmstat.com
-  - DOMAIN-SUFFIX,mob.com
-  - DOMAIN-SUFFIX,mobgi.com
-  - DOMAIN-SUFFIX,reachmax.cn
-  - DOMAIN-SUFFIX,sensorsdata.cn
-  - DOMAIN-SUFFIX,tdsdk.cn
-  - DOMAIN-SUFFIX,umsns.com
-  - DOMAIN-SUFFIX,umtrack.com
-  - DOMAIN-SUFFIX,shuzilm.cn
-  - DOMAIN-SUFFIX,ishumei.com
-  - DOMAIN-SUFFIX,fingerprintjs.com
-
-  # ===== 移动广告联盟 =====
   - DOMAIN-SUFFIX,appnext.com
   - DOMAIN-SUFFIX,appnxt.net
   - DOMAIN-SUFFIX,leadboltads.net
+  - DOMAIN-SUFFIX,mob.com
   - DOMAIN-SUFFIX,mobadvent.com
   - DOMAIN-SUFFIX,mobagent.com
   - DOMAIN-SUFFIX,mobclix.com
   - DOMAIN-SUFFIX,mobfox.com
+  - DOMAIN-SUFFIX,mobgi.com
   - DOMAIN-SUFFIX,mobnativeads.com
   - DOMAIN-SUFFIX,mobstitial.com
   - DOMAIN-SUFFIX,mobstitialtag.com
   - DOMAIN-SUFFIX,nativex.com
   - DOMAIN-SUFFIX,rayjump.com
+  - DOMAIN-SUFFIX,reachmax.cn
+
+  # ===== 广告平台 / DSP / 追踪 =====
+  - DOMAIN-SUFFIX,3lift.com
+  - DOMAIN-SUFFIX,adform.net
+  - DOMAIN-SUFFIX,adnxs.com
+  - DOMAIN-SUFFIX,adsrvr.org
+  - DOMAIN-SUFFIX,advertising.com
+  - DOMAIN-SUFFIX,bidswitch.net
+  - DOMAIN-SUFFIX,casalemedia.com
+  - DOMAIN-SUFFIX,indexww.com
+  - DOMAIN-SUFFIX,jspcdn.cn
+  - DOMAIN-SUFFIX,pubmatic.com
+  - DOMAIN-SUFFIX,rubiconproject.com
+  - DOMAIN-SUFFIX,sharethrough.com
+  - DOMAIN-SUFFIX,triplelift.com
+  - DOMAIN-SUFFIX,yieldmo.com
 
   # ===== ExoClick 系弹窗广告 =====
-  - DOMAIN-SUFFIX,pemsrv.com
-  - DOMAIN-SUFFIX,magsrv.com
   - DOMAIN-SUFFIX,exdynsrv.com
+  - DOMAIN-SUFFIX,magsrv.com
+  - DOMAIN-SUFFIX,pemsrv.com
 
-  # ===== Google 广告 / 统计 / 崩溃上报 =====
-  - DOMAIN-SUFFIX,app-measurement.com
-  - DOMAIN-SUFFIX,doubleclick.net
-  - DOMAIN-SUFFIX,googlesyndication.com
-  - DOMAIN-SUFFIX,googleadsserving.cn
-  - DOMAIN-SUFFIX,googleadservices.com
-  - DOMAIN-SUFFIX,2mdn.net
-  - DOMAIN-SUFFIX,admob.com
-  - DOMAIN-SUFFIX,adsense.com
-  - DOMAIN-SUFFIX,google-analytics.com
-  - DOMAIN-SUFFIX,googletagmanager.com
-  - DOMAIN-SUFFIX,googletagservices.com
-  - DOMAIN-SUFFIX,crashlytics.com
-  - DOMAIN,fundingchoicesmessages.google.com
-  - DOMAIN,firebaselogging-pa.googleapis.com
-  - DOMAIN,firebaselogging.googleapis.com
-  - DOMAIN,crashlyticsreports-pa.googleapis.com
-  - DOMAIN-WILDCARD,ogads-*.clients*.google.com
-
-  # ===== 海外归因 / 分析 =====
-  - DOMAIN-SUFFIX,adjust.com
-  - DOMAIN-SUFFIX,adjust.io
-  - DOMAIN-SUFFIX,adjust.net.in
-  # 会影响部分 App 的深度链接跳转
-  - DOMAIN-SUFFIX,branch.io
-  - DOMAIN-SUFFIX,kochava.com
-  - DOMAIN-SUFFIX,singular.net
-  - DOMAIN-SUFFIX,tenjin.io
-  - DOMAIN-SUFFIX,flurry.com
-  - DOMAIN-SUFFIX,mixpanel.com
-  - DOMAIN-SUFFIX,mxpnl.com
-  - DOMAIN-SUFFIX,amplitude.com
-  - DOMAIN-SUFFIX,segment.io
-  - DOMAIN-SUFFIX,segment.com
-  - DOMAIN-SUFFIX,heapanalytics.com
-  - DOMAIN-SUFFIX,fullstory.com
-  - DOMAIN-SUFFIX,braze.com
-  - DOMAIN-SUFFIX,appboy.com
-  - DOMAIN-SUFFIX,wzrkt.com
-  - DOMAIN-SUFFIX,bugsnag.com
-  - DOMAIN-SUFFIX,instabug.com
-  - DOMAIN-SUFFIX,scorecardresearch.com
-  - DOMAIN-SUFFIX,quantserve.com
-  - DOMAIN-SUFFIX,quantcount.com
-  - DOMAIN-SUFFIX,moatads.com
-  - DOMAIN-SUFFIX,ads-twitter.com
-  - DOMAIN-SUFFIX,business-api.tiktok.com
-  - DOMAIN-SUFFIX,app-analytics.snapchat.com
-  # 自己用 Sentry 的要注释掉
-  - DOMAIN-SUFFIX,sentry.io
-  # 以下有误伤风险，需要时取消注释
-  # DOMAIN-SUFFIX,facebook.net     (网站上的 Facebook 登录/分享按钮依赖它)
-  # DOMAIN,graph.facebook.com      (Facebook/Instagram 登录和主功能也用)
-  # DOMAIN-SUFFIX,newrelic.com
-  # DOMAIN-SUFFIX,nr-data.net
-
-  # ===== 游戏广告 SDK（封了看广告领奖励会失效）=====
+  # ################ 六、游戏广告 SDK ################
+  # 封了看广告领奖励会失效
   - DOMAIN-SUFFIX,adcolony.com
   - DOMAIN-SUFFIX,applvn.com
   - DOMAIN-SUFFIX,bidmachine.io
@@ -202,42 +171,95 @@ payload:
   - DOMAIN-SUFFIX,unityads.unity3d.com
   - DOMAIN-SUFFIX,unityads.unitychina.cn
   - DOMAIN-SUFFIX,vungle.com
+  - DOMAIN,api.uca.cloud.unity3d.com
   - DOMAIN,cdp.cloud.unity3d.com
   - DOMAIN,config.uca.cloud.unity3d.com
-  - DOMAIN,api.uca.cloud.unity3d.com
 
-  # ===== 广告平台 / DSP / 追踪 =====
-  - DOMAIN-SUFFIX,3lift.com
-  - DOMAIN-SUFFIX,adform.net
-  - DOMAIN-SUFFIX,adnxs.com
-  - DOMAIN-SUFFIX,adsrvr.org
-  - DOMAIN-SUFFIX,advertising.com
-  - DOMAIN-SUFFIX,bidswitch.net
-  - DOMAIN-SUFFIX,casalemedia.com
-  - DOMAIN-SUFFIX,guance.com
-  - DOMAIN-SUFFIX,indexww.com
-  - DOMAIN-SUFFIX,jspcdn.cn
-  - DOMAIN-SUFFIX,pubmatic.com
-  - DOMAIN-SUFFIX,rubiconproject.com
-  - DOMAIN-SUFFIX,sharethrough.com
-  - DOMAIN-SUFFIX,triplelift.com
-  - DOMAIN-SUFFIX,yieldmo.com
+  # ################ 七、海外归因 / 分析 / 崩溃上报 ################
+  # ===== 归因 =====
+  - DOMAIN-SUFFIX,adjust.com
+  - DOMAIN-SUFFIX,adjust.io
+  - DOMAIN-SUFFIX,adjust.net.in
+  # 会影响部分 App 的深度链接跳转
+  - DOMAIN-SUFFIX,branch.io
+  - DOMAIN-SUFFIX,kochava.com
+  - DOMAIN-SUFFIX,singular.net
+  - DOMAIN-SUFFIX,tenjin.io
+  # AppsFlyer 内嵌
+  - DOMAIN,inapps.af-sdk.com
 
+  # ===== 行为分析 / 用户运营 =====
+  - DOMAIN-SUFFIX,amplitude.com
+  - DOMAIN-SUFFIX,appboy.com
+  - DOMAIN-SUFFIX,braze.com
+  - DOMAIN-SUFFIX,flurry.com
+  - DOMAIN-SUFFIX,fullstory.com
+  - DOMAIN-SUFFIX,heapanalytics.com
+  - DOMAIN-SUFFIX,mixpanel.com
+  - DOMAIN-SUFFIX,mxpnl.com
+  - DOMAIN-SUFFIX,segment.com
+  - DOMAIN-SUFFIX,segment.io
+  - DOMAIN-SUFFIX,wzrkt.com
+
+  # ===== 崩溃 / 监控 =====
+  - DOMAIN-SUFFIX,bugsnag.com
+  - DOMAIN-SUFFIX,instabug.com
+  # 自己用 Sentry 的要注释掉
+  - DOMAIN-SUFFIX,sentry.io
+
+  # ===== 广告测量 / 受众 =====
+  - DOMAIN-SUFFIX,ads-twitter.com
+  - DOMAIN-SUFFIX,app-analytics.snapchat.com
+  - DOMAIN-SUFFIX,business-api.tiktok.com
+  - DOMAIN-SUFFIX,moatads.com
+  - DOMAIN-SUFFIX,quantcount.com
+  - DOMAIN-SUFFIX,quantserve.com
+  - DOMAIN-SUFFIX,scorecardresearch.com
+
+  # ===== Reddit =====
+  - DOMAIN-WILDCARD,*-reporting.reddit.com
+
+  # 以下有误伤风险，需要时取消注释
+  # DOMAIN-SUFFIX,facebook.net     (网站上的 Facebook 登录/分享按钮依赖它)
+  # DOMAIN,graph.facebook.com      (Facebook/Instagram 登录和主功能也用)
+  # DOMAIN-SUFFIX,newrelic.com
+  # DOMAIN-SUFFIX,nr-data.net
+
+  # ################ 八、Google 广告 / 统计 / 崩溃上报 ################
+  - DOMAIN-SUFFIX,2mdn.net
+  - DOMAIN-SUFFIX,admob.com
+  - DOMAIN-SUFFIX,adsense.com
+  - DOMAIN-SUFFIX,app-measurement.com
+  - DOMAIN-SUFFIX,crashlytics.com
+  - DOMAIN-SUFFIX,doubleclick.net
+  - DOMAIN-SUFFIX,google-analytics.com
+  - DOMAIN-SUFFIX,googleadsserving.cn
+  - DOMAIN-SUFFIX,googleadservices.com
+  - DOMAIN-SUFFIX,googlesyndication.com
+  - DOMAIN-SUFFIX,googletagmanager.com
+  - DOMAIN-SUFFIX,googletagservices.com
+  - DOMAIN,crashlyticsreports-pa.googleapis.com
+  - DOMAIN,firebaselogging-pa.googleapis.com
+  - DOMAIN,firebaselogging.googleapis.com
+  - DOMAIN,fundingchoicesmessages.google.com
+  - DOMAIN,ogads-pa.googleapis.com
+  - DOMAIN-WILDCARD,ogads-*.clients*.google.com
+
+  # ################ 九、各厂商 / 应用 ################
   # ===== 字节系 =====
   # 穿山甲，覆盖 pangolin-sdk-toutiao / -b / 1 及以后的新编号
   - DOMAIN-KEYWORD,pangolin-sdk-toutiao
-  - DOMAIN-SUFFIX,pglstatp-toutiao.com
   - DOMAIN-SUFFIX,ctobsnssdk.com
   - DOMAIN-SUFFIX,pangle.io
+  - DOMAIN-SUFFIX,pglstatp-toutiao.com
   - DOMAIN-WILDCARD,ads*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,polaris*-normal-*.zijieapi.com
   - DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
-  - DOMAIN-WILDCARD,tnc*-*.zijieapi.com
   - DOMAIN-WILDCARD,tnc*-*.bytedance.com
+  - DOMAIN-WILDCARD,tnc*-*.zijieapi.com
   - DOMAIN-WILDCARD,p*-ad-sign.byteimg.com
   - DOMAIN-WILDCARD,*-analytics.bytescm.com
-  - DOMAIN,live-player-log-service.bytedance.com
   - DOMAIN,abtest-ch.snssdk.com
   - DOMAIN,applog.snssdk.com
   - DOMAIN,dm-hl.toutiao.com
@@ -245,20 +267,27 @@ payload:
   - DOMAIN,dm.toutiao.com
   - DOMAIN,feedback-c.zijieapi.com
   - DOMAIN,gator.volces.com
+  # 注意：下面两条 i / ib.snssdk.com 在原文件的观察区里被标为核心/业务接口，
+  # 但在这里是生效的；字节系 App 异常先查这两条
   - DOMAIN,i.snssdk.com
   - DOMAIN,ib.snssdk.com
+  - DOMAIN,live-player-log-service.bytedance.com
   - DOMAIN,log-hl.snssdk.com
   - DOMAIN,log.snssdk.com
   - DOMAIN,logbk.amemv.com
   - DOMAIN,mon.snssdk.com
   - DOMAIN,monsetting.toutiao.com
+  - DOMAIN,mssdk.bytedance.com
   - DOMAIN,mssdk.volces.com
   - DOMAIN,timon.zijieapi.com
   - DOMAIN,tobapplog.ctobsnssdk.com
   - DOMAIN,toblog.ctobsnssdk.com
   - DOMAIN,vcs.zijieapi.com
-
-  # ===== 字节系：扩展同类日志/监控节点 =====
+  # TikTok / Pangle 海外
+  - DOMAIN,api16-access-ttp-b.tiktokpangle.us
+  - DOMAIN,api16-access-ttp.tiktokpangle.us
+  - DOMAIN,sf16-static.i18n-pglstatp.com
+  # 扩展同类日志/监控节点
   - DOMAIN-WILDCARD,rtlog*-*.zijieapi.com
   - DOMAIN-WILDCARD,rtlog*-*.amemv.com
   - DOMAIN-WILDCARD,*-applog-*.zijieapi.com
@@ -281,89 +310,94 @@ payload:
   - DOMAIN-WILDCARD,apm*.volces.com
 
   # ===== 腾讯系 =====
-  - DOMAIN-SUFFIX,gdt.qq.com
-  - DOMAIN-SUFFIX,e.qq.com
   - DOMAIN-SUFFIX,bugly.qq.com
+  - DOMAIN-SUFFIX,e.qq.com
+  - DOMAIN-SUFFIX,gdt.qq.com
+  - DOMAIN-SUFFIX,gdtimg.com
+  - DOMAIN-SUFFIX,ugdtimg.com
   - DOMAIN-SUFFIX,wxs.qq.com
   - DOMAIN-WILDCARD,oth.*.mdt.qq.com
-  - DOMAIN,pgdt.gtimg.cn
-  - DOMAIN,cc.map.qq.com
+  - DOMAIN,adsmind.apdcdn.tc.qq.com
   - DOMAIN,aegis.qq.com
-  - DOMAIN,rmonitor.qq.com
-  - DOMAIN,snowflake.qq.com
-  - DOMAIN,h.trace.qq.com
-  - DOMAIN,cfg.imtt.qq.com
-  - DOMAIN,us.l.qq.com
-  - DOMAIN,oss.weread.qq.com
-  - DOMAIN,file.daihuo.qq.com
-  - DOMAIN,tmfsdk.m.qq.com
-  - DOMAIN,tools.3g.qq.com
-  - DOMAIN,pingjs.qq.com
+  - DOMAIN,badjs.weixinbridge.com
   - DOMAIN,btrace.qq.com
   - DOMAIN,btrace.video.qq.com
+  - DOMAIN,cc.map.qq.com
+  - DOMAIN,cfg.imtt.qq.com
   - DOMAIN,dns.weixin.qq.com.cn
-  - DOMAIN,wxaintpcos.wxqcloud.qq.com.cn
+  - DOMAIN,file.daihuo.qq.com
   - DOMAIN,galileotelemetry.tencent.com
+  - DOMAIN,h.trace.qq.com
   - DOMAIN,mmgame.qpic.cn
-  - DOMAIN,badjs.weixinbridge.com
+  - DOMAIN,oss.weread.qq.com
+  - DOMAIN,pgdt.gtimg.cn
+  - DOMAIN,pingjs.qq.com
   - DOMAIN,report.voovmeeting.com
-  - DOMAIN-SUFFIX,ugdtimg.com
-  - DOMAIN-SUFFIX,gdtimg.com
-  - DOMAIN,adsmind.apdcdn.tc.qq.com
+  - DOMAIN,rmonitor.qq.com
+  - DOMAIN,snowflake.qq.com
+  - DOMAIN,tmfsdk.m.qq.com
+  - DOMAIN,tools.3g.qq.com
+  - DOMAIN,us.l.qq.com
+  - DOMAIN,wxaintpcos.wxqcloud.qq.com.cn
 
   # ===== 阿里系 =====
   - DOMAIN-SUFFIX,alibabachengdun.com
   - DOMAIN-SUFFIX,alibabachengdun.net
   - DOMAIN-SUFFIX,log.aliyuncs.com
   - DOMAIN-SUFFIX,tanx.com
-  - DOMAIN,sdkgen.data.tianwenca.com
-  - DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
-  - DOMAIN,acjs.aliyun.com
   - DOMAIN,abtest.alibaba.com
+  - DOMAIN,acjs.aliyun.com
+  - DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
+  - DOMAIN,adtrack.quark.cn
+  - DOMAIN,atm.youku.com
   - DOMAIN,atoken.m.taobao.com
   - DOMAIN,audid-api.taobao.com
-  - DOMAIN,fourier.taobao.com
-  - DOMAIN,sjarvis.taobao.com
-  - DOMAIN,dorangesource.alicdn.com
-  - DOMAIN,px.ucweb.com
-  - DOMAIN,ucus.ucweb.com
-  - DOMAIN,adtrack.quark.cn
-  - DOMAIN,huichuan.sm.cn
-  - DOMAIN,ulog.wpk.qianwen.com
-  - DOMAIN,loggw-ex.alipay.com
-  - DOMAIN,dualstack-logs.amap.com
-  - DOMAIN,atm.youku.com
-  - DOMAIN,iyes.youku.com
   - DOMAIN,club.alimama.com
+  - DOMAIN,dorangesource.alicdn.com
+  - DOMAIN,dualstack-logs.amap.com
+  - DOMAIN,fourier.taobao.com
+  - DOMAIN,huichuan.sm.cn
+  - DOMAIN,iyes.youku.com
+  - DOMAIN,loggw-ex.alipay.com
+  - DOMAIN,px.ucweb.com
+  - DOMAIN,sdkgen.data.tianwenca.com
+  - DOMAIN,sjarvis.taobao.com
+  - DOMAIN,ucus.ucweb.com
+  - DOMAIN,ulog.wpk.qianwen.com
 
   # ===== 百度 / 搜狗 =====
+  # - DOMAIN-SUFFIX,mobads.baidu.com
   - DOMAIN,ada.baidu.com
   - DOMAIN,afd.baidu.com
   - DOMAIN,als.baidu.com
   - DOMAIN,appc.baidu.com
+  - DOMAIN,cpro.baidu.com
   - DOMAIN,dlswbr.baidu.com
+  - DOMAIN,ecmb.bdimg.com
   - DOMAIN,ext.baidu.com
   - DOMAIN,fclick.baidu.com
   - DOMAIN,feed-image.baidu.com
   - DOMAIN,h2tcbox.baidu.com
   - DOMAIN,hectorstatic.baidu.com
+  - DOMAIN,hm.baidu.com
   - DOMAIN,hmma.baidu.com
   - DOMAIN,input.shouji.sogou.com
+  - DOMAIN,mobads-logs.baidu.com
+  - DOMAIN,mobads.baidu.com
   - DOMAIN,sofire.baidu.com
   - DOMAIN,sp1.baidu.com
   - DOMAIN,techain.baidu.com
   - DOMAIN,worldwide.sogou.com
-  # - DOMAIN-SUFFIX,mobads.baidu.com
-  - DOMAIN,mobads.baidu.com
-  - DOMAIN,mobads-logs.baidu.com
-  - DOMAIN,cpro.baidu.com
 
-  # ===== 京东 / 美团 / 拼多多=====
+  # ===== 京东 / 美团 / 拼多多 / 携程 / 滴滴 =====
   - DOMAIN,catfront.dianping.com
   - DOMAIN,data-sdk-uuid-log.d.meituan.net
   - DOMAIN,kepler.jd.com
   - DOMAIN,knicks.jd.com
+  - DOMAIN,ma-adx.ctrip.com
   - DOMAIN,mapi.m.jd.com
+  - DOMAIN,omgup.xiaojukeji.com
+  - DOMAIN,s.c-ctrip.com
   - DOMAIN,ta.pinduoduo.com
   - DOMAIN,th.pinduoduo.com
 
@@ -376,162 +410,149 @@ payload:
   - DOMAIN,t2.xiaohongshu.com
 
   # ===== 快手 =====
+  - DOMAIN-SUFFIX,adukwai.com
   - DOMAIN-WILDCARD,ulog*.gifshow.com
+  - DOMAIN,ad.partner.gifshow.com
   - DOMAIN,api.e.kuaishou.com
   - DOMAIN,kste.ksapisrv.com
-  - DOMAIN,push.ksapisrv.com
-  - DOMAIN,open.kwaizt.com
   - DOMAIN,open.kuaishouzt.com
-  - DOMAIN,ad.partner.gifshow.com
-  - DOMAIN-SUFFIX,adukwai.com
+  - DOMAIN,open.kwaizt.com
+  - DOMAIN,push.ksapisrv.com
 
   # ===== 视频 / 其他媒体 =====
   - DOMAIN-SUFFIX,mgtv-ad.com
-  - DOMAIN,stat.mgtv.com
-  - DOMAIN,pcvcr.cdn.mgtv.com
+  - DOMAIN,api.xsj.wasu.tv
   - DOMAIN,data.bilibili.com
   - DOMAIN,dataflow.biliapi.com
-  - DOMAIN,api.xsj.wasu.tv
+  - DOMAIN,etl-xlmc-ssl.sandai.net
+  - DOMAIN,line1-log.biligame.net
+  - DOMAIN,pcvcr.cdn.mgtv.com
+  - DOMAIN,stat.mgtv.com
 
-  # ===== 手机厂商 =====
+  # ===== 手机厂商：小米 =====
   - DOMAIN-SUFFIX,ad.xiaomi.com
   - DOMAIN-WILDCARD,data.mistat.*
-  - DOMAIN,api.installer.xiaomi.com
-  - DOMAIN,tz.sec.xiaomi.com
-  - DOMAIN,ccc.sys.miui.com
   - DOMAIN,adv.sec.miui.com
-  - DOMAIN,tk.d.mi.com
+  - DOMAIN,api.installer.xiaomi.com
+  - DOMAIN,api.sec.miui.com
   - DOMAIN,beats.be.mi.com
+  - DOMAIN,ccc.sys.miui.com
+  - DOMAIN,data.sec.miui.com
   - DOMAIN,stat.youpin.mi.com
+  - DOMAIN,tk.d.mi.com
   - DOMAIN,tracking.miui.com
+  - DOMAIN,tz.sec.xiaomi.com
+
+  # ===== 手机厂商：华为 =====
   - DOMAIN-WILDCARD,events-*.op.dbankcloud.*
-  - DOMAIN,healthdata.dbankcloud.cn
-  - DOMAIN,grs.dbankcloud.com
-  - DOMAIN,metrics1.data.hicloud.com
   - DOMAIN,adx.hicloud.com
-  - DOMAIN-SUFFIX,ads.heytapmobi.com
-  - DOMAIN,adx.heytapmobi.com
-  - DOMAIN,data.heytapmobi.com
-  - DOMAIN,dcs.heytapmobi.com
-  - DOMAIN,stat.heytapmobi.com
-  - DOMAIN,adsfs.oppomobile.com
-  - DOMAIN,adsfs.heytapimage.com
-  - DOMAIN,dc.vivo.com.cn
-  - DOMAIN,adx.vivo.com.cn
-  - DOMAIN,norma-external-collect.meizu.com
-  - DOMAIN,ureca.samsungapps.com
-  - DOMAIN,ad.mobile.sec.samsung.com
+  - DOMAIN,grs.dbankcloud.com
+  - DOMAIN,healthdata.dbankcloud.cn
+  - DOMAIN,metrics1.data.hicloud.com
   # 以下可能影响应用商店，需要时取消注释
   # DOMAIN,hispace.hicloud.com
+
+  # ===== 手机厂商：OPPO / vivo / 魅族 =====
+  - DOMAIN-SUFFIX,ads.heytapmobi.com
+  - DOMAIN,adsfs.heytapimage.com
+  - DOMAIN,adsfs.oppomobile.com
+  - DOMAIN,adx.heytapmobi.com
+  - DOMAIN,adx.vivo.com.cn
+  - DOMAIN,data.heytapmobi.com
+  - DOMAIN,dc.vivo.com.cn
+  - DOMAIN,dcs.heytapmobi.com
+  - DOMAIN,norma-external-collect.meizu.com
+  - DOMAIN,stat.heytapmobi.com
+
+  # ===== 手机厂商：三星 =====
+  - DOMAIN,ad.mobile.sec.samsung.com
+  - DOMAIN,dc.dqa.samsung.com
+  - DOMAIN,sspapi-prd.samsungrs.com
+  - DOMAIN,ureca.samsungapps.com
+  # 以下可能影响应用商店，需要时取消注释
   # DOMAIN,sa.samsungapps.com
 
+  # ===== Apple =====
+  - DOMAIN-SUFFIX,iadsdk.apple.com
+  - DOMAIN,metrics.icloud.com
+
   # ===== 运营商 =====
+  - DOMAIN,auni.telecome.cn
   - DOMAIN,h.app.coc.10086.cn
   - DOMAIN,log2.cmpassport.com
+  - DOMAIN,m1.ad.10010.com
   - DOMAIN,rdp.cmpassport.com
   - DOMAIN,smartad.10010.com
-  - DOMAIN,m1.ad.10010.com
-  - DOMAIN,auni.telecome.cn
   - DOMAIN,stat.189.cn
   - DOMAIN,zxid-m.mobileservice.cn
   # DOMAIN-SUFFIX,wo.cn
   # DOMAIN-SUFFIX,cmvideo.cn
 
-  # ===== 墨迹天气 =====
-  - DOMAIN,adl.api.moweather.com
+  # ===== 微软：App Center / 开发者遥测 =====
+  - DOMAIN-SUFFIX,applicationinsights.microsoft.com
+  - DOMAIN-SUFFIX,clarity.ms
+  # Application Insights，自己开发并使用的要注释掉
+  - DOMAIN,dc.services.visualstudio.com
+  - DOMAIN,in.appcenter.ms
+  # Bing 广告转化追踪
+  - DOMAIN,bat.bing.com
+
+  # ===== 微软：Windows / Office / Edge / MSN 诊断上报 =====
+  - DOMAIN-SUFFIX,events.data.microsoft.com
+  - DOMAIN-SUFFIX,pipe.aria.microsoft.com
+  - DOMAIN-WILDCARD,vortex*.data.microsoft.com
+  - DOMAIN,browser.events.data.msn.com
+  - DOMAIN,c.msn.com
+  - DOMAIN,watson.microsoft.com
+  # Windows 配置下发，封了个别功能的远程配置可能拉不到
+  # DOMAIN,settings-win.data.microsoft.com
+
+  # ===== 垂直 App：墨迹天气 =====
   - DOMAIN-WILDCARD,mcs*.api.moweather.com
   - DOMAIN-WILDCARD,v*log.moweather.com
+  - DOMAIN,adl.api.moweather.com
   # DOMAIN,bctrl.api.moweather.com
   # DOMAIN,wh.api.moweather.com
 
-  # ===== 车来了 =====
+  # ===== 垂直 App：车来了 =====
   - DOMAIN,adx.sogaha.cn
-  - DOMAIN,ctrace.sogaha.cn
-  - DOMAIN,atrace.chelaile.net.cn
   - DOMAIN,adx.yg84.com
+  - DOMAIN,atrace.chelaile.net.cn
+  - DOMAIN,ctrace.sogaha.cn
 
-  # ===== PandaBus =====
+  # ===== 垂直 App：PandaBus =====
   - DOMAIN-SUFFIX,tobidad.cn
   - DOMAIN-WILDCARD,adapi.pandabus.*
   - DOMAIN-WILDCARD,deviceconfig.pandabus.*
   - DOMAIN,mpaas-loggw4zwy.aliyuncs.com
 
-  # ===== 微软：App Center / 开发者遥测 =====
-  - DOMAIN,in.appcenter.ms
-  # Application Insights，自己开发并使用的要注释掉
-  - DOMAIN,dc.services.visualstudio.com
-  - DOMAIN-SUFFIX,applicationinsights.microsoft.com
-  # Microsoft Clarity 网页行为分析
-  - DOMAIN-SUFFIX,clarity.ms
-  # Bing 广告转化追踪
-  - DOMAIN,bat.bing.com
-
-  # ===== 微软：Windows / Office / Edge 诊断上报 =====
-  - DOMAIN-WILDCARD,vortex*.data.microsoft.com
-  - DOMAIN-SUFFIX,events.data.microsoft.com
-  - DOMAIN-SUFFIX,pipe.aria.microsoft.com
-  - DOMAIN,watson.microsoft.com
-  # Windows 配置下发，封了个别功能的远程配置可能拉不到
-  # DOMAIN,settings-win.data.microsoft.com
-
-  # ===== Reddit / AppsFlyer 内嵌 =====
-  - DOMAIN-WILDCARD,*-reporting.reddit.com
-  - DOMAIN,inapps.af-sdk.com
-
-  # ===== 航旅纵横 =====
+  # ===== 垂直 App：航旅纵横 =====
   - DOMAIN,sensors.umetrip.com.cn
 
   # ===== 其他应用遥测 =====
-  - DOMAIN,metrics.roblox.com
-  - DOMAIN,tracing.roblox.com
+  - DOMAIN,collector.github.com
   - DOMAIN,ecsv2.roblox.com
   - DOMAIN,events.mapbox.com
+  - DOMAIN,metrics.roblox.com
+  - DOMAIN,tracing.roblox.com
 
-
-  # ===== 其他 =====
-  - DOMAIN,als.baidu.com
-  - DOMAIN,api.sec.miui.com
-  - DOMAIN,api16-access-ttp-b.tiktokpangle.us
-  - DOMAIN,api16-access-ttp.tiktokpangle.us
+  # ===== 未归属 / 来源不明 =====
+  - DOMAIN-SUFFIX,wmzfylgdsz.com
   - DOMAIN,b.qchannel03.cn
-  - DOMAIN,browser.events.data.msn.com
-  - DOMAIN,c.msn.com
   - DOMAIN,cn.s.50union.com
-  - DOMAIN,collector.github.com
-  - DOMAIN,data.sec.miui.com
-  - DOMAIN,dc.dqa.samsung.com
-  - DOMAIN,ecmb.bdimg.com
-  - DOMAIN,etl-xlmc-ssl.sandai.net
   - DOMAIN,fo.iemiq.com
   - DOMAIN,gdloc.qchannel03.cn
   - DOMAIN,gdloc2.qchannel03.cn
-  - DOMAIN,h2tcbox.baidu.com
-  - DOMAIN,hm.baidu.com
-  - DOMAIN,line1-log.biligame.net
   - DOMAIN,log-sdk.clickwifi.net
-  - DOMAIN,ma-adx.ctrip.com
-  - DOMAIN,metrics.icloud.com
   - DOMAIN,miav-cse.avlyun.com
-  - DOMAIN,mssdk.bytedance.com
-  - DOMAIN,ogads-pa.googleapis.com
-  - DOMAIN,omgup.xiaojukeji.com
   - DOMAIN,px.effirst.com
   - DOMAIN,rumt-zh.com
-  - DOMAIN,s.c-ctrip.com
-  - DOMAIN,sf16-static.i18n-pglstatp.com
-  - DOMAIN,sp1.baidu.com
-  - DOMAIN,sspapi-prd.samsungrs.com
   - DOMAIN,syh-imp.cdnjtzy.com
   - DOMAIN,yumao.puata.info
-  - DOMAIN-SUFFIX,iadsdk.apple.com
-  - DOMAIN-SUFFIX,wmzfylgdsz.com
 
-  # ===== 观察区（来源或用途未确认，或有误伤风险，默认不生效）=====
-  # 核心接口之一，字节系 App 异常先查这条
-  # DOMAIN,i.snssdk.com
-  # 疑似业务接口
-  # DOMAIN,ib.snssdk.com
+  # ################ 十、观察区（来源或用途未确认，或有误伤风险，默认不生效）################
   # DOMAIN,lf-rc1.yhgfb-cn-static.com
+  # 疑似业务接口
   # DOMAIN,opex-service-cn.allawntech.com
   # 第二档补全域名，把握较小
   # DOMAIN-SUFFIX,adjust.world
