@@ -119,6 +119,7 @@ DOMAIN-SUFFIX,adsense.com
 DOMAIN-SUFFIX,google-analytics.com
 DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,crashlytics.com
 DOMAIN,fundingchoicesmessages.google.com
 DOMAIN,firebaselogging-pa.googleapis.com
@@ -283,6 +284,9 @@ DOMAIN,galileotelemetry.tencent.com
 DOMAIN,mmgame.qpic.cn
 DOMAIN,badjs.weixinbridge.com
 DOMAIN,report.voovmeeting.com
+DOMAIN-SUFFIX,ugdtimg.com
+DOMAIN-SUFFIX,gdtimg.com
+DOMAIN,adsmind.apdcdn.tc.qq.com
 
 # ===== 阿里系 =====
 DOMAIN-SUFFIX,alibabachengdun.com
@@ -323,6 +327,8 @@ DOMAIN,sofire.baidu.com
 DOMAIN,techain.baidu.com
 DOMAIN,input.shouji.sogou.com
 DOMAIN,worldwide.sogou.com
+DOMAIN,mobads-logs.baidu.com
+DOMAIN,cpro.baidu.com
 
 # ===== 京东 / 美团 =====
 DOMAIN,kepler.jd.com
@@ -346,6 +352,8 @@ DOMAIN,kste.ksapisrv.com
 DOMAIN,push.ksapisrv.com
 DOMAIN,open.kwaizt.com
 DOMAIN,open.kuaishouzt.com
+DOMAIN,ad.partner.gifshow.com
+DOMAIN-SUFFIX,adukwai.com
 
 # ===== 视频 / 其他媒体 =====
 DOMAIN-SUFFIX,mgtv-ad.com
