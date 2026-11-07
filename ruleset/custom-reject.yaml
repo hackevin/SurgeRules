@@ -486,6 +486,16 @@ payload:
   - DOMAIN,stat.189.cn
   - DOMAIN,zxid-m.mobileservice.cn
   - DOMAIN,jiguang.coc.10086.cn
+  # 中国移动客户端性能监控
+  - DOMAIN,apm.app.coc.10086.cn
+  - DOMAIN,apm.clientaccess.10086.cn
+  - DOMAIN,dc.cmicapm.com
+  # 中国移动基础业务
+  # - DOMAIN,base.hjq.komect.com
+  # 中国移动云盘
+   - DOMAIN,caiyun.feixin.10086.cn
+  # 中国移动 MM 广告相关服务（用途待验证）
+  - DOMAIN,da.mmarket.com
   # DOMAIN-SUFFIX,wo.cn
   # DOMAIN-SUFFIX,cmvideo.cn
 
