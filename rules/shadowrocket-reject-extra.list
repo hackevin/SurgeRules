@@ -1,6 +1,6 @@
 # 描述: 只含通配符/关键字的部分
-# 更新时间: 2026-11-04 11:43:07 (UTC+8)
-# 规则数量: 929
+# 更新时间: 2026-11-07 08:02:27 (UTC+8)
+# 规则数量: 927
 # 用法: Shadowrocket: RULE-SET,<本文件URL>,REJECT
 DOMAIN-KEYWORD,.24log.
 DOMAIN-KEYWORD,.aan.amazon.
@@ -243,7 +243,6 @@ DOMAIN-WILDCARD,*.iptracker-lb-*.amazonaws.com
 DOMAIN-WILDCARD,*.ir-new-cdn-eu-west-*-hb.rayjump.com
 DOMAIN-WILDCARD,*.ja*.apppure.net
 DOMAIN-WILDCARD,*.ja*.gamersky.com
-DOMAIN-WILDCARD,*.js*.abolezi.com
 DOMAIN-WILDCARD,*.js.*2023*.live
 DOMAIN-WILDCARD,*.js.*2023*.xyz
 DOMAIN-WILDCARD,*.jtbo*.nqxvevk.cn
@@ -702,7 +701,6 @@ DOMAIN-WILDCARD,iptracker-lb-*.amazonaws.com
 DOMAIN-WILDCARD,ir-new-cdn-eu-west-*-hb.rayjump.com
 DOMAIN-WILDCARD,ja*.apppure.net
 DOMAIN-WILDCARD,ja*.gamersky.com
-DOMAIN-WILDCARD,js*.abolezi.com
 DOMAIN-WILDCARD,js.*2023*.live
 DOMAIN-WILDCARD,js.*2023*.xyz
 DOMAIN-WILDCARD,jtbo*.nqxvevk.cn

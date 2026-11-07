@@ -1,6 +1,6 @@
 # 描述: domain 规则集表达不了的部分(通配符/关键字/正则)，与 mihomo-reject.yaml 搭配使用
-# 更新时间: 2026-11-04 11:43:07 (UTC+8)
-# 规则数量: 929
+# 更新时间: 2026-11-07 08:02:27 (UTC+8)
+# 规则数量: 927
 # 用法: mihomo rule-providers: behavior: classical
 payload:
   - 'DOMAIN-KEYWORD,.24log.'
@@ -244,7 +244,6 @@ payload:
   - 'DOMAIN-WILDCARD,*.ir-new-cdn-eu-west-*-hb.rayjump.com'
   - 'DOMAIN-WILDCARD,*.ja*.apppure.net'
   - 'DOMAIN-WILDCARD,*.ja*.gamersky.com'
-  - 'DOMAIN-WILDCARD,*.js*.abolezi.com'
   - 'DOMAIN-WILDCARD,*.js.*2023*.live'
   - 'DOMAIN-WILDCARD,*.js.*2023*.xyz'
   - 'DOMAIN-WILDCARD,*.jtbo*.nqxvevk.cn'
@@ -703,7 +702,6 @@ payload:
   - 'DOMAIN-WILDCARD,ir-new-cdn-eu-west-*-hb.rayjump.com'
   - 'DOMAIN-WILDCARD,ja*.apppure.net'
   - 'DOMAIN-WILDCARD,ja*.gamersky.com'
-  - 'DOMAIN-WILDCARD,js*.abolezi.com'
   - 'DOMAIN-WILDCARD,js.*2023*.live'
   - 'DOMAIN-WILDCARD,js.*2023*.xyz'
   - 'DOMAIN-WILDCARD,jtbo*.nqxvevk.cn'
