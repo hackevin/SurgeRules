@@ -51,9 +51,9 @@ payload:
   # ===== 通用日志 / 监控前缀 =====
   - DOMAIN-WILDCARD,applog.*
   - DOMAIN-WILDCARD,analytics.*
-  - DOMAIN-WILDCARD,log.*
-  - DOMAIN-WILDCARD,logs.*
+  - DOMAIN-REGEX,^logs?\..+$
   - DOMAIN-WILDCARD,mon.*
+  - DOMAIN-WILDCARD,rtlog*.*
 
   # ===== 小红书（新增，你的命中第 3、6、11 名）=====
   - DOMAIN-WILDCARD,apm-*.xiaohongshu.com
@@ -77,6 +77,7 @@ payload:
   - DOMAIN-SUFFIX,logs.netflix.com
   - DOMAIN,dataflow.biliapi.com
   - DOMAIN,report.voovmeeting.com
+  - DOMAIN,dw-online.ksosoft.com
 
   # ===== 推送长连接（断线后客户端会反复重连，封了收不到离线通知）=====
   - DOMAIN-SUFFIX,jpush.cn
@@ -97,6 +98,7 @@ payload:
   - DOMAIN,mpaas-loggw4zwy.aliyuncs.com
   - DOMAIN,loggw-ex.alipay.com
   - DOMAIN-WILDCARD,mdap.alipay.*
+
 
   # ===== 候选（默认不生效，看命中次数再启用）=====
   # - DOMAIN-SUFFIX,bugly.qq.com
