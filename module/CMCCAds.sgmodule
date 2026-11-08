@@ -1,43 +1,66 @@
 #!name=中国移动去广告
-#!desc=拦截 10086 APP 开屏广告、悬浮窗及营销内容
-#!author=Claude
-#!version=1.1.0
+#!desc=拦截中国移动 10086 APP 开屏、悬浮窗、营销内容及已识别的广告/APM遥测请求；保留认证和正常业务域名。
+#!author=Chatgpt
+#!version=1.2.0
 #!category=去广告
 
 [Rule]
-# 核心广告域名拦截
+# ===== 中国移动：广告域名 =====
 DOMAIN,ad.10086.cn,REJECT-DROP
 DOMAIN,adcdn.10086.cn,REJECT-DROP
 DOMAIN,msg.10086.cn,REJECT-DROP
 DOMAIN,promotion.10086.cn,REJECT-DROP
-DOMAIN,amdc.m.taobao.com,REJECT-DROP
 
-# SDK 拦截 - 防止摇一摇跳转（穿山甲广告域名）
-DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-DROP
-DOMAIN-SUFFIX,pglstatp-toutiao.co,REJECT-DROP
+# ===== 中国移动：APM / 性能监控 / 数据采集 =====
+DOMAIN,apm.app.coc.10086.cn,REJECT-DROP
+DOMAIN,apm.clientaccess.10086.cn,REJECT-DROP
+DOMAIN,dc.cmicapm.com,REJECT-DROP
 
-# > 开屏广告初始化接口
+# ===== 中国移动：开屏广告初始化接口 =====
 URL-REGEX,^https?://client\.app\.coc\.10086\.cn/biz-orange/DN/init/startInit,REJECT-DROP
 URL-REGEX,^https?://clientaccess\.10086\.cn/biz-orange/DN/init/startInit,REJECT-DROP
 
-# > 广告列表接口
+# ===== 中国移动：广告列表接口 =====
 URL-REGEX,^https?://client\.app\.coc\.10086\.cn/biz-orange/DN/explorePage/getAdverList,REJECT-DROP
 
-# > 悬浮窗广告
+# ===== 中国移动：悬浮窗 / 情绪市场 =====
 URL-REGEX,^https?://(client\.app\.coc|h\.app\.coc|app)\.10086\.cn/biz-orange/DN/emotionMarket,REJECT-DROP
 
-# > 首页促销广告接口
+# ===== 中国移动：启动及初始化广告接口（此前模块补入）=====
+
+# ===== 中国移动：首页促销广告接口 =====
 URL-REGEX,^https?://app\.10086\.cn/biz-orange/DN/(findSale|homeSale)/getsaleAdver,REJECT-DROP
 
-# > 营销内容 feed
+# ===== 中国移动：营销内容 Feed =====
 URL-REGEX,^https?://wap\.js\.10086\.cn/jsmccClient/cd/market_content/api/v\d/market_content\.page\.query,REJECT-DROP
 
-# > 广告图片资源（返回 1px 透明图，避免图片加载报错）
+# ===== 中国移动：图片广告资源 =====
+# 返回 1px 透明图，避免图片加载报错
 URL-REGEX,^https?://gd\.10086\.cn/gmccfile/file/image/preloading703/.*\.jpg,REJECT-TINYGIF
 URL-REGEX,^https?://res\.app\.coc\.10086\.cn/group\d/M00/[0-9]{2}/[A-Z0-9]{2}/.+\.jpg,REJECT-TINYGIF
 
-# 屏蔽咪咕视频预加载广告
+# ===== 咪咕视频：预加载广告 =====
 URL-REGEX,^https?://ad\.cmvideo\.cn/.*,REJECT-DROP
 
+# ===== 认证及业务域名保护 =====
+# 以下认证/业务域名不做 DNS 层拦截：
+# log2.cmpassport.com
+# rdp.cmpassport.com
+# DOMAIN-SUFFIX,cmpassport.com
+# DOMAIN-SUFFIX,10086.cn
+# DOMAIN-SUFFIX,139.com
+# DOMAIN-SUFFIX,migu.cn
+# DOMAIN-SUFFIX,miguvideo.com
+# DOMAIN-SUFFIX,yidongyun.com
+# DOMAIN-SUFFIX,cmvideo.cn
+# DOMAIN-SUFFIX,mobileservice.cn
+# DOMAIN-SUFFIX,komect.com
+# DOMAIN-SUFFIX,cmcloud.cn
+
+# ===== 待观察域名：默认不拦截 =====
+# h.app.coc.10086.cn
+# zxid-m.mobileservice.cn
+# da.mmarket.com
+
 [MITM]
-hostname = %APPEND% client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn, gd.10086.cn, res.app.coc.10086.cn, clientaccess.10086.cn, wap.js.10086.cn
+hostname = %APPEND% *.10086.cn
