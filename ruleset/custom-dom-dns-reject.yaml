@@ -11,3 +11,6 @@ payload:
   - 'httpdns.music.163.com'
   - 'httpdns.zybang.com'
   - 'httpsdns.baidu.com'
+  - 'httpdns.meituan.com'
+  - 'aedns.weixin.qq.com'
+  - 'httpdns.browser.miui.com'
