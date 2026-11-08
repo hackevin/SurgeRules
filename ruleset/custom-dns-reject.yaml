@@ -1,14 +1,16 @@
 payload:
-  # httpdns 私有 DNS 入口
-  - DOMAIN,amdc.alipay.com
-  - DOMAIN,dig.bdurl.net
-  - DOMAIN,dig.zjurl.cn
-  - DOMAIN,dns.jd.com
-  - DOMAIN,dns.weixin.qq.com.cn
-  - DOMAIN,grs.dbankcloud.com
-  - DOMAIN-WILDCARD,httpdns.*
-  - DOMAIN-WILDCARD,httpsdns.*
-  - DOMAIN,httpdns.bilivideo.com
-  - DOMAIN,httpdns.meituan.com
-  - DOMAIN,httpdns.music.163.com
-  - DOMAIN,httpdns.zybang.com
+# DNS / HTTPDNS 通用规则
+- DOMAIN-REGEX,^(dig|dns)\.[^.]+\.(cn|net|com)$
+- DOMAIN-REGEX,^https?dns\.[^.]+\.com$
+
+# 精确域名
+- DOMAIN,amdc.alipay.com
+- DOMAIN,dig.bdurl.net
+- DOMAIN,dig.zjurl.cn
+- DOMAIN,dns.jd.com
+- DOMAIN,dns.weixin.qq.com.cn
+- DOMAIN,grs.dbankcloud.com
+- DOMAIN,httpdns.bilivideo.com
+- DOMAIN,httpdns.meituan.com
+- DOMAIN,httpdns.music.163.com
+- DOMAIN,httpdns.zybang.com
