@@ -78,6 +78,7 @@ payload:
   - DOMAIN,dataflow.biliapi.com
   - DOMAIN,report.voovmeeting.com
   - DOMAIN,dw-online.ksosoft.com
+  - DOMAIN-SUFFIX,lnk0.com
 
   # ===== 推送长连接（断线后客户端会反复重连，封了收不到离线通知）=====
   - DOMAIN-SUFFIX,jpush.cn
