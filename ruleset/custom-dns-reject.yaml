@@ -15,3 +15,5 @@ payload:
 - DOMAIN,httpdns.music.163.com
 - DOMAIN,httpdns.zybang.com
 - DOMAIN,safebrowsing.urlsec.qq.com
+- DOMAIN,aedns.weixin.qq.com
+- DOMAIN,httpdns.browser.miui.com
