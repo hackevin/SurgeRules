@@ -14,3 +14,4 @@ payload:
 - DOMAIN,httpdns.meituan.com
 - DOMAIN,httpdns.music.163.com
 - DOMAIN,httpdns.zybang.com
+- DOMAIN,safebrowsing.urlsec.qq.com
