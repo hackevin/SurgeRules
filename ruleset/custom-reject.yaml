@@ -244,6 +244,7 @@ payload:
   - DOMAIN,fundingchoicesmessages.google.com
   - DOMAIN,ogads-pa.googleapis.com
   - DOMAIN-WILDCARD,ogads-*.clients*.google.com
+  - DOMAIN-REGEX,^beacons[0-5]?\.gcp?\.gvt2\.com$
 
   # ################ 九、各厂商 / 应用 ################
   # ===== 字节系 =====
