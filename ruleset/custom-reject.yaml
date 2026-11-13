@@ -45,6 +45,7 @@ payload:
   - DOMAIN-WILDCARD,h-adashx.ut.*
 
   # ===== 通用关键字（广告词）=====
+  - DOMAIN-KEYWORD,.ads.
   - DOMAIN-KEYWORD,admarvel
   - DOMAIN-KEYWORD,admaster
   - DOMAIN-KEYWORD,adsage
