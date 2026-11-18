@@ -118,7 +118,9 @@ payload:
   - DOMAIN,mpaas-loggw4zwy.aliyuncs.com
   - DOMAIN,loggw-ex.alipay.com
   - DOMAIN-WILDCARD,mdap.alipay.*
-
+  # ===== 百度 =====
+  - DOMAIN,h2tcbox.baidu.com
+  - DOMAIN,ecmb.bdimg.com
 
   # ===== 候选（默认不生效，看命中次数再启用）=====
   # - DOMAIN-SUFFIX,bugly.qq.com
