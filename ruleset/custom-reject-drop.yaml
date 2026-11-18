@@ -1,15 +1,21 @@
 # ============================================================
 # 名称: reject-drop
-# 更新: 2026-11-03
+# 更新: 2026-11-18
 # 类型: classical / REJECT-DROP
 # 说明: 后台日志、监控、遥测、推送长连接等会被拒绝后反复重连的域名，
 #       用丢弃让对方等超时，降低重试频率。
-#       广告类（开屏、信息流）不放这里，放 REJECT 规则集。
+#       广告类（开屏、信息流）不放这里，放 custom-reject（REJECT）规则集；
+#       两个规则集内容互斥，本文件里的域名也不要放进 DNS 层的 custom-dom-reject
+#       （DNS 直接拒绝会让客户端更快重试，等于绕过了 DROP）。
 # 依赖: DOMAIN-WILDCARD 需要较新的 mihomo 内核，且假设 * 可以跨越 .
-# 注意: 推送组封了会收不到离线通知；log.* / logs.* / mon.* 范围较宽
+# 注意: 推送组封了会收不到离线通知；analytics.* / log.* / logs.* / mon.* /
+#       telemetry.* 范围较宽，会命中 analytics.google.com、公司内网的
+#       log.xxx / mon.xxx 等；DROP 是挂起到超时，误伤时比 REJECT 更难察觉，
+#       需要放行的域名请在规则里排到本规则集之前（内网 / 私网直连也放前面）
 # ============================================================
 payload:
   # ===== 字节系：日志 / 监控（命中最高）=====
+  # mssdk / tnc / polaris / saveu 是风控和路由配置，字节系 App 登录 / 风控异常时先查这几条
   - DOMAIN-WILDCARD,log*-misc-*.amemv.com
   - DOMAIN-WILDCARD,log*-misc-*.zijieapi.com
   - DOMAIN-WILDCARD,log*-misc-*.fqnovel.com
@@ -54,6 +60,9 @@ payload:
   - DOMAIN-REGEX,^logs?\..+$
   - DOMAIN-WILDCARD,mon.*
   - DOMAIN-WILDCARD,rtlog*.*
+  # 遥测（含 telemetry.microsoft.com、incoming.telemetry.mozilla.org 等）
+  - DOMAIN-WILDCARD,telemetry.*
+  - DOMAIN-WILDCARD,*.telemetry.*
 
   # ===== 小红书（新增，你的命中第 3、6、11 名）=====
   - DOMAIN-WILDCARD,apm-*.xiaohongshu.com
@@ -66,7 +75,7 @@ payload:
   - DOMAIN-SUFFIX,events.data.microsoft.com
   - DOMAIN-WILDCARD,vortex*.data.microsoft.com
   - DOMAIN-SUFFIX,pipe.aria.microsoft.com
-  - DOMAIN-SUFFIX,telemetry.microsoft.com
+  # Application Insights，自己开发并使用的要注释掉
   - DOMAIN-SUFFIX,applicationinsights.microsoft.com
   - DOMAIN,watson.microsoft.com
   - DOMAIN,in.appcenter.ms
@@ -83,8 +92,8 @@ payload:
   # ===== 推送长连接（断线后客户端会反复重连，封了收不到离线通知）=====
   - DOMAIN-SUFFIX,jpush.cn
   - DOMAIN-SUFFIX,jpush.io
-  # 极光认证（一键登录）也用这个域名
-  - DOMAIN-SUFFIX,jiguang.cn
+  # 极光认证（一键登录）、官网和控制台也用 jiguang.cn，DROP 会让一键登录卡到超时，默认不启用
+  # - DOMAIN-SUFFIX,jiguang.cn
   - DOMAIN-SUFFIX,gepush.com
   - DOMAIN-SUFFIX,getui.com
   - DOMAIN-SUFFIX,getui.net
@@ -95,6 +104,8 @@ payload:
   # ===== 友盟 / 阿里日志 =====
   - DOMAIN-SUFFIX,umeng.com
   - DOMAIN-SUFFIX,umengcloud.com
+  - DOMAIN-SUFFIX,umengcloud.net
+  # 阿里云日志服务数据面，自己用 SLS 的要注释掉
   - DOMAIN-SUFFIX,log.aliyuncs.com
   - DOMAIN,mpaas-loggw4zwy.aliyuncs.com
   - DOMAIN,loggw-ex.alipay.com
