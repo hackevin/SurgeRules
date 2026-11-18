@@ -82,12 +82,20 @@ payload:
 
   # ===== 其他应用遥测（新增）=====
   - DOMAIN,ecsv2.roblox.com
+  - DOMAIN,tracing.roblox.com
   # 补回，logs.* 覆盖不到带前缀的子域名
   - DOMAIN-SUFFIX,logs.netflix.com
   - DOMAIN,dataflow.biliapi.com
   - DOMAIN,report.voovmeeting.com
   - DOMAIN,dw-online.ksosoft.com
   - DOMAIN-SUFFIX,lnk0.com
+  - DOMAIN,receiver.habby.mobi
+  # 观测云 RUM / 数据上报；自己用观测云控制台的要注释掉
+  - DOMAIN-SUFFIX,guance.com
+  # 墨迹天气日志
+  - DOMAIN-WILDCARD,v*log.moweather.com
+  # Firebase 统计
+  - DOMAIN-SUFFIX,app-measurement.com
 
   # ===== 推送长连接（断线后客户端会反复重连，封了收不到离线通知）=====
   - DOMAIN-SUFFIX,jpush.cn
@@ -121,5 +129,4 @@ payload:
   # - DOMAIN,techain.baidu.com
   # - DOMAIN-WILDCARD,data.mistat.*
   # - DOMAIN,tracking.miui.com
-  # - DOMAIN-SUFFIX,app-measurement.com
   # - DOMAIN-SUFFIX,crashlytics.com
