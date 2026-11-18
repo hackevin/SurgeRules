@@ -83,7 +83,6 @@ payload:
   - DOMAIN-SUFFIX,51.la
   - DOMAIN-SUFFIX,cnzz.com
   - DOMAIN-SUFFIX,growingio.com
-  - DOMAIN-SUFFIX,guance.com
   - DOMAIN-SUFFIX,irs01.com
   - DOMAIN-SUFFIX,mmstat.com
   - DOMAIN-SUFFIX,sensorsdata.cn
@@ -220,7 +219,6 @@ payload:
   - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,admob.com
   - DOMAIN-SUFFIX,adsense.com
-  - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,crashlytics.com
   - DOMAIN-SUFFIX,doubleclick.net
   - DOMAIN-SUFFIX,google-analytics.com
@@ -436,8 +434,8 @@ payload:
   # DOMAIN,settings-win.data.microsoft.com
 
   # ===== 垂直 App：墨迹天气 =====
+  # v*log.moweather.com 日志域名已迁到 drop
   - DOMAIN-WILDCARD,mcs*.api.moweather.com
-  - DOMAIN-WILDCARD,v*log.moweather.com
   - DOMAIN,adl.api.moweather.com
   # DOMAIN,bctrl.api.moweather.com
   # DOMAIN,wh.api.moweather.com
@@ -460,7 +458,6 @@ payload:
   - DOMAIN,collector.github.com
   - DOMAIN,events.mapbox.com
   - DOMAIN,metrics.roblox.com
-  - DOMAIN,tracing.roblox.com
 
   # ===== 未归属 / 来源不明 =====
   - DOMAIN-SUFFIX,wmzfylgdsz.com
