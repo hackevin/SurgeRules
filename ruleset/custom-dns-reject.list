@@ -1,18 +1,18 @@
 # DNS / HTTPDNS 通用规则
-- DOMAIN-REGEX,^(dig|dns)\.[^.]+\.(cn|net|com)$
-- DOMAIN-REGEX,^https?dns\.[^.]+\.com$
+DOMAIN-REGEX,^(dig|dns)\.[^.]+\.(cn|net|com)$
+DOMAIN-REGEX,^https?dns\.[^.]+\.com$
 
 # 精确域名
-- DOMAIN,amdc.alipay.com
-- DOMAIN,dig.bdurl.net
-- DOMAIN,dig.zjurl.cn
-- DOMAIN,dns.jd.com
-- DOMAIN,dns.weixin.qq.com.cn
-- DOMAIN,grs.dbankcloud.com
-- DOMAIN,httpdns.bilivideo.com
-- DOMAIN,httpdns.meituan.com
-- DOMAIN,httpdns.music.163.com
-- DOMAIN,httpdns.zybang.com
-- DOMAIN,safebrowsing.urlsec.qq.com
-- DOMAIN,aedns.weixin.qq.com
-- DOMAIN,httpdns.browser.miui.com
+DOMAIN,amdc.alipay.com
+DOMAIN,dig.bdurl.net
+DOMAIN,dig.zjurl.cn
+DOMAIN,dns.jd.com
+DOMAIN,dns.weixin.qq.com.cn
+DOMAIN,grs.dbankcloud.com
+DOMAIN,httpdns.bilivideo.com
+DOMAIN,httpdns.meituan.com
+DOMAIN,httpdns.music.163.com
+DOMAIN,httpdns.zybang.com
+DOMAIN,safebrowsing.urlsec.qq.com
+DOMAIN,aedns.weixin.qq.com
+DOMAIN,httpdns.browser.miui.com
