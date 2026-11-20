@@ -1,4 +1,11 @@
-# DNS / HTTPDNS 通用规则
+# ============================================================
+# 名称: custom-dns-reject
+# 类型: REJECT
+# 说明: 拦截 DNS / HTTPDNS 调度域名
+# 适用: Surge / Shadowrocket
+# ============================================================
+
+# DNS / HTTPDNS 通用正则
 DOMAIN-REGEX,^(dig|dns)\.[^.]+\.(cn|net|com)$
 DOMAIN-REGEX,^https?dns\.[^.]+\.com$
 
