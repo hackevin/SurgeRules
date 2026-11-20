@@ -1,24 +1,31 @@
-# ===== 字节系：日志 / 监控（命中最高）=====
-DOMAIN-WILDCARD,log*-misc-*.amemv.com
-DOMAIN-WILDCARD,log*-misc-*.zijieapi.com
-DOMAIN-WILDCARD,log*-misc-*.fqnovel.com
-DOMAIN-WILDCARD,mon*-misc-*.amemv.com
-DOMAIN-WILDCARD,mon*-misc-*.zijieapi.com
-DOMAIN-WILDCARD,mon*-misc-*.fqnovel.com
-DOMAIN-WILDCARD,rtlog*-*.zijieapi.com
-DOMAIN-WILDCARD,rtlog*-*.amemv.com
-DOMAIN-WILDCARD,*-applog-*.zijieapi.com
-DOMAIN-WILDCARD,*-applog-*.amemv.com
-DOMAIN-WILDCARD,*-applog-*.fqnovel.com
-DOMAIN-WILDCARD,abtest*-misc-*.zijieapi.com
-DOMAIN-WILDCARD,abtest*-misc-*.amemv.com
-DOMAIN-WILDCARD,abtest*-misc-*.fqnovel.com
-DOMAIN-WILDCARD,mssdk*-normal-*.zijieapi.com
-DOMAIN-WILDCARD,polaris*-normal-*.zijieapi.com
-DOMAIN-WILDCARD,saveu*-normal-*.zijieapi.com
-DOMAIN-WILDCARD,tnc*-*.zijieapi.com
-DOMAIN-WILDCARD,tnc*-*.bytedance.com
-DOMAIN-WILDCARD,*-analytics.bytescm.com
+# ============================================================
+# 名称: custom-reject-drop
+# 类型: REJECT-DROP
+# 说明: 日志、遥测、监控及推送长连接（避免客户端反复重连超时）
+# 适用: Surge / Shadowrocket
+# ============================================================
+
+# ===== 字节系：日志 / 监控 =====
+DOMAIN-REGEX,^log.*-misc-.*\.amemv\.com$
+DOMAIN-REGEX,^log.*-misc-.*\.zijieapi\.com$
+DOMAIN-REGEX,^log.*-misc-.*\.fqnovel\.com$
+DOMAIN-REGEX,^mon.*-misc-.*\.amemv\.com$
+DOMAIN-REGEX,^mon.*-misc-.*\.zijieapi\.com$
+DOMAIN-REGEX,^mon.*-misc-.*\.fqnovel\.com$
+DOMAIN-REGEX,^rtlog.*-.*\.zijieapi\.com$
+DOMAIN-REGEX,^rtlog.*-.*\.amemv\.com$
+DOMAIN-REGEX,^.*-applog-.*\.zijieapi\.com$
+DOMAIN-REGEX,^.*-applog-.*\.amemv\.com$
+DOMAIN-REGEX,^.*-applog-.*\.fqnovel\.com$
+DOMAIN-REGEX,^abtest.*-misc-.*\.zijieapi\.com$
+DOMAIN-REGEX,^abtest.*-misc-.*\.amemv\.com$
+DOMAIN-REGEX,^abtest.*-misc-.*\.fqnovel\.com$
+DOMAIN-REGEX,^mssdk.*-normal-.*\.zijieapi\.com$
+DOMAIN-REGEX,^polaris.*-normal-.*\.zijieapi\.com$
+DOMAIN-REGEX,^saveu.*-normal-.*\.zijieapi\.com$
+DOMAIN-REGEX,^tnc.*-.*\.zijieapi\.com$
+DOMAIN-REGEX,^tnc.*-.*\.bytedance\.com$
+DOMAIN-REGEX,^.*-analytics\.bytescm\.com$
 DOMAIN-SUFFIX,ctobsnssdk.com
 DOMAIN,logbk.amemv.com
 DOMAIN,timon.zijieapi.com
@@ -31,24 +38,22 @@ DOMAIN,dm-hl.toutiao.com
 DOMAIN,monsetting.toutiao.com
 DOMAIN,abtest-ch.snssdk.com
 DOMAIN,mssdk.volces.com
-# 以下是推断的节点，没匹配到域名时无副作用
-DOMAIN-WILDCARD,mcs*.zijieapi.com
-DOMAIN-WILDCARD,crash*.zijieapi.com
-DOMAIN-WILDCARD,slardar*.zijieapi.com
-DOMAIN-WILDCARD,apm*.volces.com
+DOMAIN-REGEX,^mcs.*\.zijieapi\.com$
+DOMAIN-REGEX,^crash.*\.zijieapi\.com$
+DOMAIN-REGEX,^slardar.*\.zijieapi\.com$
+DOMAIN-REGEX,^apm.*\.volces\.com$
 
 # ===== 通用日志 / 监控前缀 =====
-DOMAIN-WILDCARD,applog.*
-DOMAIN-WILDCARD,analytics.*
+DOMAIN-REGEX,^applog\..+$
+DOMAIN-REGEX,^analytics\..+$
 DOMAIN-REGEX,^logs?\..+$
-DOMAIN-WILDCARD,mon.*
-DOMAIN-WILDCARD,rtlog*.*
-# 遥测（含 telemetry.microsoft.com、incoming.telemetry.mozilla.org 等）
-DOMAIN-WILDCARD,telemetry.*
-DOMAIN-WILDCARD,*.telemetry.*
+DOMAIN-REGEX,^mon\..+$
+DOMAIN-REGEX,^rtlog.*\..+$
+DOMAIN-REGEX,^telemetry\..+$
+DOMAIN-REGEX,^.+\.telemetry\..+$
 
-# ===== 小红书（新增，你的命中第 3、6、11 名）=====
-DOMAIN-WILDCARD,apm-*.xiaohongshu.com
+# ===== 小红书 =====
+DOMAIN-REGEX,^apm-.*\.xiaohongshu\.com$
 DOMAIN,t2.xiaohongshu.com
 DOMAIN,lng.xiaohongshu.com
 DOMAIN,spider-tracker.xiaohongshu.com
@@ -56,62 +61,43 @@ DOMAIN,crash.xiaohongshu.com
 
 # ===== 微软遥测 =====
 DOMAIN-SUFFIX,events.data.microsoft.com
-DOMAIN-WILDCARD,vortex*.data.microsoft.com
+DOMAIN-REGEX,^vortex.*\.data\.microsoft\.com$
 DOMAIN-SUFFIX,pipe.aria.microsoft.com
-# Application Insights，自己开发并使用的要注释掉
 DOMAIN-SUFFIX,applicationinsights.microsoft.com
 DOMAIN,watson.microsoft.com
 DOMAIN,in.appcenter.ms
 
-# ===== 其他应用遥测（新增）=====
+# ===== 其他应用遥测 =====
 DOMAIN,ecsv2.roblox.com
 DOMAIN,tracing.roblox.com
-# 补回，logs.* 覆盖不到带前缀的子域名
 DOMAIN-SUFFIX,logs.netflix.com
 DOMAIN,dataflow.biliapi.com
 DOMAIN,report.voovmeeting.com
 DOMAIN,dw-online.ksosoft.com
 DOMAIN-SUFFIX,lnk0.com
 DOMAIN,receiver.habby.mobi
-# 观测云 RUM / 数据上报；自己用观测云控制台的要注释掉
 DOMAIN-SUFFIX,guance.com
-# 墨迹天气日志
-DOMAIN-WILDCARD,v*log.moweather.com
-# Firebase 统计
+DOMAIN-REGEX,^v.*log\.moweather\.com$
 DOMAIN-SUFFIX,app-measurement.com
 
-# ===== 推送长连接（断线后客户端会反复重连，封了收不到离线通知）=====
+# ===== 推送长连接 =====
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jpush.io
-# 极光认证（一键登录）、官网和控制台也用 jiguang.cn，DROP 会让一键登录卡到超时，默认不启用
-# - DOMAIN-SUFFIX,jiguang.cn
 DOMAIN-SUFFIX,gepush.com
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,igexin.com
 DOMAIN,push.ksapisrv.com
-# - DOMAIN-SUFFIX,onesignal.com
 
 # ===== 友盟 / 阿里日志 =====
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,umengcloud.net
-# 阿里云日志服务数据面，自己用 SLS 的要注释掉
 DOMAIN-SUFFIX,log.aliyuncs.com
 DOMAIN,mpaas-loggw4zwy.aliyuncs.com
 DOMAIN,loggw-ex.alipay.com
-DOMAIN-WILDCARD,mdap.alipay.*
+DOMAIN-REGEX,^mdap\.alipay\..+$
+
 # ===== 百度 =====
 DOMAIN,h2tcbox.baidu.com
 DOMAIN,ecmb.bdimg.com
-
-# ===== 候选（默认不生效，看命中次数再启用）=====
-# - DOMAIN-SUFFIX,bugly.qq.com
-# - DOMAIN-SUFFIX,beacon.qq.com
-# - DOMAIN,rmonitor.qq.com
-# - DOMAIN,aegis.qq.com
-# - DOMAIN,sofire.baidu.com
-# - DOMAIN,techain.baidu.com
-# - DOMAIN-WILDCARD,data.mistat.*
-# - DOMAIN,tracking.miui.com
-# - DOMAIN-SUFFIX,crashlytics.com
