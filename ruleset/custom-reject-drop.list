@@ -6,6 +6,9 @@
 # ============================================================
 
 # ===== 字节系：日志 / 监控 =====
+DOMAIN-REGEX,^ads.*-normal-.*\.amemv\.com$
+DOMAIN-REGEX,^ads.*-normal-.*\.zijieapi\.com$
+DOMAIN-REGEX,^ads.*-normal-.*\.fqnovel\.com$
 DOMAIN-REGEX,^log.*-misc-.*\.amemv\.com$
 DOMAIN-REGEX,^log.*-misc-.*\.zijieapi\.com$
 DOMAIN-REGEX,^log.*-misc-.*\.fqnovel\.com$
