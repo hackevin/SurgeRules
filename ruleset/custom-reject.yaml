@@ -53,6 +53,7 @@ payload:
   - DOMAIN-KEYWORD,adsmogo
   - DOMAIN-KEYWORD,adsrvmedia
   - DOMAIN-KEYWORD,adsserving
+  - DOMAIN-KEYWORD,analytics
   - DOMAIN-KEYWORD,domob
   - DOMAIN-KEYWORD,duomeng
   - DOMAIN-KEYWORD,dwtrack
