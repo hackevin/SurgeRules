@@ -5,6 +5,7 @@ payload:
   - 'dig.zjurl.cn'
   - 'dns.jd.com'
   - 'dns.weixin.qq.com.cn'
+  - 'dns.weixin.qq.com'
   - 'grs.dbankcloud.com'
   - 'httpdns.bilivideo.com'
   - 'httpdns.meituan.com'
