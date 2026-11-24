@@ -297,6 +297,7 @@ payload:
   - 'dlswbr.baidu.com'
   - 'dns.jd.com'
   - 'dns.weixin.qq.com.cn'
+  - 'dns.weixin.qq.com'
   - 'dualstack-logs.amap.com'
   - 'easytomessage.com'
   - 'ecmb.bdimg.com'
