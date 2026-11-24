@@ -9,6 +9,7 @@ payload:
 - DOMAIN,dig.zjurl.cn
 - DOMAIN,dns.jd.com
 - DOMAIN,dns.weixin.qq.com.cn
+- DOMAIN,dns.weixin.qq.com
 - DOMAIN,grs.dbankcloud.com
 - DOMAIN,httpdns.bilivideo.com
 - DOMAIN,httpdns.meituan.com
