@@ -473,6 +473,7 @@ payload:
   - DOMAIN,rumt-zh.com
   - DOMAIN,syh-imp.cdnjtzy.com
   - DOMAIN,yumao.puata.info
+  - DOMAIN,ad.12306.cn
 
   # ################ 十、观察区（来源或用途未确认，或有误伤风险，默认不生效）################
   # DOMAIN,lf-rc1.yhgfb-cn-static.com
