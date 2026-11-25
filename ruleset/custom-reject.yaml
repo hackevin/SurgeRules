@@ -326,6 +326,8 @@ payload:
   - DOMAIN,sofire.baidu.com
   - DOMAIN,techain.baidu.com
   - DOMAIN,worldwide.sogou.com
+  - DOMAIN,sp1.baidu.com
+  - DOMAIN-REGEX,^nadvideo[0-5]?\.baidu\.com$
 
   # ===== 京东 / 美团 / 拼多多 / 携程 / 滴滴 =====
   - DOMAIN,catfront.dianping.com
