@@ -476,6 +476,7 @@ payload:
   - 'zxid-m.mobileservice.cn'
   - 'zz.bdstatic.com'
   - 'zzhc.vnet.cn'
+  - 'ad.12306.cn'
 
   # ---- 撤下的条目（有误杀风险或用途未确认，需要时再启用）----
   # '+.datadoghq.com'                       会拦掉 Datadog 控制台和 API
