@@ -479,6 +479,8 @@ payload:
   - 'ad.12306.cn'
   - 'sp1.baidu.com'
   - 'nadvideo2.baidu.com'
+  - 'i.snssdk.com'
+  - 'ib.snssdk.com'
 
   # ---- 撤下的条目（有误杀风险或用途未确认，需要时再启用）----
   # '+.datadoghq.com'                       会拦掉 Datadog 控制台和 API
