@@ -56,7 +56,8 @@ payload:
   - DOMAIN-WILDCARD,crash*.zijieapi.com
   - DOMAIN-WILDCARD,slardar*.zijieapi.com
   - DOMAIN-WILDCARD,apm*.volces.com
-  - DOMAIN-REGEX,^ads.-normal\.zijieapi\.com
+  - DOMAIN-REGEX,^ads.-normal\.zijieapi\.com$
+  - DOMAIN-REGEX,^ib?\.snssdk\.com$
 
   # ===== 通用日志 / 监控前缀 =====
   - DOMAIN-WILDCARD,applog.*
