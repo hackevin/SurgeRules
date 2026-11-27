@@ -1,6 +1,6 @@
 # 描述: domain 规则集表达不了的部分(通配符/关键字/正则)，与 mihomo-reject.yaml 搭配使用
-# 更新时间: 2026-11-07 08:02:27 (UTC+8)
-# 规则数量: 927
+# 更新时间: 2026-11-27 10:44:27 (UTC+8)
+# 规则数量: 929
 # 用法: mihomo rule-providers: behavior: classical
 payload:
   - 'DOMAIN-KEYWORD,.24log.'
@@ -391,6 +391,7 @@ payload:
   - 'DOMAIN-WILDCARD,*.tag-v*.kuzen.io'
   - 'DOMAIN-WILDCARD,*.tblog-*.kgslb.com'
   - 'DOMAIN-WILDCARD,*.telemetry*.transcend.io'
+  - 'DOMAIN-WILDCARD,*.telemetry.*.oci.oraclecloud.com'
   - 'DOMAIN-WILDCARD,*.telemetry.*.pvp.net'
   - 'DOMAIN-WILDCARD,*.thezbpe5*.xyz'
   - 'DOMAIN-WILDCARD,*.tnc*.tiktokv.com'
@@ -860,6 +861,7 @@ payload:
   - 'DOMAIN-WILDCARD,tag-v*.kuzen.io'
   - 'DOMAIN-WILDCARD,tblog-*.kgslb.com'
   - 'DOMAIN-WILDCARD,telemetry*.transcend.io'
+  - 'DOMAIN-WILDCARD,telemetry.*.oci.oraclecloud.com'
   - 'DOMAIN-WILDCARD,telemetry.*.pvp.net'
   - 'DOMAIN-WILDCARD,thezbpe5*.xyz'
   - 'DOMAIN-WILDCARD,tnc*.tiktokv.com'

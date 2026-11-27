@@ -1,6 +1,6 @@
 # 描述: 只含通配符/关键字的部分
-# 更新时间: 2026-11-07 08:02:27 (UTC+8)
-# 规则数量: 927
+# 更新时间: 2026-11-27 10:44:27 (UTC+8)
+# 规则数量: 929
 # 用法: Shadowrocket: RULE-SET,<本文件URL>,REJECT
 DOMAIN-KEYWORD,.24log.
 DOMAIN-KEYWORD,.aan.amazon.
@@ -390,6 +390,7 @@ DOMAIN-WILDCARD,*.t*.zcvh.net
 DOMAIN-WILDCARD,*.tag-v*.kuzen.io
 DOMAIN-WILDCARD,*.tblog-*.kgslb.com
 DOMAIN-WILDCARD,*.telemetry*.transcend.io
+DOMAIN-WILDCARD,*.telemetry.*.oci.oraclecloud.com
 DOMAIN-WILDCARD,*.telemetry.*.pvp.net
 DOMAIN-WILDCARD,*.thezbpe5*.xyz
 DOMAIN-WILDCARD,*.tnc*.tiktokv.com
@@ -859,6 +860,7 @@ DOMAIN-WILDCARD,t*.zcvh.net
 DOMAIN-WILDCARD,tag-v*.kuzen.io
 DOMAIN-WILDCARD,tblog-*.kgslb.com
 DOMAIN-WILDCARD,telemetry*.transcend.io
+DOMAIN-WILDCARD,telemetry.*.oci.oraclecloud.com
 DOMAIN-WILDCARD,telemetry.*.pvp.net
 DOMAIN-WILDCARD,thezbpe5*.xyz
 DOMAIN-WILDCARD,tnc*.tiktokv.com
