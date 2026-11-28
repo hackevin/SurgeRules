@@ -1,6 +1,6 @@
 # 描述: domain-set 表达不了的部分(通配符/关键字)，与 surge-reject.txt 搭配使用
-# 更新时间: 2026-11-27 10:44:27 (UTC+8)
-# 规则数量: 929
+# 更新时间: 2026-11-28 10:34:48 (UTC+8)
+# 规则数量: 935
 # 用法: Surge: RULE-SET,<本文件URL>,REJECT
 DOMAIN-KEYWORD,.24log.
 DOMAIN-KEYWORD,.aan.amazon.
@@ -192,6 +192,7 @@ DOMAIN-WILDCARD,*.event.*.shoplive.cloud
 DOMAIN-WILDCARD,*.events*.cre.ma
 DOMAIN-WILDCARD,*.events-*.op.hicloud.com
 DOMAIN-WILDCARD,*.events-api*.outfit7.com
+DOMAIN-WILDCARD,*.events.*.oci.oraclecloud.com
 DOMAIN-WILDCARD,*.f-log-*.grammarly.io
 DOMAIN-WILDCARD,*.fads*s.com
 DOMAIN-WILDCARD,*.fads*z.com
@@ -270,6 +271,7 @@ DOMAIN-WILDCARD,*.log-v*-boot.capcutapi.com
 DOMAIN-WILDCARD,*.log-va*.capcutapi.com
 DOMAIN-WILDCARD,*.log.*.hunantv.com
 DOMAIN-WILDCARD,*.logger-*.dailymotion.com
+DOMAIN-WILDCARD,*.logging.*.oci.oraclecloud.com
 DOMAIN-WILDCARD,*.logreport-global-dual.cool*cloud.com
 DOMAIN-WILDCARD,*.logs-*.rebxgame.com
 DOMAIN-WILDCARD,*.logs.collector.*.cloud.solarwinds.com
@@ -391,6 +393,7 @@ DOMAIN-WILDCARD,*.tag-v*.kuzen.io
 DOMAIN-WILDCARD,*.tblog-*.kgslb.com
 DOMAIN-WILDCARD,*.telemetry*.transcend.io
 DOMAIN-WILDCARD,*.telemetry.*.oci.oraclecloud.com
+DOMAIN-WILDCARD,*.telemetry.*.oraclecloud.com
 DOMAIN-WILDCARD,*.telemetry.*.pvp.net
 DOMAIN-WILDCARD,*.thezbpe5*.xyz
 DOMAIN-WILDCARD,*.tnc*.tiktokv.com
@@ -649,6 +652,7 @@ DOMAIN-WILDCARD,event.*.shoplive.cloud
 DOMAIN-WILDCARD,events*.cre.ma
 DOMAIN-WILDCARD,events-*.op.hicloud.com
 DOMAIN-WILDCARD,events-api*.outfit7.com
+DOMAIN-WILDCARD,events.*.oci.oraclecloud.com
 DOMAIN-WILDCARD,f-log-*.grammarly.io
 DOMAIN-WILDCARD,fads*s.com
 DOMAIN-WILDCARD,fads*z.com
@@ -729,6 +733,7 @@ DOMAIN-WILDCARD,log-v*-boot.capcutapi.com
 DOMAIN-WILDCARD,log-va*.capcutapi.com
 DOMAIN-WILDCARD,log.*.hunantv.com
 DOMAIN-WILDCARD,logger-*.dailymotion.com
+DOMAIN-WILDCARD,logging.*.oci.oraclecloud.com
 DOMAIN-WILDCARD,logreport-global-dual.cool*cloud.com
 DOMAIN-WILDCARD,logs-*.rebxgame.com
 DOMAIN-WILDCARD,logs.collector.*.cloud.solarwinds.com
@@ -861,6 +866,7 @@ DOMAIN-WILDCARD,tag-v*.kuzen.io
 DOMAIN-WILDCARD,tblog-*.kgslb.com
 DOMAIN-WILDCARD,telemetry*.transcend.io
 DOMAIN-WILDCARD,telemetry.*.oci.oraclecloud.com
+DOMAIN-WILDCARD,telemetry.*.oraclecloud.com
 DOMAIN-WILDCARD,telemetry.*.pvp.net
 DOMAIN-WILDCARD,thezbpe5*.xyz
 DOMAIN-WILDCARD,tnc*.tiktokv.com
